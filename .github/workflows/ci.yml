@@ -26,6 +26,9 @@ jobs:
       - name: Build Shared Packages
         run: npm run build --workspace=packages/shared
 
+      - name: Generate Prisma Client from project schema
+        run: npm run prisma:generate --workspace=services/api
+
       - name: Typecheck Backend API
         run: cd services/api && npx tsc --noEmit
 
@@ -75,4 +78,5 @@ jobs:
       - name: Run pytest Analytics & Grading Tests
         run: |
           cd services/analytics
-          pytest tests/ -v
+          python -c "from app.main import app; print(app.title)"
+          python -m pytest tests/ -v

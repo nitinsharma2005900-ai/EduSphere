@@ -14,7 +14,7 @@
     "dev:api": "npm run dev --workspace=services/api",
     "dev:worker": "npm run dev --workspace=services/worker",
     "dev:analytics": "powershell -Command \"cd services/analytics; python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload\"",
-    "build:all": "npm run build --workspace=packages/shared && npm run build --workspace=services/api && npm run build --workspace=apps/web",
+    "build:all": "npm run build --workspace=packages/shared && npm run prisma:generate --workspace=services/api && npm run build --workspace=services/api && npm run build --workspace=apps/web",
     "test:all": "npm run test:api && npm run test:analytics && npm run test:security",
     "test:api": "npm run test --workspace=services/api",
     "test:analytics": "powershell -Command \"cd services/analytics; python -m pytest tests/ -v\"",
