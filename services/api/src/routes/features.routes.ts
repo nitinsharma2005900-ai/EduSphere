@@ -75,7 +75,8 @@ router.get('/certificates/verify/:number/pdf', async (req, res, next) => {
     const cert = db.certificates.find(c => c.certificateNumber === req.params.number)!;
     const response = await fetch(`${config.analyticsServiceUrl}/api/v1/utilities/render-certificate`, { method: 'POST', signal: AbortSignal.timeout(10000), headers: { 'Content-Type': 'application/json', 'X-Internal-Key': config.internalServiceKey }, body: JSON.stringify({ certificate_id: cert.id, certificate_number: cert.certificateNumber, learner_id: cert.userId, learner_name: verified.learnerName, course_id: cert.courseId, course_title: verified.courseTitle, completion_date: cert.completionDate, issuer_name: cert.issuerName }) });
     if (!response.ok) throw new Error('Certificate rendering unavailable');
-    res.type('application/pdf').setHeader('Content-Disposition', `attachment; filename="${cert.certificateNumber}.pdf"`);
+    const safeName = verified.learnerName.normalize('NFKC').replace(/[^\p{L}\p{N}]+/gu, '_').replace(/^_+|_+$/g, '').slice(0, 80) || 'Learner';
+    res.attachment(`${safeName}_${cert.certificateNumber}.pdf`).type('application/pdf');
     res.send(Buffer.from(await response.arrayBuffer()));
   } catch (error) { next(error); }
 });
