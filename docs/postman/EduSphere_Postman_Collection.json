@@ -1,0 +1,125 @@
+{
+  "info": {
+    "name": "EduSphere LMS & Assessment Platform API Collection",
+    "description": "Comprehensive Postman collection for all EduSphere REST endpoints across 5 roles: Learner, Instructor, Course Author, Assessor, and Administrator.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "1. Login (Learner)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"learner@edusphere.demo\",\n  \"password\": \"EduSphere2026!\"\n}"
+            },
+            "url": "http://localhost:4000/api/v1/auth/login"
+          }
+        },
+        {
+          "name": "2. Login (Admin)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"admin@edusphere.demo\",\n  \"password\": \"EduSphere2026!\"\n}"
+            },
+            "url": "http://localhost:4000/api/v1/auth/login"
+          }
+        },
+        {
+          "name": "3. Register New Student",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"new_applicant@edusphere.demo\",\n  \"password\": \"SecurePass2026!\",\n  \"firstName\": \"Jordan\",\n  \"lastName\": \"Taylor\"\n}"
+            },
+            "url": "http://localhost:4000/api/v1/auth/register"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Courses & Curriculum",
+      "item": [
+        {
+          "name": "List Courses",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:4000/api/v1/courses"
+          }
+        },
+        {
+          "name": "Get Course Details",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:4000/api/v1/courses/crs-python-001"
+          }
+        },
+        {
+          "name": "Get Curriculum Tree & Locks",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{access_token}}" }],
+            "url": "http://localhost:4000/api/v1/enrollments/crs-python-001/curriculum"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Assessments & Grading",
+      "item": [
+        {
+          "name": "Start Assessment Attempt",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Authorization", "value": "Bearer {{access_token}}" }],
+            "url": "http://localhost:4000/api/v1/assessments/asm-crs-python-001/start"
+          }
+        },
+        {
+          "name": "Submit Assessment Answers (Deterministic Grading)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{access_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"answers\": {\n    \"q-asm-crs-python-001-1\": \"opt_c\",\n    \"q-asm-crs-python-001-2\": [\"sec_a\", \"sec_c\", \"sec_d\"],\n    \"q-asm-crs-python-001-3\": \"false\"\n  }\n}"
+            },
+            "url": "http://localhost:4000/api/v1/assessments/asm-crs-python-001/submit"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Certificates & Verification",
+      "item": [
+        {
+          "name": "Claim Earned Certificate",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Authorization", "value": "Bearer {{access_token}}" }],
+            "url": "http://localhost:4000/api/v1/certificates/courses/crs-python-001/claim"
+          }
+        },
+        {
+          "name": "Public Verification",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:4000/api/v1/certificates/verify/EDU-2026-PYT-7892"
+          }
+        }
+      ]
+    }
+  ]
+}

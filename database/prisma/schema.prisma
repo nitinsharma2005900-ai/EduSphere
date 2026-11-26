@@ -1,0 +1,565 @@
+// EduSphere Learning Management, Course Authoring & Assessment Platform
+// Database Schema Specification (PostgreSQL + Prisma ORM)
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Role {
+  LEARNER
+  INSTRUCTOR
+  COURSE_AUTHOR
+  ASSESSOR
+  ADMIN
+}
+
+enum CourseStatus {
+  DRAFT
+  UNDER_REVIEW
+  PUBLISHED
+  ARCHIVED
+}
+
+enum CourseLevel {
+  BEGINNER
+  INTERMEDIATE
+  ADVANCED
+}
+
+enum LessonType {
+  VIDEO
+  TEXT
+  ATTACHMENT
+}
+
+enum EnrollmentStatus {
+  ACTIVE
+  COMPLETED
+  SUSPENDED
+}
+
+enum QuestionType {
+  SINGLE_CHOICE
+  MULTIPLE_CHOICE
+  TRUE_FALSE
+}
+
+enum AttemptStatus {
+  IN_PROGRESS
+  SUBMITTED
+  GRADED
+  EXPIRED
+}
+
+enum SubmissionStatus {
+  SUBMITTED
+  UNDER_REVIEW
+  GRADED
+  REVISION_REQUESTED
+}
+
+enum PaymentStatus {
+  PENDING
+  COMPLETED
+  FAILED
+  REFUNDED
+}
+
+enum NotificationType {
+  ENROLLMENT
+  ASSESSMENT
+  GRADE
+  CERTIFICATE
+  SYSTEM
+}
+
+model User {
+  id                    String                 @id @default(uuid())
+  email                 String                 @unique
+  passwordHash          String
+  firstName             String
+  lastName              String
+  role                  Role                   @default(LEARNER)
+  avatarUrl             String?
+  bio                   String?
+  isActive              Boolean                @default(true)
+  createdAt             DateTime               @default(now())
+  updatedAt             DateTime               @updatedAt
+
+  // Relationships
+  refreshTokens         RefreshToken[]
+  authoredCourses       Course[]               @relation("CourseAuthor")
+  instructedCourses     Course[]               @relation("CourseInstructor")
+  enrollments           Enrollment[]
+  assessmentAttempts    AssessmentAttempt[]
+  assignmentSubmissions AssignmentSubmission[]
+  gradedSubmissions     AssignmentSubmission[] @relation("GradedBy")
+  certificates          Certificate[]
+  notifications         Notification[]
+  payments              Payment[]
+  auditLogs             AuditLog[]
+  uploadedFiles         UploadedFile[]
+
+  @@index([email])
+  @@index([role])
+}
+
+model RefreshToken {
+  id               String    @id @default(uuid())
+  token            String    @unique
+  userId           String
+  user             User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt        DateTime
+  isRevoked        Boolean   @default(false)
+  replacedByToken  String?
+  createdAt        DateTime  @default(now())
+
+  @@index([userId])
+  @@index([token])
+}
+
+model Category {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  slug        String   @unique
+  description String?
+  icon        String?
+  courses     Course[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([slug])
+}
+
+model Course {
+  id                 String                  @id @default(uuid())
+  title              String
+  slug               String                  @unique
+  subtitle           String?
+  description        String
+  thumbnailUrl       String
+  categoryId         String
+  category           Category                @relation(fields: [categoryId], references: [id])
+  level              CourseLevel             @default(BEGINNER)
+  price              Decimal                 @default(0.0) @db.Decimal(10, 2)
+  isPaid             Boolean                 @default(false)
+  status             CourseStatus            @default(DRAFT)
+  durationMinutes    Int                     @default(0)
+  learningObjectives Json                    @default("[]") // string[]
+  authorId           String
+  author             User                    @relation("CourseAuthor", fields: [authorId], references: [id])
+  instructorId       String
+  instructor         User                    @relation("CourseInstructor", fields: [instructorId], references: [id])
+  version            Int                     @default(1)
+  createdAt          DateTime                @default(now())
+  updatedAt          DateTime                @updatedAt
+
+  // Hierarchy & Relations
+  topics             Topic[]
+  enrollments        Enrollment[]
+  certificates       Certificate[]
+  versionHistory     CourseVersionHistory[]
+  payments           Payment[]
+  assessments        Assessment[]
+  assignments        Assignment[]
+  
+  // Self-referencing prerequisites
+  prerequisites      CoursePrerequisite[]    @relation("CourseRequires")
+  requiredFor        CoursePrerequisite[]    @relation("PrerequisiteCourse")
+
+  @@index([slug])
+  @@index([categoryId])
+  @@index([status])
+  @@index([authorId])
+  @@index([instructorId])
+}
+
+model CoursePrerequisite {
+  id             String   @id @default(uuid())
+  courseId       String
+  course         Course   @relation("CourseRequires", fields: [courseId], references: [id], onDelete: Cascade)
+  prerequisiteId String
+  prerequisite   Course   @relation("PrerequisiteCourse", fields: [prerequisiteId], references: [id], onDelete: Cascade)
+  createdAt      DateTime @default(now())
+
+  @@unique([courseId, prerequisiteId])
+  @@index([courseId])
+  @@index([prerequisiteId])
+}
+
+model CourseVersionHistory {
+  id            String   @id @default(uuid())
+  courseId      String
+  course        Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  version       Int
+  changeSummary String
+  changedById   String
+  snapshot      Json     // complete frozen course JSON snapshot
+  createdAt     DateTime @default(now())
+
+  @@index([courseId])
+}
+
+model Topic {
+  id          String       @id @default(uuid())
+  courseId    String
+  course      Course       @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  title       String
+  description String?
+  orderIndex  Int          @default(0)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  lessons     Lesson[]
+  assessments Assessment[]
+  assignments Assignment[]
+
+  @@index([courseId])
+  @@index([orderIndex])
+}
+
+model Lesson {
+  id              String           @id @default(uuid())
+  topicId         String
+  topic           Topic            @relation(fields: [topicId], references: [id], onDelete: Cascade)
+  title           String
+  slug            String
+  description     String?
+  type            LessonType       @default(VIDEO)
+  videoUrl        String?
+  contentText     String?
+  durationSeconds Int              @default(0)
+  orderIndex      Int              @default(0)
+  isPreview       Boolean          @default(false)
+  isMandatory     Boolean          @default(true)
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  resources       LessonResource[]
+  progressRecords LessonProgress[]
+
+  @@index([topicId])
+  @@index([orderIndex])
+}
+
+model LessonResource {
+  id             String   @id @default(uuid())
+  lessonId       String
+  lesson         Lesson   @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  title          String
+  fileUrl        String
+  fileType       String
+  fileSize       Int
+  isDownloadable Boolean  @default(true)
+  createdAt      DateTime @default(now())
+
+  @@index([lessonId])
+}
+
+model Enrollment {
+  id                 String              @id @default(uuid())
+  userId             String
+  user               User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  courseId           String
+  course             Course              @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  status             EnrollmentStatus    @default(ACTIVE)
+  enrolledAt         DateTime            @default(now())
+  completedAt        DateTime?
+  progressPercentage Float               @default(0.0)
+  lastAccessedAt     DateTime            @default(now())
+
+  lessonProgress     LessonProgress[]
+  assessmentAttempts AssessmentAttempt[]
+  submissions        AssignmentSubmission[]
+  certificate        Certificate?
+
+  @@unique([userId, courseId])
+  @@index([userId])
+  @@index([courseId])
+  @@index([status])
+}
+
+model LessonProgress {
+  id                  String     @id @default(uuid())
+  enrollmentId        String
+  enrollment          Enrollment @relation(fields: [enrollmentId], references: [id], onDelete: Cascade)
+  lessonId            String
+  lesson              Lesson     @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  isCompleted         Boolean    @default(false)
+  completedAt         DateTime?
+  lastPositionSeconds Int        @default(0)
+  createdAt           DateTime   @default(now())
+  updatedAt           DateTime   @updatedAt
+
+  @@unique([enrollmentId, lessonId])
+  @@index([enrollmentId])
+  @@index([lessonId])
+}
+
+model Assessment {
+  id                 String              @id @default(uuid())
+  courseId           String
+  course             Course              @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  topicId            String
+  topic              Topic               @relation(fields: [topicId], references: [id], onDelete: Cascade)
+  title              String
+  description        String?
+  durationMinutes    Int                 @default(30)
+  passingScore       Float               @default(70.0)
+  maxAttempts        Int                 @default(3)
+  deadline           DateTime?
+  isStrictSequential Boolean             @default(true)
+  version            Int                 @default(1)
+  createdAt          DateTime            @default(now())
+  updatedAt          DateTime            @updatedAt
+
+  questions          Question[]
+  attempts           AssessmentAttempt[]
+  versions           AssessmentVersion[]
+
+  @@index([courseId])
+  @@index([topicId])
+}
+
+model AssessmentVersion {
+  id            String     @id @default(uuid())
+  assessmentId  String
+  assessment    Assessment @relation(fields: [assessmentId], references: [id], onDelete: Cascade)
+  versionNumber Int
+  changeNotes   String
+  createdById   String
+  snapshot      Json       // Questions & answers snapshot
+  createdAt     DateTime   @default(now())
+
+  @@index([assessmentId])
+}
+
+model Question {
+  id             String       @id @default(uuid())
+  assessmentId   String
+  assessment     Assessment   @relation(fields: [assessmentId], references: [id], onDelete: Cascade)
+  prompt         String
+  type           QuestionType @default(SINGLE_CHOICE)
+  points         Float        @default(1.0)
+  orderIndex     Int          @default(0)
+  options        Json         // array of { id: string, text: string }
+  correctAnswers Json         // array of correct option IDs (hidden before submit)
+  explanation    String?
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+
+  @@index([assessmentId])
+  @@index([orderIndex])
+}
+
+model AssessmentAttempt {
+  id              String        @id @default(uuid())
+  assessmentId    String
+  assessment      Assessment    @relation(fields: [assessmentId], references: [id], onDelete: Cascade)
+  userId          String
+  user            User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  enrollmentId    String
+  enrollment      Enrollment    @relation(fields: [enrollmentId], references: [id], onDelete: Cascade)
+  attemptNumber   Int
+  versionNumber   Int           @default(1)
+  startedAt       DateTime      @default(now())
+  submittedAt     DateTime?
+  durationSeconds Int?
+  score           Float         @default(0.0)
+  percentage      Float         @default(0.0)
+  isPassed        Boolean       @default(false)
+  status          AttemptStatus @default(IN_PROGRESS)
+  answers         Json          @default("{}") // user answers map
+  feedback        Json?         // question-level breakdown feedback
+  createdAt       DateTime      @default(now())
+
+  @@unique([assessmentId, userId, attemptNumber])
+  @@index([assessmentId])
+  @@index([userId])
+  @@index([enrollmentId])
+}
+
+model Assignment {
+  id               String                 @id @default(uuid())
+  courseId         String
+  course           Course                 @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  topicId          String
+  topic            Topic                  @relation(fields: [topicId], references: [id], onDelete: Cascade)
+  title            String
+  instructions     String
+  maxScore         Float                  @default(100.0)
+  deadline         DateTime?
+  allowedFileTypes Json                   @default("[\"pdf\", \"zip\", \"docx\", \"txt\"]")
+  maxFileSizeMb    Int                    @default(20)
+  rubricCriteria   Json                   // array of { id, title, description, maxPoints }
+  createdAt        DateTime               @default(now())
+  updatedAt        DateTime               @updatedAt
+
+  submissions      AssignmentSubmission[]
+
+  @@index([courseId])
+  @@index([topicId])
+}
+
+model AssignmentSubmission {
+  id             String           @id @default(uuid())
+  assignmentId   String
+  assignment     Assignment       @relation(fields: [assignmentId], references: [id], onDelete: Cascade)
+  userId         String
+  user           User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  enrollmentId   String
+  enrollment     Enrollment       @relation(fields: [enrollmentId], references: [id], onDelete: Cascade)
+  submissionText String?
+  fileUrl        String?
+  fileName       String?
+  fileSize       Int?
+  status         SubmissionStatus @default(SUBMITTED)
+  submittedAt    DateTime         @default(now())
+  score          Float?
+  feedback       String?
+  rubricScores   Json?            // map of { criterionId: score }
+  gradedById     String?
+  gradedBy       User?            @relation("GradedBy", fields: [gradedById], references: [id])
+  gradedAt       DateTime?
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+
+  @@index([assignmentId])
+  @@index([userId])
+  @@index([enrollmentId])
+  @@index([status])
+}
+
+model Certificate {
+  id                String    @id @default(uuid())
+  certificateNumber String    @unique // e.g. EDU-2026-ABCD-1234
+  userId            String
+  user              User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  courseId          String
+  course            Course    @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  enrollmentId      String    @unique
+  enrollment        Enrollment@relation(fields: [enrollmentId], references: [id], onDelete: Cascade)
+  issueDate         DateTime  @default(now())
+  completionDate    DateTime  @default(now())
+  verificationUrl   String
+  qrCodeData        String
+  issuerName        String    @default("EduSphere Academic Board")
+  isRevoked         Boolean   @default(false)
+  revocationReason  String?
+  revokedAt         DateTime?
+  revokedById       String?
+  metadata          Json      @default("{}")
+  createdAt         DateTime  @default(now())
+
+  revocations       CertificateRevocationAudit[]
+
+  @@index([certificateNumber])
+  @@index([userId])
+  @@index([courseId])
+}
+
+model CertificateRevocationAudit {
+  id            String      @id @default(uuid())
+  certificateId String
+  certificate   Certificate @relation(fields: [certificateId], references: [id], onDelete: Cascade)
+  revokedById   String
+  reason        String
+  revokedAt     DateTime    @default(now())
+
+  @@index([certificateId])
+}
+
+model Notification {
+  id        String           @id @default(uuid())
+  userId    String
+  user      User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title     String
+  message   String
+  type      NotificationType @default(SYSTEM)
+  isRead    Boolean          @default(false)
+  linkUrl   String?
+  createdAt DateTime         @default(now())
+
+  @@index([userId])
+  @@index([isRead])
+}
+
+model Payment {
+  id                String        @id @default(uuid())
+  orderId           String        @unique
+  paymentId         String?       @unique
+  userId            String
+  user              User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  courseId          String
+  course            Course        @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  amount            Decimal       @db.Decimal(10, 2)
+  currency          String        @default("USD")
+  status            PaymentStatus @default(PENDING)
+  provider          String        @default("STRIPE_SANDBOX")
+  providerSignature String?
+  idempotencyKey    String        @unique
+  metadata          Json          @default("{}")
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+
+  @@index([orderId])
+  @@index([userId])
+  @@index([courseId])
+  @@index([status])
+}
+
+model WebhookEvent {
+  id          String   @id @default(uuid())
+  provider    String
+  eventId     String
+  eventType   String
+  payload     Json
+  processed   Boolean  @default(false)
+  processedAt DateTime?
+  createdAt   DateTime @default(now())
+
+  @@unique([provider, eventId])
+  @@index([provider, eventId])
+}
+
+model UploadedFile {
+  id           String   @id @default(uuid())
+  userId       String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  fileName     String
+  originalName String
+  mimeType     String
+  sizeBytes    Int
+  storageKey   String   @unique
+  bucket       String   @default("edusphere-media")
+  isPrivate    Boolean  @default(false)
+  url          String
+  createdAt    DateTime @default(now())
+
+  @@index([userId])
+  @@index([storageKey])
+}
+
+model AuditLog {
+  id        String   @id @default(uuid())
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  userRole  String?
+  action    String
+  entity    String
+  entityId  String?
+  ipAddress String?
+  userAgent String?
+  details   Json     @default("{}")
+  timestamp DateTime @default(now())
+
+  @@index([userId])
+  @@index([action])
+  @@index([entity])
+  @@index([timestamp])
+}

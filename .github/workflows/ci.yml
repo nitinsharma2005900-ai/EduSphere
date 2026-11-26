@@ -1,0 +1,78 @@
+name: EduSphere Continuous Integration
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint-and-typecheck:
+    name: Lint & Typecheck
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Shared Packages
+        run: npm run build --workspace=packages/shared
+
+      - name: Typecheck Backend API
+        run: cd services/api && npx tsc --noEmit
+
+      - name: Build Next.js Web
+        run: npm run build --workspace=apps/web
+
+  backend-tests:
+    name: Node.js & Security Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Shared Packages
+        run: npm run build --workspace=packages/shared
+
+      - name: Run Jest API & Security Test Suite
+        run: cd services/api && npx jest --runInBand --detectOpenHandles
+
+  python-tests:
+    name: Python Microservice Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r services/analytics/requirements.txt
+
+      - name: Run pytest Analytics & Grading Tests
+        run: |
+          cd services/analytics
+          pytest tests/ -v

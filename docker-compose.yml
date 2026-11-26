@@ -1,0 +1,155 @@
+name: edusphere
+
+services:
+  # 1. Reverse Proxy Gateway
+  nginx:
+    image: nginx:alpine
+    container_name: edusphere-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./infrastructure/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - web
+      - api
+      - analytics
+    networks:
+      - edusphere-network
+
+  # 2. Next.js Frontend UI
+  web:
+    build:
+      context: .
+      dockerfile: infrastructure/docker/Dockerfile.web
+    container_name: edusphere-web
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_API_URL=http://localhost:4000/api/v1
+      - NEXT_PUBLIC_ANALYTICS_URL=http://localhost:8000
+    depends_on:
+      - api
+    networks:
+      - edusphere-network
+
+  # 3. Core Node.js / Express API Service
+  api:
+    build:
+      context: .
+      dockerfile: infrastructure/docker/Dockerfile.api
+    container_name: edusphere-api
+    restart: unless-stopped
+    ports:
+      - "4000:4000"
+    environment:
+      - NODE_ENV=production
+      - PORT=4000
+      - DATABASE_URL=postgresql://edusphere:edusphere_secure_pass@postgres:5432/edusphere_db?schema=public
+      - REDIS_URL=redis://redis:6379
+      - ANALYTICS_SERVICE_URL=http://analytics:8000
+      - INTERNAL_SERVICE_KEY=edusphere_internal_microservice_secret_key_2026_secure!
+      - JWT_ACCESS_SECRET=edusphere_jwt_super_secure_access_secret_key_2026_x9281!
+      - JWT_REFRESH_SECRET=edusphere_jwt_super_secure_refresh_secret_key_2026_r4719@
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      analytics:
+        condition: service_started
+    networks:
+      - edusphere-network
+
+  # 4. Python FastAPI Analytics & Deterministic Grading Microservice
+  analytics:
+    build:
+      context: .
+      dockerfile: infrastructure/docker/Dockerfile.analytics
+    container_name: edusphere-analytics
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - ANALYTICS_HOST=0.0.0.0
+      - ANALYTICS_PORT=8000
+      - INTERNAL_SERVICE_KEY=edusphere_internal_microservice_secret_key_2026_secure!
+    networks:
+      - edusphere-network
+
+  # 5. PostgreSQL System of Record
+  postgres:
+    image: postgres:16-alpine
+    container_name: edusphere-postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=edusphere
+      - POSTGRES_PASSWORD=edusphere_secure_pass
+      - POSTGRES_DB=edusphere_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U edusphere -d edusphere_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - edusphere-network
+
+  # 6. Redis In-Memory Cache & Message Broker
+  redis:
+    image: redis:7-alpine
+    container_name: edusphere-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - edusphere-network
+
+  # 7. MinIO S3-Compatible Object Storage
+  minio:
+    image: minio/minio:RELEASE.2024-01-18T22-51-28Z
+    container_name: edusphere-minio
+    restart: unless-stopped
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      - MINIO_ROOT_USER=edusphere_minio_admin
+      - MINIO_ROOT_PASSWORD=edusphere_minio_super_secret_pass_2026
+    command: server /data --console-address ":9001"
+    volumes:
+      - minio-data:/data
+    networks:
+      - edusphere-network
+
+  # 8. Mailpit Local Email Sandbox
+  mailpit:
+    image: axllent/mailpit:latest
+    container_name: edusphere-mailpit
+    restart: unless-stopped
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+    networks:
+      - edusphere-network
+
+volumes:
+  postgres-data:
+  redis-data:
+  minio-data:
+
+networks:
+  edusphere-network:
+    driver: bridge

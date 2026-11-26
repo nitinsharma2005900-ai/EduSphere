@@ -1,0 +1,70 @@
+# Node & NPM
+node_modules/
+.npm/
+npm-debug.log*
+
+# Next.js
+apps/web/.next/
+apps/web/out/
+apps/web/build/
+
+# TypeScript & Build outputs
+dist/
+build/
+*.tsbuildinfo
+
+# Python
+services/analytics/__pycache__/
+services/analytics/*/__pycache__/
+services/analytics/.pytest_cache/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+ENV/
+
+# Environment Variables & Secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+
+# Test & Coverage
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+
+# Database & Local Storage
+*.sqlite
+*.sqlite3
+*.db
+storage/uploads/*
+!storage/uploads/.gitkeep
+storage/certificates/*
+!storage/certificates/.gitkeep
+
+# OS generated
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+logs/
+*.log
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.rar
+
+# AI / Tooling local metadata
+.gemini/
+.claude/
+.cursor/

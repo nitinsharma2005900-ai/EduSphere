@@ -1,0 +1,104 @@
+# ==============================================================================
+# EduSphere Learning Management Platform - Render Blueprint Specification
+# Reference: https://render.com/docs/blueprint-spec
+# ==============================================================================
+
+version: "1"
+
+databases:
+  # Managed PostgreSQL Database (Render Free Tier)
+  - name: edusphere-postgres
+    databaseName: edusphere_db
+    user: edusphere
+    plan: free
+    region: oregon
+    ipAllowList: [] # Allows connections from all Render services and external admin tools
+
+services:
+  # ----------------------------------------------------------------------------
+  # 1. Python FastAPI Analytics & Deterministic Grading Microservice
+  # ----------------------------------------------------------------------------
+  - type: web
+    name: edusphere-analytics
+    runtime: python
+    plan: free
+    region: oregon
+    rootDir: services/analytics
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: PORT
+        value: 8000
+      - key: APP_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: edusphere-postgres
+          property: connectionString
+      - key: INTERNAL_SERVICE_KEY
+        generateCryptoKey: true
+
+  # ----------------------------------------------------------------------------
+  # 2. Node.js / Express Core Backend REST API
+  # ----------------------------------------------------------------------------
+  - type: web
+    name: edusphere-api
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: npm install && npm run build --workspace=packages/shared && cd services/api && npx prisma generate --schema=../../database/prisma/schema.prisma && npm run build
+    startCommand: cd services/api && node dist/index.js
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 4000
+      - key: DATABASE_URL
+        fromDatabase:
+          name: edusphere-postgres
+          property: connectionString
+      - key: JWT_ACCESS_SECRET
+        generateCryptoKey: true
+      - key: JWT_REFRESH_SECRET
+        generateCryptoKey: true
+      - key: JWT_ACCESS_EXPIRES_IN
+        value: 15m
+      - key: JWT_REFRESH_EXPIRES_IN
+        value: 7d
+      - key: ANALYTICS_SERVICE_URL
+        value: https://edusphere-analytics.onrender.com
+      - key: CORS_ORIGIN
+        value: "*"
+      - key: PAYMENT_PROVIDER
+        value: STRIPE_SANDBOX
+      - key: PAYMENT_SANDBOX_MODE
+        value: "true"
+      # Optional external Redis (e.g. free Upstash Redis instance)
+      - key: REDIS_URL
+        sync: false
+
+  # ----------------------------------------------------------------------------
+  # 3. Next.js 14 Frontend Web Application (App Router)
+  # ----------------------------------------------------------------------------
+  - type: web
+    name: edusphere-web
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: npm install && npm run build --workspace=packages/shared && npm run build --workspace=apps/web
+    startCommand: npm run start --workspace=apps/web -- -p $PORT
+    healthCheckPath: /
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_PUBLIC_API_URL
+        value: https://edusphere-api.onrender.com/api/v1
+      - key: NEXT_PUBLIC_ANALYTICS_URL
+        value: https://edusphere-analytics.onrender.com
