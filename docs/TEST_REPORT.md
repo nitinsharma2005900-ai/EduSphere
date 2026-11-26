@@ -1,76 +1,17 @@
 # EduSphere Test Execution Report
 
-## Summary of Automated Test Execution
+## Verified baseline (26 November 2026)
 
-All automated tests across Node.js/TypeScript backend services, security regression suites, and Python FastAPI microservices execute cleanly with 100% pass rates.
+[GitHub Actions run 45833781536](https://github.com/nitinsharma2005900-ai/EduSphere/actions/runs/45833781536) at commit d4a70dfd21d2273e22463f977225a7648ba18068 recorded 30 passing Jest tests, 3 PostgreSQL integration tests and 10 passing Python tests (43 total). All eight CI jobs passed, including dependency security audit, frontend production build and three Docker image builds. Python reported 18 warnings. This is a historical baseline, not the result of subsequent code changes; see the latest GitHub Actions run for updated results.
 
-```
-================================================================================
-Test Suite Results Summary:
-Total Test Suites: 4
-Total Automated Tests: 21
-Passed Tests: 21 (100%)
-Failed Tests: 0 (0%)
-================================================================================
-```
+Railway runtime logs recorded course creation, enrollment, sequential lesson completion, quiz and assignment grading, certificate verification and PDF, object storage, notifications and analytics. Expected forbidden actions were rejected. These are observed requests, not an exhaustive new browser test.
 
----
+## Repeat locally
 
-## 1. Node.js & Express API Test Suite (Jest & Supertest)
+- `npm run test:api`
+- `npm run test:analytics`
+- `npm run build:all`
 
-Command: `cd services/api && npx jest --runInBand`
+Additional certificate regressions cover a newly registered learner, enrollment and prerequisite checks, duplicate claims, identity passed to the PDF renderer and unknown certificate IDs. The API PDF test mocks the renderer; it does not establish live PDF rendering. Browser and live verification scripts are in `tests/e2e` and `scripts/verify-live.mjs`. Live verification creates synthetic test data and should only be run in a designated test/demo environment.
 
-### Test Files Executed:
-1. `tests/security.test.ts` (Capstone Security Regression Suite)
-   - `✓ SECURITY TEST 1: Learner must NOT be able to unlock restricted lessons by skipping prerequisites` (Passed)
-   - `✓ SECURITY TEST 2: Learner must NOT exceed assessment attempt limits` (Passed)
-   - `✓ SECURITY TEST 3: Learner must NOT alter their own grades or grade submissions` (Passed)
-   - `✓ SECURITY TEST 4: Learner must NOT issue an unauthorized certificate without fulfilling requirements` (Passed)
-   - `✓ SECURITY TEST 5: Assessment answers must NEVER be leaked to learners prior to submission` (Passed)
-
-2. `tests/auth.test.ts` (Authentication & Authorization Suite)
-   - `✓ should successfully register a new learner and return tokens` (Passed)
-   - `✓ should reject registration with duplicate email (409 Conflict)` (Passed)
-   - `✓ should reject weak passwords failing complexity rules` (Passed)
-   - `✓ should authenticate valid credentials and issue tokens` (Passed)
-   - `✓ should reject invalid password with 401 Unauthorized` (Passed)
-   - `✓ should support refresh token rotation and revoke old token` (Passed)
-
-3. `tests/learning-workflow.test.ts` (Learning Workflow Suite)
-   - `✓ 1. Course Hierarchy: should retrieve courses and topic curriculum` (Passed)
-   - `✓ 2. Enrollment: should enroll in a course and reflect in enrolled list` (Passed)
-   - `✓ 3. Lesson Progress & Sequential Lock: should enforce order of completion` (Passed)
-   - `✓ 4. Assessment Attempt & Automatic Deterministic Grading` (Passed)
-
-**Result**: 3 Test Suites Passed, 15 Tests Passed.
-
----
-
-## 2. Python FastAPI Microservice Test Suite (pytest & HTTPX)
-
-Command: `cd services/analytics && python -m pytest tests/ -v`
-
-### Test Files Executed:
-1. `tests/test_grading.py`
-   - `✓ test_single_choice_and_true_false_grading` (Passed)
-   - `✓ test_multiple_choice_partial_credit` (Passed)
-   - `✓ test_rubric_aggregation` (Passed)
-
-2. `tests/test_analytics.py`
-   - `✓ test_cohort_analytics_and_at_risk_detection` (Passed)
-
-3. `tests/test_benchmarks.py`
-   - `✓ test_csv_import_validation` (Passed)
-   - `✓ test_grading_performance_benchmark` (Passed)
-
-**Result**: 6 Tests Passed in 0.15s.
-
----
-
-## 3. Frontend Next.js Production Build Verification
-
-Command: `cd apps/web && npm run build`
-
-- Compiled 10 App Router routes cleanly.
-- 0 TypeScript compilation errors.
-- Output includes optimized static HTML and dynamic server routes.
+See [known limitations](KNOWN_LIMITATIONS.md). Passing CI does not prove complete assessment compliance.

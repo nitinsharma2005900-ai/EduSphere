@@ -28,7 +28,12 @@ export default function Certificates() {
       const href = URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = href;
-      link.download = `${String(cert.learnerName || 'Learner').replace(/[^\\p{L}\\p{N}]+/gu, '_')}_${cert.certificateNumber.replace(/[^A-Za-z0-9_-]/g, '_')}.pdf`;
+      const disposition = response.headers.get('content-disposition') || '';
+      const encodedName = disposition.match(/filename\*=UTF-8''([^;]+)/i);
+      const plainName = disposition.match(/filename="([^"]+)"/i);
+      let filename = plainName?.[1] || `${cert.certificateNumber.replace(/[^A-Za-z0-9_-]/g, '_')}.pdf`;
+      if (encodedName) { try { filename = decodeURIComponent(encodedName[1]); } catch {} }
+      link.download = filename.replace(/[\\/]/g, '_');
       link.click();
       setTimeout(() => URL.revokeObjectURL(href), 1000);
     } catch (error) { setMessage(error instanceof Error ? error.message : 'PDF download failed.'); }
