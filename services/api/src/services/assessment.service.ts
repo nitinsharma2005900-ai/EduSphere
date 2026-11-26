@@ -1,11 +1,27 @@
 import { MemoryDataStore } from '../database/store';
-import { NotFoundError, ForbiddenError, ConflictError } from '../utils/errors';
+import { NotFoundError, ForbiddenError, ConflictError, ValidationError } from '../utils/errors';
 import { config } from '../config';
 import { UserRole } from '@edusphere/shared';
 import { v4 as uuidv4 } from 'uuid';
 
 export class AssessmentService {
   private db = MemoryDataStore.getInstance();
+  private submitting = new Set<string>();
+
+  private checkEligibility(assessmentId: string, userId: string) {
+    const assessment = this.db.assessments.find(a => a.id === assessmentId);
+    if (!assessment) throw new NotFoundError('Assessment not found');
+    if (assessment.deadline && Date.parse(assessment.deadline) < Date.now()) throw new ForbiddenError('Assessment deadline has passed');
+    const enrollment = this.db.enrollments.find(e => e.courseId === assessment.courseId && e.userId === userId && e.status !== 'SUSPENDED');
+    if (!enrollment) throw new ForbiddenError('You must be enrolled in this course to take this assessment.');
+    if (assessment.isStrictSequential) {
+      const topic = this.db.topics.find(t => t.id === assessment.topicId);
+      const topicIds = this.db.topics.filter(t => t.courseId === assessment.courseId && (!topic || t.orderIndex <= topic.orderIndex)).map(t => t.id);
+      const incomplete = this.db.lessons.some(l => topicIds.includes(l.topicId) && l.isMandatory && !this.db.lessonProgress.some(p => p.enrollmentId === enrollment.id && p.lessonId === l.id && p.isCompleted));
+      if (incomplete) throw new ForbiddenError('Complete all preceding mandatory lessons before taking this assessment.');
+    }
+    return enrollment;
+  }
 
   public async getAssessment(assessmentId: string, userRole: UserRole) {
     const assessment = this.db.assessments.find(a => a.id === assessmentId);
@@ -34,6 +50,7 @@ export class AssessmentService {
   }
 
   public async startAttempt(assessmentId: string, userId: string) {
+    this.checkEligibility(assessmentId, userId);
     const assessment = this.db.assessments.find(a => a.id === assessmentId);
     if (!assessment) {
       throw new NotFoundError('Assessment not found');
@@ -44,6 +61,8 @@ export class AssessmentService {
       throw new ForbiddenError('You must be enrolled in this course to take this assessment.');
     }
 
+    const active = this.db.assessmentAttempts.find(att => att.assessmentId === assessmentId && att.userId === userId && att.status === 'IN_PROGRESS');
+    if (active) return active;
     // Enforce Attempt Limit
     const existingAttempts = this.db.assessmentAttempts.filter(
       att => att.assessmentId === assessmentId && att.userId === userId
@@ -80,7 +99,8 @@ export class AssessmentService {
   public async submitAttempt(
     assessmentId: string,
     userId: string,
-    answers: Record<string, any>
+    answers: Record<string, any>,
+    attemptId?: string
   ) {
     const assessment = this.db.assessments.find(a => a.id === assessmentId);
     if (!assessment) {
@@ -92,9 +112,27 @@ export class AssessmentService {
       throw new ForbiddenError('You are not enrolled in this course.');
     }
 
+    this.checkEligibility(assessmentId, userId);
+    if (attemptId) {
+      const saved = this.db.assessmentAttempts.find(a => a.id === attemptId && a.userId === userId && a.assessmentId === assessmentId);
+      if (!saved) throw new NotFoundError('Attempt not found');
+      if (saved.status === 'GRADED') return saved;
+    }
+    if (!answers || typeof answers !== 'object' || Array.isArray(answers)) throw new ValidationError('Answers must be an object');
+    for (const [id, value] of Object.entries(answers)) {
+      const question = assessment.questions.find(q => q.id === id);
+      if (!question || !(typeof value === 'string' || (Array.isArray(value) && value.every(v => typeof v === 'string')))) throw new ValidationError('Invalid question or answer format');
+      if (question.type !== 'MULTIPLE_CHOICE' && Array.isArray(value)) throw new ValidationError('Only one answer is allowed');
+      const selected = Array.isArray(value) ? value : [value];
+      if (selected.some(v => !question.options.some(o => o.id === v))) throw new ValidationError('Unknown answer option');
+    }
+    const key = `${assessmentId}:${userId}`;
+    if (this.submitting.has(key)) throw new ConflictError('This attempt is already being graded');
+    this.submitting.add(key);
+    try {
     // Find in-progress attempt or check attempt limits
     let attempt: any = this.db.assessmentAttempts.find(
-      att => att.assessmentId === assessmentId && att.userId === userId && att.status === 'IN_PROGRESS'
+      att => att.assessmentId === assessmentId && att.userId === userId && att.status === 'IN_PROGRESS' && (!attemptId || att.id === attemptId)
     );
 
     if (!attempt) {
@@ -108,10 +146,15 @@ export class AssessmentService {
       attempt = await this.startAttempt(assessmentId, userId);
     }
 
+    if (Date.now() - Date.parse(attempt.startedAt) > assessment.durationMinutes * 60000) {
+      attempt.status = 'EXPIRED';
+      throw new ForbiddenError('Assessment time limit exceeded');
+    }
     // Deterministic Evaluation via Python Microservice OR internal deterministic fallback
     let gradingResult: any = null;
     try {
       const response = await fetch(`${config.analyticsServiceUrl}/api/v1/grading/evaluate-assessment`, {
+        signal: AbortSignal.timeout(10000),
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -148,7 +191,7 @@ export class AssessmentService {
     attempt.status = 'GRADED';
     attempt.submittedAt = now;
     attempt.answers = answers;
-    attempt.score = gradingResult.total_score || gradingResult.totalScore;
+    attempt.score = gradingResult.total_score ?? gradingResult.totalScore ?? 0;
     attempt.percentage = gradingResult.percentage;
     attempt.isPassed = gradingResult.is_passed !== undefined ? gradingResult.is_passed : gradingResult.isPassed;
     attempt.feedback = gradingResult.breakdown;
@@ -166,6 +209,7 @@ export class AssessmentService {
     });
 
     return attempt;
+    } finally { this.submitting.delete(key); }
   }
 
   private localDeterministicGrade(assessment: any, answers: Record<string, any>) {
@@ -208,7 +252,8 @@ export class AssessmentService {
       };
     });
 
-    const percentage = maxScore > 0 ? Math.round((totalScore / maxScore) * 1000) / 10 : 0;
+    totalScore = Math.round(totalScore * 100) / 100;
+    const percentage = maxScore > 0 ? Math.round((totalScore / maxScore) * 10000) / 100 : 0;
     return {
       total_score: totalScore,
       max_score: maxScore,

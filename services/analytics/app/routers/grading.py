@@ -10,7 +10,7 @@ router = APIRouter(prefix="/grading", tags=["Grading Engine"])
 
 def verify_internal_auth(x_internal_key: str = Header(None)):
     # Internal service token verification
-    if x_internal_key and x_internal_key != settings.INTERNAL_SERVICE_KEY:
+    if not x_internal_key or x_internal_key != settings.INTERNAL_SERVICE_KEY:
         raise HTTPException(status_code=403, detail="Invalid internal service credentials")
     return True
 

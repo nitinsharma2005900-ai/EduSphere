@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
-import { apiRequest } from '@/lib/api';
+import { apiRequest, downloadFile } from '@/lib/api';
 import Link from 'next/link';
 import { 
   PlayCircle, CheckCircle2, Lock, FileText, Download,
@@ -173,6 +173,7 @@ export default function LessonPlayerPage() {
                         <a
                           key={res.id}
                           href={res.fileUrl}
+                          onClick={event => { event.preventDefault(); void downloadFile(res.fileUrl, token, 'lesson-notes.pdf').catch(error => alert(error.message)); }}
                           download
                           className="px-3 py-1.5 rounded-lg border border-slate-200 text-xs text-slate-700 hover:border-indigo-300 hover:text-indigo-600 transition-colors flex items-center gap-1.5"
                         >

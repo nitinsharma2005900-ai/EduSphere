@@ -11,6 +11,12 @@ export class EnrollmentService {
     if (!course) {
       throw new NotFoundError('Course not found');
     }
+    if (course.status !== 'PUBLISHED') throw new ForbiddenError('This course is not open for enrollment');
+    for (const prerequisiteId of course.prerequisites) {
+      if (!this.db.enrollments.some(e => e.userId === userId && e.courseId === prerequisiteId && e.status === EnrollmentStatus.COMPLETED)) {
+        throw new ForbiddenError('Complete the prerequisite courses before enrolling');
+      }
+    }
 
     // Check duplicate enrollment
     const existing = this.db.enrollments.find(e => e.userId === userId && e.courseId === courseId);
@@ -23,7 +29,7 @@ export class EnrollmentService {
 
     // Paid course validation
     if (course.isPaid && course.price > 0) {
-      if (!paymentToken) {
+      if (!paymentToken || !/^tok_sandbox_[a-z_]+$/.test(paymentToken)) {
         throw new ForbiddenError('Payment required to enroll in this paid course. Please initiate sandbox checkout.');
       }
     }

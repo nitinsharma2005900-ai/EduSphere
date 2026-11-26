@@ -8,7 +8,7 @@ import { UserRole } from '@edusphere/shared';
 export const analyticsRouter = Router();
 const analyticsCtrl = new AnalyticsController();
 analyticsRouter.get('/overview', (req, res, next) => analyticsCtrl.getPlatformOverview(req, res, next));
-analyticsRouter.get('/cohort/:courseId', authenticate, (req, res, next) => analyticsCtrl.getCourseCohortAnalytics(req, res, next));
+analyticsRouter.get('/cohort/:courseId', authenticate, authorize(UserRole.ADMIN, UserRole.INSTRUCTOR, UserRole.COURSE_AUTHOR), (req, res, next) => analyticsCtrl.getCourseCohortAnalytics(req, res, next));
 
 export const integrationRouter = Router();
 const integrationCtrl = new IntegrationController();

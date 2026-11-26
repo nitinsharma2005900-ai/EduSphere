@@ -297,7 +297,7 @@ export const RegisterSchema = z.object({
     .regex(/[^A-Za-z0-9]/, 'Password must contain at least one special character'),
   firstName: z.string().min(2, 'First name is required'),
   lastName: z.string().min(2, 'Last name is required'),
-  role: z.nativeEnum(UserRole).default(UserRole.LEARNER),
+  role: z.literal(UserRole.LEARNER).default(UserRole.LEARNER),
 });
 
 export const LoginSchema = z.object({

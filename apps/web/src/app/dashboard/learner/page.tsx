@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useAuth } from '@/context/AuthContext';
-import { apiRequest } from '@/lib/api';
+import { apiRequest, API_BASE_URL } from '@/lib/api';
 import { 
   PlayCircle, Award, CheckCircle2, BookOpen, Clock,
   ArrowRight, ShieldCheck, Bell, ChevronRight, Download
@@ -158,7 +158,7 @@ export default function LearnerDashboard() {
                       Public Verification Page <ChevronRight className="w-3 h-3" />
                     </Link>
                     <a
-                      href={`/storage/certificates/${cert.certificateNumber}.pdf`}
+                      href={`${API_BASE_URL}/certificates/verify/${cert.certificateNumber}/pdf`}
                       download
                       className="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-[11px] flex items-center gap-1"
                     >

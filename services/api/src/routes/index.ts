@@ -5,8 +5,12 @@ import enrollmentRoutes from './enrollment.routes';
 import assessmentRoutes from './assessment.routes';
 import certificateRoutes from './certificate.routes';
 import { analyticsRouter, integrationRouter, adminRouter } from './other.routes';
+import featureRoutes from './features.routes';
+import authorRoutes from './author.routes';
 
 const router = Router();
+router.use(featureRoutes);
+router.use('/author', authorRoutes);
 
 router.use('/auth', authRoutes);
 router.use('/courses', courseRoutes);

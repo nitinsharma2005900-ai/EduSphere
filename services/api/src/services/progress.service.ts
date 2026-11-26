@@ -12,7 +12,7 @@ export class ProgressService {
     }
 
     const enrollment = this.db.enrollments.find(e => e.courseId === courseId && e.userId === userId);
-    if (!enrollment) {
+    if (!enrollment || enrollment.status === EnrollmentStatus.SUSPENDED) {
       throw new ForbiddenError('You must be enrolled in this course to access the lesson player.');
     }
 
@@ -133,7 +133,7 @@ export class ProgressService {
     }
 
     const enrollment = this.db.enrollments.find(e => e.courseId === topic.courseId && e.userId === userId);
-    if (!enrollment) {
+    if (!enrollment || enrollment.status === EnrollmentStatus.SUSPENDED) {
       throw new ForbiddenError('You are not enrolled in this course.');
     }
 
@@ -148,8 +148,8 @@ export class ProgressService {
 
     const currentIdx = allLessons.findIndex(l => l.id === lessonId);
     if (currentIdx > 0 && !lesson.isPreview) {
-      const prevLesson = allLessons[currentIdx - 1];
-      if (prevLesson.isMandatory) {
+      const previousMandatoryLessons = allLessons.slice(0, currentIdx).filter(l => l.isMandatory);
+      for (const prevLesson of previousMandatoryLessons) {
         const prevProg = this.db.lessonProgress.find(lp => lp.enrollmentId === enrollment.id && lp.lessonId === prevLesson.id);
         if (!prevProg || !prevProg.isCompleted) {
           throw new ForbiddenError('Sequential learning restriction: You must complete the previous lesson before advancing or marking this lesson complete.');

@@ -1,5 +1,6 @@
 import hashlib
 import json
+import os
 from app.models.schemas import CertificateDataPrepRequest, CertificateDataPrepResponse
 
 class CertificateHelper:
@@ -12,9 +13,9 @@ class CertificateHelper:
     @staticmethod
     def prepare_certificate_data(
         request: CertificateDataPrepRequest,
-        base_url: str = "http://localhost:3000"
+        base_url: str = ""
     ) -> CertificateDataPrepResponse:
-        verification_url = f"{base_url}/verify/{request.certificate_number}"
+        verification_url = f"{base_url or os.getenv('APP_URL', 'http://localhost:3000')}/verify/{request.certificate_number}"
         
         # Deterministic payload for integrity hashing
         payload = {

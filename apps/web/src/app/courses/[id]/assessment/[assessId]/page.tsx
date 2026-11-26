@@ -15,6 +15,7 @@ export default function AssessmentPage() {
   const router = useRouter();
   const { user, token } = useAuth();
   const [assessment, setAssessment] = useState<any>(null);
+  const [attemptId, setAttemptId] = useState<string>('');
   const [answers, setAnswers] = useState<Record<string, any>>({});
   const [result, setResult] = useState<any>(null);
   const [submitting, setSubmitting] = useState(false);
@@ -28,7 +29,9 @@ export default function AssessmentPage() {
         setLoading(true);
         const data = await apiRequest(`/assessments/${params.assessId}`, {}, token);
         setAssessment(data);
-        setTimeLeft(data.durationMinutes * 60);
+        const attempt = await apiRequest(`/assessments/${params.assessId}/start`, { method: 'POST', body: '{}' }, token);
+        setAttemptId(attempt.id);
+        setTimeLeft(Math.max(0, Math.floor(data.durationMinutes * 60 - (Date.now() - Date.parse(attempt.startedAt)) / 1000)));
       } catch (err: any) {
         alert(err.message || 'Error loading assessment');
       } finally {
@@ -77,7 +80,7 @@ export default function AssessmentPage() {
     try {
       const graded = await apiRequest(`/assessments/${params.assessId}/submit`, {
         method: 'POST',
-        body: JSON.stringify({ answers }),
+        body: JSON.stringify({ answers, attemptId }),
       }, token);
       setResult(graded);
     } catch (err: any) {
@@ -234,7 +237,7 @@ export default function AssessmentPage() {
         <div className="flex justify-end pt-4">
           <button
             onClick={handleSubmit}
-            disabled={submitting}
+            disabled={submitting || !attemptId || timeLeft <= 0}
             className="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow-lg shadow-indigo-600/25 transition-all flex items-center gap-2"
           >
             {submitting ? 'Evaluating Submission...' : 'Submit Assessment for Deterministic Grading'}

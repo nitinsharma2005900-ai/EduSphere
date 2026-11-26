@@ -37,6 +37,7 @@ describe('Capstone Domain-Specific Challenge: Security Regression Tests', () => 
 
   it('SECURITY TEST 1: Learner must NOT be able to unlock restricted lessons by skipping prerequisites', async () => {
     const courseId = 'crs-sec-007';
+    db.enrollments.find(e => e.userId === 'usr-learner-001' && e.courseId === 'crs-fullstack-002')!.status = 'COMPLETED' as any;
     await request(app)
       .post(`/api/v1/enrollments/${courseId}/enroll`)
       .set('Authorization', `Bearer ${learnerToken}`)

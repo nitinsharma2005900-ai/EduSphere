@@ -1,5 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 import bcrypt from 'bcryptjs';
+import { config } from '../config';
 import {
   DbUser, DbCategory, DbCourse, DbTopic, DbLesson, DbEnrollment,
   DbLessonProgress, DbAssessment, DbAssessmentAttempt, DbAssignment,
@@ -11,6 +12,7 @@ export class MemoryDataStore {
   private static instance: MemoryDataStore;
 
   public users: DbUser[] = [];
+  public uploadedFiles: { id: string; userId: string; name: string; key: string; size: number; contentType: string }[] = [];
   public refreshTokens: { id: string; userId: string; token: string; expiresAt: string; isRevoked: boolean }[] = [];
   public categories: DbCategory[] = [];
   public courses: DbCourse[] = [];
@@ -41,7 +43,20 @@ export class MemoryDataStore {
     return MemoryDataStore.instance;
   }
 
+  // Preserve the existing domain services while persisting their complete state in PostgreSQL.
+  public snapshot(): Record<string, unknown[]> {
+    return Object.fromEntries(Object.entries(this).filter(([, value]) => Array.isArray(value)));
+  }
+
+  public restore(snapshot: Record<string, unknown[]>) {
+    for (const key of Object.keys(this.snapshot())) {
+      if (!Array.isArray(snapshot[key])) throw new Error(`Invalid stored collection: ${key}`);
+      (this as any)[key] = snapshot[key];
+    }
+  }
+
   public reset() {
+    this.uploadedFiles = [];
     this.users = [];
     this.refreshTokens = [];
     this.categories = [];
@@ -361,7 +376,7 @@ export class MemoryDataStore {
                 id: `res-${lessonId}-1`,
                 lessonId: lessonId,
                 title: 'Lesson Cheat Sheet & Architecture Diagram (PDF)',
-                fileUrl: '/storage/uploads/sample-cheatsheet.pdf',
+                fileUrl: `/api/v1/resources/${lessonId}`,
                 fileType: 'application/pdf',
                 fileSize: 1024 * 350,
                 isDownloadable: true,
@@ -564,8 +579,8 @@ export class MemoryDataStore {
       enrollmentId: enr1.id,
       issueDate: new Date(Date.now() - 1 * 86400000).toISOString(),
       completionDate: new Date(Date.now() - 1 * 86400000).toISOString(),
-      verificationUrl: `http://localhost:3000/verify/${certNum}`,
-      qrCodeData: `EDUSPHERE|CERT:${certNum}|VERIFY:http://localhost:3000/verify/${certNum}`,
+      verificationUrl: `${config.appUrl}/verify/${certNum}`,
+      qrCodeData: `EDUSPHERE|CERT:${certNum}|VERIFY:${config.appUrl}/verify/${certNum}`,
       issuerName: 'EduSphere Academic Board & Dean Eleanor Vance',
       isRevoked: false,
       metadata: {

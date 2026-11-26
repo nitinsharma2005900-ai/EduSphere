@@ -10,7 +10,7 @@ export class CourseController {
         category: req.query.category as string,
         level: req.query.level as string,
         search: req.query.search as string,
-        status: req.query.status as any,
+        status: undefined,
         page: req.query.page ? parseInt(req.query.page as string, 10) : 1,
         limit: req.query.limit ? parseInt(req.query.limit as string, 10) : 12,
       });
@@ -63,7 +63,7 @@ export class CourseController {
   public async updateStatus(req: Request, res: Response, next: NextFunction) {
     try {
       const { status } = req.body;
-      const updated = await courseService.updateCourseStatus(req.params.id, status, req.user!.role);
+      const updated = await courseService.updateCourseStatus(req.params.id, status, req.user!.role, req.user!.userId);
       res.status(200).json({
         success: true,
         data: updated,

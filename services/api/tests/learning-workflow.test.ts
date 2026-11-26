@@ -54,6 +54,7 @@ describe('Assessment 12: Learning Workflow Testing', () => {
   it('3. Lesson Progress & Sequential Lock: should enforce order of completion', async () => {
     // Attempt to complete lesson 2 while lesson 1 is not completed
     const courseId = 'crs-devops-005';
+    db.enrollments.find(e => e.userId === 'usr-learner-001' && e.courseId === 'crs-fullstack-002')!.status = 'COMPLETED' as any;
     await request(app)
       .post(`/api/v1/enrollments/${courseId}/enroll`)
       .set('Authorization', `Bearer ${learnerToken}`)

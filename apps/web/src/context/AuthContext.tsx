@@ -67,6 +67,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       setToken(data.tokens.accessToken);
       localStorage.setItem('edusphere_token', data.tokens.accessToken);
       localStorage.setItem('edusphere_user', JSON.stringify(data.user));
+      localStorage.setItem('edusphere_refresh', data.tokens.refreshToken);
     } finally {
       setIsLoading(false);
     }
@@ -78,6 +79,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const logout = () => {
+    const refreshToken = localStorage.getItem('edusphere_refresh');
+    if (refreshToken) void apiRequest('/auth/logout', { method: 'POST', body: JSON.stringify({ refreshToken }) }).catch(() => {});
+    localStorage.removeItem('edusphere_refresh');
     setUser(null);
     setToken(null);
     localStorage.removeItem('edusphere_token');

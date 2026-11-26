@@ -17,3 +17,5 @@ class Settings(BaseSettings):
         extra = "ignore"
 
 settings = Settings()
+if os.getenv("NODE_ENV") == "production" and (len(settings.INTERNAL_SERVICE_KEY) < 32 or settings.INTERNAL_SERVICE_KEY.startswith("edusphere_")):
+    raise RuntimeError("Production requires a new random INTERNAL_SERVICE_KEY")

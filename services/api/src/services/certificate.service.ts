@@ -2,6 +2,8 @@ import { MemoryDataStore } from '../database/store';
 import { NotFoundError, ForbiddenError, ConflictError } from '../utils/errors';
 import { UserRole } from '@edusphere/shared';
 import { v4 as uuidv4 } from 'uuid';
+import { config } from '../config';
+import { createHash } from 'crypto';
 
 export class CertificateService {
   private db = MemoryDataStore.getInstance();
@@ -26,7 +28,7 @@ export class CertificateService {
     }
 
     const enrollment = this.db.enrollments.find(e => e.courseId === courseId && e.userId === userId);
-    if (!enrollment) {
+    if (!enrollment || enrollment.status === 'SUSPENDED') {
       throw new ForbiddenError('You are not enrolled in this course.');
     }
 
@@ -35,6 +37,7 @@ export class CertificateService {
     if (existingCert) {
       return existingCert;
     }
+    if (this.db.certificates.some(c => c.enrollmentId === enrollment.id && c.isRevoked)) throw new ConflictError('This certificate was revoked. Contact the administrator.');
 
     // 1. Verify Mandatory Lesson Completion
     const courseTopics = this.db.topics.filter(t => t.courseId === courseId);
@@ -48,6 +51,7 @@ export class CertificateService {
     );
 
     const incompleteLessons = mandatoryLessons.filter(l => !completedLessonIds.has(l.id));
+    if (!mandatoryLessons.length) throw new ForbiddenError('Certificate Eligibility Requirement Not Met: Course has no mandatory curriculum');
     if (incompleteLessons.length > 0) {
       throw new ForbiddenError(
         `Certificate Eligibility Requirement Not Met: You have ${incompleteLessons.length} incomplete mandatory lessons. You must complete 100% of course lessons before claiming a certificate.`
@@ -67,11 +71,16 @@ export class CertificateService {
       }
     }
 
+    for (const assignment of this.db.assignments.filter(a => a.courseId === courseId)) {
+      if (!this.db.assignmentSubmissions.some(s => s.assignmentId === assignment.id && s.userId === userId && s.status === 'GRADED' && (s.score ?? 0) >= assignment.maxScore * 0.7)) {
+        throw new ForbiddenError(`Certificate Eligibility Requirement Not Met: A passing grade is required for '${assignment.title}'.`);
+      }
+    }
     // Generate unique certificate ID
     const randomSuffix = Math.random().toString(36).substring(2, 6).toUpperCase();
     const certNumber = `EDU-2026-${course.title.substring(0, 3).toUpperCase()}-${randomSuffix}`;
     const now = new Date().toISOString();
-    const verificationUrl = `http://localhost:3000/verify/${certNumber}`;
+    const verificationUrl = `${config.appUrl}/verify/${certNumber}`;
     const qrCodeData = `EDUSPHERE|CERT:${certNumber}|VERIFY:${verificationUrl}`;
 
     const newCertificate = {
@@ -90,6 +99,7 @@ export class CertificateService {
         learnerName: `${user.firstName} ${user.lastName}`,
         courseTitle: course.title,
         verificationUrl,
+        integrityHash: createHash('sha256').update(`${certNumber}|${user.id}|${course.id}|${now}`).digest('hex'),
       },
       createdAt: now,
     };

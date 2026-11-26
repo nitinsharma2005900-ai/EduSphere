@@ -70,6 +70,7 @@ export class AnalyticsService {
     // Call FastAPI Learning Analytics Microservice
     try {
       const response = await fetch(`${config.analyticsServiceUrl}/api/v1/analytics/cohort-performance`, {
+        signal: AbortSignal.timeout(10000),
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

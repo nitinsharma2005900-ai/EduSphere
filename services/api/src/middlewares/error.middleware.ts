@@ -17,7 +17,7 @@ export const errorHandler = (
       error: {
         code: 'VALIDATION_ERROR',
         message: 'Request payload validation failed',
-        details: err.errors.map(e => ({
+        details: err.issues.map(e => ({
           path: e.path.join('.'),
           message: e.message,
         })),

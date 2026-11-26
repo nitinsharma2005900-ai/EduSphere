@@ -1,6 +1,7 @@
 import jwt from 'jsonwebtoken';
 import { config } from '../config';
 import { UserRole } from '@edusphere/shared';
+import { randomUUID } from 'crypto';
 
 export interface TokenPayload {
   userId: string;
@@ -15,6 +16,7 @@ export const generateTokens = (payload: TokenPayload) => {
 
   const refreshToken = jwt.sign(payload, config.jwt.refreshSecret, {
     expiresIn: '7d',
+    jwtid: randomUUID(),
   });
 
   return {

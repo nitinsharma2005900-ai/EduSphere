@@ -30,7 +30,7 @@ export class AuthService {
       passwordHash,
       firstName: data.firstName,
       lastName: data.lastName,
-      role: data.role || UserRole.LEARNER,
+      role: UserRole.LEARNER,
       avatarUrl: `https://api.dicebear.com/7.x/avataaars/svg?seed=${data.email}`,
       isActive: true,
       createdAt: now,

@@ -2,6 +2,17 @@ import { MemoryDataStore } from '../database/store';
 import { NotFoundError, ForbiddenError, ValidationError } from '../utils/errors';
 import { CourseStatus, CourseLevel, UserRole } from '@edusphere/shared';
 import { v4 as uuidv4 } from 'uuid';
+import { z } from 'zod';
+import { requireCourseAccess } from './access';
+
+const courseInput = z.object({
+  title: z.string().trim().min(3).max(200), description: z.string().trim().min(3).max(20000),
+  subtitle: z.string().max(300).optional(), thumbnailUrl: z.string().url().optional(),
+  categoryId: z.string().optional(), level: z.nativeEnum(CourseLevel).optional(),
+  price: z.number().min(0).max(100000).optional(), isPaid: z.boolean().optional(),
+  durationMinutes: z.number().int().positive().optional(), learningObjectives: z.array(z.string()).max(50).optional(),
+  prerequisites: z.array(z.string()).max(50).optional(), instructorId: z.string().optional(),
+}).strict();
 
 export class CourseService {
   private db = MemoryDataStore.getInstance();
@@ -68,7 +79,7 @@ export class CourseService {
 
   public async getCourseById(id: string) {
     const course = this.db.courses.find(c => c.id === id || c.slug === id);
-    if (!course) {
+    if (!course || course.status !== CourseStatus.PUBLISHED) {
       throw new NotFoundError('Course not found');
     }
 
@@ -135,6 +146,7 @@ export class CourseService {
   }
 
   public async createCourse(data: any, userId: string, userRole: UserRole) {
+    data = courseInput.parse(data);
     if (userRole !== UserRole.COURSE_AUTHOR && userRole !== UserRole.ADMIN) {
       throw new ForbiddenError('Only course authors or administrators can create courses');
     }
@@ -170,6 +182,7 @@ export class CourseService {
   }
 
   public async updateCourse(courseId: string, data: any, userId: string, userRole: UserRole) {
+    data = courseInput.partial().parse(data);
     const course = this.db.courses.find(c => c.id === courseId);
     if (!course) {
       throw new NotFoundError('Course not found');
@@ -181,19 +194,22 @@ export class CourseService {
 
     Object.assign(course, {
       ...data,
+      version: course.version + 1,
       updatedAt: new Date().toISOString(),
     });
 
     return course;
   }
 
-  public async updateCourseStatus(courseId: string, status: CourseStatus, userRole: UserRole) {
+  public async updateCourseStatus(courseId: string, status: CourseStatus, userRole: UserRole, userId: string) {
+    z.nativeEnum(CourseStatus).parse(status);
+    requireCourseAccess(courseId, userId, true);
     const course = this.db.courses.find(c => c.id === courseId);
     if (!course) {
       throw new NotFoundError('Course not found');
     }
 
-    if (userRole !== UserRole.ADMIN && userRole !== UserRole.INSTRUCTOR) {
+    if (![UserRole.ADMIN, UserRole.INSTRUCTOR, UserRole.COURSE_AUTHOR].includes(userRole)) {
       throw new ForbiddenError('Only administrators or instructors can publish or archive courses');
     }
 

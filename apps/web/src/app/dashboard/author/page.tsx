@@ -20,7 +20,7 @@ export default function CourseAuthorDashboard() {
     async function loadCourses() {
       if (!token) return;
       try {
-        const data = await apiRequest('/courses', {}, token);
+        const data = await apiRequest('/author/courses', {}, token);
         setCourses(data);
       } catch (err) {
         console.error(err);
@@ -87,10 +87,10 @@ export default function CourseAuthorDashboard() {
             <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
               <span className="text-xs text-slate-400">{course.level}</span>
               <Link
-                href={`/courses/${course.id}`}
+                href={`/dashboard/author/${course.id}`}
                 className="text-xs font-bold text-indigo-600 hover:text-indigo-700 flex items-center gap-1"
               >
-                Inspect Curriculum <ArrowRight className="w-3.5 h-3.5" />
+                Edit Curriculum <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
           </div>

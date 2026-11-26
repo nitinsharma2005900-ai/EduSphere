@@ -2,6 +2,7 @@ import { Request, Response, NextFunction } from 'express';
 import { verifyAccessToken, TokenPayload } from '../utils/jwt';
 import { UnauthorizedError, ForbiddenError } from '../utils/errors';
 import { UserRole } from '@edusphere/shared';
+import { MemoryDataStore } from '../database/store';
 
 declare global {
   namespace Express {
@@ -21,6 +22,8 @@ export const authenticate = (req: Request, res: Response, next: NextFunction) =>
 
     const token = authHeader.split(' ')[1];
     const decoded = verifyAccessToken(token);
+    const user = MemoryDataStore.getInstance().users.find(user => user.id === decoded.userId && user.isActive);
+    if (!user || user.role !== decoded.role) throw new UnauthorizedError('User is inactive or permissions have changed');
     req.user = decoded;
     next();
   } catch (err: any) {

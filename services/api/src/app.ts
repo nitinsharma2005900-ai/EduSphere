@@ -8,16 +8,23 @@ import apiRoutes from './routes';
 import { errorHandler } from './middlewares/error.middleware';
 import { swaggerSpec } from './docs/swagger';
 import { config } from './config';
+import { persistentRequest, pool } from './database/persistence';
+import rateLimit from 'express-rate-limit';
+import Redis from 'ioredis';
+
+const healthRedis = process.env.REDIS_URL ? new Redis(process.env.REDIS_URL, { family: 0, lazyConnect: true, maxRetriesPerRequest: 1 }) : null;
+healthRedis?.on('error', error => console.error('Redis health check:', error.message));
 
 export const createApp = () => {
   const app = express();
+  app.set('trust proxy', 1);
 
   // Security headers & CORS
   app.use(helmet({
     crossOriginResourcePolicy: false,
   }));
   app.use(cors({
-    origin: '*',
+    origin: config.corsOrigin.split(',').map(origin => origin.trim()),
     credentials: true,
   }));
 
@@ -46,13 +53,16 @@ export const createApp = () => {
     });
   });
 
-  app.get('/ready', (req: Request, res: Response) => {
-    res.status(200).json({
-      ready: true,
-      database: 'CONNECTED',
-      analyticsService: 'READY',
-      storage: 'READY',
-    });
+  app.get('/ready', async (req: Request, res: Response) => {
+    try {
+      if (pool) await pool.query('SELECT 1 FROM lms_state WHERE id = 1');
+      const response = await fetch(`${config.analyticsServiceUrl}/health`, { signal: AbortSignal.timeout(5000) });
+      if (!response.ok) throw new Error('Analytics unavailable');
+      if (healthRedis && !await healthRedis.get('edusphere:worker:heartbeat')) throw new Error('Worker heartbeat missing');
+      res.json({ ready: true, database: pool ? 'CONNECTED' : 'DEVELOPMENT_MEMORY', analyticsService: 'READY', worker: healthRedis ? 'READY' : 'NOT_CONFIGURED' });
+    } catch {
+      res.status(503).json({ ready: false });
+    }
   });
 
   // Swagger UI Interactive Documentation
@@ -65,7 +75,11 @@ export const createApp = () => {
   });
 
   // Versioned API Routes
-  app.use('/api/v1', apiRoutes);
+  if (config.env !== 'test') {
+    app.use('/api/v1/auth', rateLimit({ windowMs: 15 * 60 * 1000, limit: 100, standardHeaders: 'draft-7', legacyHeaders: false }));
+    app.use('/api/v1', rateLimit({ windowMs: 60 * 1000, limit: 600, standardHeaders: 'draft-7', legacyHeaders: false }));
+  }
+  app.use('/api/v1', persistentRequest, apiRoutes);
 
   // Global Error Handler
   app.use(errorHandler);

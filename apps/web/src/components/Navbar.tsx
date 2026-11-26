@@ -77,6 +77,9 @@ export const Navbar: React.FC = () => {
           <Link href="/courses" className="hover:text-indigo-600 transition-colors">
             Course Catalog
           </Link>
+          <Link href="/dashboard/assignments" className="hover:text-indigo-600 transition-colors">Assignments</Link>
+          <Link href="/dashboard/certificates" className="hover:text-indigo-600 transition-colors">Certificates</Link>
+          <Link href="/dashboard/notifications" className="hover:text-indigo-600 transition-colors">Notifications</Link>
           <Link href={getDashboardLink()} className="hover:text-indigo-600 transition-colors flex items-center gap-1.5">
             <LayoutDashboard className="w-4 h-4 text-indigo-600" />
             Dashboard

@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import { AnalyticsService } from '../services/analytics.service';
+import { requireCourseAccess } from '../services/access';
 
 const analyticsService = new AnalyticsService();
 
@@ -18,6 +19,7 @@ export class AnalyticsController {
 
   public async getCourseCohortAnalytics(req: Request, res: Response, next: NextFunction) {
     try {
+      requireCourseAccess(req.params.courseId, req.user!.userId, true);
       const analytics = await analyticsService.getCourseCohortAnalytics(req.params.courseId);
       if (!analytics) {
         return res.status(404).json({ success: false, message: 'Course not found' });

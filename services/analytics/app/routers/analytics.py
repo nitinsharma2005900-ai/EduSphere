@@ -6,7 +6,7 @@ from app.config import settings
 router = APIRouter(prefix="/analytics", tags=["Learning Analytics"])
 
 def verify_internal_auth(x_internal_key: str = Header(None)):
-    if x_internal_key and x_internal_key != settings.INTERNAL_SERVICE_KEY:
+    if not x_internal_key or x_internal_key != settings.INTERNAL_SERVICE_KEY:
         raise HTTPException(status_code=403, detail="Invalid internal service credentials")
     return True
 

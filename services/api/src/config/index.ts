@@ -1,11 +1,23 @@
 import dotenv from 'dotenv';
 import path from 'path';
 
-dotenv.config({ path: path.resolve(__dirname, '../../../.env') });
+dotenv.config({ path: path.resolve(__dirname, '../../../../.env') });
+
+if (process.env.NODE_ENV === 'production') {
+  for (const key of ['DATABASE_URL', 'JWT_ACCESS_SECRET', 'JWT_REFRESH_SECRET', 'INTERNAL_SERVICE_KEY', 'APP_URL', 'CORS_ORIGIN', 'ANALYTICS_SERVICE_URL']) {
+    if (!process.env[key]) throw new Error(`Production requires ${key}`);
+  }
+  for (const key of ['JWT_ACCESS_SECRET', 'JWT_REFRESH_SECRET', 'INTERNAL_SERVICE_KEY']) {
+    if (process.env[key]!.length < 32 || process.env[key]!.startsWith('edusphere_')) {
+      throw new Error(`${key} must be a new random secret of at least 32 characters`);
+    }
+  }
+}
 
 export const config = {
   env: process.env.NODE_ENV || 'development',
   port: parseInt(process.env.PORT || '4000', 10),
+  appUrl: process.env.APP_URL || 'http://localhost:3000',
   jwt: {
     accessSecret: process.env.JWT_ACCESS_SECRET || 'edusphere_jwt_super_secure_access_secret_key_2026_x9281!',
     refreshSecret: process.env.JWT_REFRESH_SECRET || 'edusphere_jwt_super_secure_refresh_secret_key_2026_r4719@',

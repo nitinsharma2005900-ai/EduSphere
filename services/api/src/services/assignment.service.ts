@@ -1,5 +1,7 @@
 import { MemoryDataStore } from '../database/store';
-import { NotFoundError, ForbiddenError } from '../utils/errors';
+import { NotFoundError, ForbiddenError, ValidationError } from '../utils/errors';
+import { requireCourseAccess } from './access';
+import { z } from 'zod';
 import { UserRole, SubmissionStatus } from '@edusphere/shared';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -11,6 +13,7 @@ export class AssignmentService {
     if (!assignment) {
       throw new NotFoundError('Assignment not found');
     }
+    requireCourseAccess(assignment.courseId, userId);
 
     const submission = this.db.assignmentSubmissions.find(
       s => s.assignmentId === assignmentId && s.userId === userId
@@ -36,6 +39,17 @@ export class AssignmentService {
     if (!enrollment) {
       throw new ForbiddenError('You must be enrolled in this course to submit assignments.');
     }
+    if (enrollment.status === 'SUSPENDED') throw new ForbiddenError('Enrollment is suspended');
+    if (assignment.deadline && Date.parse(assignment.deadline) < Date.now()) throw new ForbiddenError('Assignment deadline has passed');
+    data = z.object({
+      submissionText: z.string().trim().max(20000).optional(),
+      fileUrl: z.string().startsWith('/api/v1/files/').optional(),
+      fileName: z.string().max(200).optional(),
+      fileSize: z.number().nonnegative().max(assignment.maxFileSizeMb * 1024 * 1024).optional(),
+    }).parse(data);
+    if (!data.submissionText && !data.fileUrl) throw new ValidationError('Submit text or a file');
+    if (data.fileName && !assignment.allowedFileTypes.includes(data.fileName.split('.').pop()!.toLowerCase())) throw new ValidationError('Unsupported file type');
+    if (data.fileUrl && !this.db.uploadedFiles.some(f => `/api/v1/files/${f.id}` === data.fileUrl && f.userId === userId)) throw new ForbiddenError('Use a file uploaded by your own account');
 
     let submission = this.db.assignmentSubmissions.find(
       s => s.assignmentId === assignmentId && s.userId === userId
@@ -65,6 +79,11 @@ export class AssignmentService {
       submission.fileSize = data.fileSize;
       submission.status = SubmissionStatus.SUBMITTED;
       submission.submittedAt = now;
+      submission.score = undefined;
+      submission.rubricScores = undefined;
+      submission.feedback = undefined;
+      submission.gradedAt = undefined;
+      submission.gradedById = undefined;
     }
 
     return submission;
@@ -93,7 +112,7 @@ export class AssignmentService {
     data: { score: number; feedback: string; rubricScores: Record<string, number> }
   ) {
     // Capstone security: Learners cannot grade submissions or alter scores!
-    if (graderRole === UserRole.LEARNER) {
+    if (![UserRole.ADMIN, UserRole.INSTRUCTOR, UserRole.ASSESSOR].includes(graderRole)) {
       throw new ForbiddenError('Learners cannot grade submissions or alter scores.');
     }
 
@@ -101,6 +120,13 @@ export class AssignmentService {
     if (!submission) {
       throw new NotFoundError('Submission not found');
     }
+    const assignment = this.db.assignments.find(a => a.id === submission.assignmentId)!;
+    if (graderRole === UserRole.INSTRUCTOR) requireCourseAccess(assignment.courseId, graderId, true);
+    data = z.object({ score: z.number().min(0).max(assignment.maxScore), feedback: z.string().trim().min(1).max(10000), rubricScores: z.record(z.string(), z.number().nonnegative()) }).parse(data);
+    const criteria = assignment.rubricCriteria;
+    if (Object.keys(data.rubricScores).length !== criteria.length || criteria.some(c => data.rubricScores[c.id] === undefined || data.rubricScores[c.id] > c.maxPoints)) throw new ValidationError('Provide a valid score for every rubric criterion');
+    const total = Object.values(data.rubricScores).reduce((sum, score) => sum + score, 0);
+    if (Math.abs(total - data.score) > 0.01) throw new ValidationError('Total score must equal the sum of rubric scores');
 
     submission.score = data.score;
     submission.feedback = data.feedback;

@@ -4,6 +4,8 @@ import { EnrollmentStatus } from '@edusphere/shared';
 import { v4 as uuidv4 } from 'uuid';
 import fs from 'fs';
 import path from 'path';
+import { config } from '../config';
+import { createHmac, timingSafeEqual } from 'crypto';
 
 export class IntegrationService {
   private db = MemoryDataStore.getInstance();
@@ -57,7 +59,8 @@ export class IntegrationService {
     }
 
     // 2. Validate signature (sandbox format verification)
-    if (!payload.signature || !payload.signature.startsWith('sig_test_')) {
+    const expected = createHmac('sha256', config.payment.webhookSecret).update(`${payload.eventId}.${payload.eventType}.${payload.orderId}`).digest('hex');
+    if (typeof payload.signature !== 'string' || payload.signature.length !== expected.length || !timingSafeEqual(Buffer.from(payload.signature), Buffer.from(expected))) {
       throw new ValidationError('Invalid webhook signature verification failed');
     }
 
@@ -141,8 +144,8 @@ export class IntegrationService {
       `DTSTART:${formatDate(now)}`,
       `DTEND:${formatDate(deadline)}`,
       `SUMMARY:EduSphere: ${course.title} Milestone Deadline`,
-      `DESCRIPTION:Study milestone and assessment submission deadline for ${course.title}. Access curriculum at http://localhost:3000/courses/${course.id}/learn`,
-      `URL:http://localhost:3000/courses/${course.id}/learn`,
+      `DESCRIPTION:Study milestone and assessment submission deadline for ${course.title}. Access curriculum at ${config.appUrl}/courses/${course.id}/learn`,
+      `URL:${config.appUrl}/courses/${course.id}/learn`,
       'STATUS:CONFIRMED',
       'END:VEVENT',
       'END:VCALENDAR',
