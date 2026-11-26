@@ -1,8 +1,17 @@
 # EduSphere: Enterprise Learning Management, Course Authoring & Assessment Platform
 
-EduSphere is a production-grade, secure, multi-service Learning Management System built for enterprise course delivery, sequential curriculum progression, deterministic assessment evaluation, and verifiable digital credentialing.
+EduSphere is a multi-service enterprise-style demo Learning Management System built for enterprise course delivery, sequential curriculum progression, deterministic assessment evaluation, and verifiable digital credentialing.
 
 ---
+
+## Live demo on Railway
+
+- [EduSphere website](https://web-production-4feff415.up.railway.app)
+- [API readiness](https://api-production-7499d486.up.railway.app/ready)
+- [API docs](https://web-production-4feff415.up.railway.app/api/docs)
+- [Analytics health](https://analytics-production-44a30124.up.railway.app/health)
+
+Synthetic demo data only. Never enter real student records or payment details. Hosting availability depends on Railway credits.
 
 ## 🚀 Quick Start (Localhost)
 
@@ -14,7 +23,7 @@ EduSphere is a production-grade, secure, multi-service Learning Management Syste
 ### 2. Installation & Build
 ```bash
 # Clone the repository
-git clone <repo-url>
+git clone https://github.com/nitinsharma2005900-ai/EduSphere.git
 cd EduSphere
 
 # Install dependencies
@@ -64,10 +73,10 @@ All demo accounts share the password: **`EduSphere2026!`**
 
 ## 🧪 Automated Testing
 ```bash
-# Run Node.js & Security Test Suites (15 passing tests)
+# Run Node.js & Security Test Suites (30 passing tests)
 npm run test:api
 
-# Run Python Grading & Analytics Test Suite (6 passing tests)
+# Run Python Grading & Analytics Test Suite (10 passing tests)
 npm run test:analytics
 ```
 
@@ -83,11 +92,11 @@ docker compose up -d --build
 
 ## ☁️ Render Cloud Deployment
 EduSphere is pre-configured with a root `render.yaml` Blueprint for one-click deployment to Render.
-Detailed instructions, environment variable keys, and free-tier optimization tips are provided in [docs/DEPLOYMENT_GUIDE.md](file:///c:/Users/amits/Documents/Edu%20Sphere/docs/DEPLOYMENT_GUIDE.md).
+Detailed instructions, environment variable keys, and free-tier optimization tips are provided in [docs/DEPLOYMENT_GUIDE.md](docs/DEPLOYMENT_GUIDE.md).
 
 ---
 
-## 📋 Assessment Compliance Summary (All 15 Complete)
+## 📋 Implementation map (not an independent compliance score)
 
 | Assessment | Title | Status | Primary Verification Artifact |
 | :--- | :--- | :---: | :--- |
@@ -104,5 +113,5 @@ Detailed instructions, environment variable keys, and free-tier optimization tip
 | **11** | Background Jobs & Event Notifications | ✅ Complete | In-app notification center, resilient job queue architecture |
 | **12** | EdTech System Integrations | ✅ Complete | S3/MinIO, ICS milestone calendar, Stripe sandbox checkout |
 | **13** | Enterprise Security & Access Hardening | ✅ Complete | OWASP top 10, SQL injection prevention, rate limiting, helmet |
-| **14** | Automated Quality Assurance & Testing | ✅ Complete | 21 passing automated tests (15 Jest/Supertest + 6 Pytest) |
+| **14** | Automated Quality Assurance & Testing | ✅ Complete | 43 passing automated tests in baseline CI (30 Jest + 3 PostgreSQL + 10 pytest) |
 | **15** | Production Readiness & Operations | ✅ Complete | Render Blueprint, Docker Compose, incident RCAs, health endpoints |

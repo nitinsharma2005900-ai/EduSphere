@@ -36,7 +36,7 @@ export const Navbar: React.FC = () => {
         </div>
         <div className="flex items-center gap-1.5 shrink-0 ml-4">
           {(Object.keys(DEMO_USERS) as Array<keyof typeof DEMO_USERS>).map(r => {
-            const isCurrent = user?.role === r;
+            const isCurrent = user?.email === DEMO_USERS[r].email;
             return (
               <button
                 key={r}
@@ -84,7 +84,7 @@ export const Navbar: React.FC = () => {
             <LayoutDashboard className="w-4 h-4 text-indigo-600" />
             Dashboard
           </Link>
-          <Link href="/verify/EDU-2026-PYT-7892" className="hover:text-indigo-600 transition-colors flex items-center gap-1">
+          <Link href="/verify" className="hover:text-indigo-600 transition-colors flex items-center gap-1">
             <ShieldCheck className="w-4 h-4 text-emerald-600" />
             Verify Certificate
           </Link>
@@ -101,6 +101,7 @@ export const Navbar: React.FC = () => {
 
         {/* User Identity Menu */}
         <div className="flex items-center gap-3">
+          <Link href="/account" className="text-xs font-semibold text-indigo-600 whitespace-nowrap">Sign in / Register</Link>
           {user ? (
             <div className="relative">
               <button

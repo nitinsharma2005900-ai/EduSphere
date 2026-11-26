@@ -18,6 +18,7 @@ interface AuthContextType {
   token: string | null;
   isLoading: boolean;
   login: (email: string, pass: string) => Promise<void>;
+  register: (input: { firstName: string; lastName: string; email: string; password: string }) => Promise<void>;
   loginDemo: (role: 'LEARNER' | 'INSTRUCTOR' | 'COURSE_AUTHOR' | 'ASSESSOR' | 'ADMIN') => Promise<void>;
   logout: () => void;
 }
@@ -49,7 +50,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         localStorage.removeItem('edusphere_token');
         localStorage.removeItem('edusphere_user');
       }
-    } else {
+    } else if (window.location.pathname !== '/account') {
       // Default to demo learner on first visit for zero-friction exploration
       loginDemo('LEARNER').catch(() => {});
     }
@@ -73,6 +74,18 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   };
 
+  const register = async (input: { firstName: string; lastName: string; email: string; password: string }) => {
+    setIsLoading(true);
+    try {
+      const data = await apiRequest('/auth/register', { method: 'POST', body: JSON.stringify(input) });
+      localStorage.setItem('edusphere_token', data.tokens.accessToken);
+      localStorage.setItem('edusphere_user', JSON.stringify(data.user));
+      localStorage.setItem('edusphere_refresh', data.tokens.refreshToken);
+      setUser(data.user);
+      setToken(data.tokens.accessToken);
+    } finally { setIsLoading(false); }
+  };
+
   const loginDemo = async (role: 'LEARNER' | 'INSTRUCTOR' | 'COURSE_AUTHOR' | 'ASSESSOR' | 'ADMIN') => {
     const demo = DEMO_USERS[role];
     await login(demo.email, 'EduSphere2026!');
@@ -89,7 +102,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   return (
-    <AuthContext.Provider value={{ user, token, isLoading, login, loginDemo, logout }}>
+    <AuthContext.Provider value={{ user, token, isLoading, login, register, loginDemo, logout }}>
       {children}
     </AuthContext.Provider>
   );

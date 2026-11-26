@@ -1,5 +1,9 @@
 # EduSphere Deployment & Operations Guide
 
+## Current Railway demo
+
+The live web service is https://web-production-4feff415.up.railway.app. API readiness: https://api-production-7499d486.up.railway.app/ready. Analytics: https://analytics-production-44a30124.up.railway.app/health. Build from the repository root using the appropriate Dockerfile in `infrastructure/docker/`; retain existing PostgreSQL and Redis volumes, uploads bucket and Railway-managed secrets. The Render instructions below are an alternative, not the active deployment.
+
 ## 1. Local Development Setup (Standalone)
 EduSphere can be launched locally without requiring external container runtimes:
 

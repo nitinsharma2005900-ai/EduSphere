@@ -77,10 +77,11 @@ export class CertificateService {
       }
     }
     // Generate unique certificate ID
-    const randomSuffix = Math.random().toString(36).substring(2, 6).toUpperCase();
-    const certNumber = `EDU-2026-${course.title.substring(0, 3).toUpperCase()}-${randomSuffix}`;
+    const randomSuffix = uuidv4().replace(/-/g, '').toUpperCase();
+    const courseCode = course.title.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 3) || 'LMS';
+    const certNumber = `EDU-${new Date().getUTCFullYear()}-${courseCode}-${randomSuffix}`;
     const now = new Date().toISOString();
-    const verificationUrl = `${config.appUrl}/verify/${certNumber}`;
+    const verificationUrl = `${config.appUrl.replace(/\/+$/, '')}/verify/${encodeURIComponent(certNumber)}`;
     const qrCodeData = `EDUSPHERE|CERT:${certNumber}|VERIFY:${verificationUrl}`;
 
     const newCertificate = {

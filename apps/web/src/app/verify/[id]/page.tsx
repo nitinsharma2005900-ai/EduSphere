@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
-import { apiRequest } from '@/lib/api';
+import { apiRequest, API_BASE_URL } from '@/lib/api';
 import Link from 'next/link';
 import { 
   ShieldCheck, CheckCircle2, XCircle, Award, Calendar,
@@ -18,7 +18,7 @@ export default function CertificateVerificationPage() {
     async function verify() {
       try {
         setLoading(true);
-        const data = await apiRequest(`/certificates/verify/${params.id}`);
+        const data = await apiRequest(`/certificates/verify/${encodeURIComponent(String(params.id))}`);
         setCert(data);
       } catch (err: any) {
         setCert({ error: err.message || 'Invalid certificate' });
@@ -37,7 +37,7 @@ export default function CertificateVerificationPage() {
     );
   }
 
-  const isInvalid = !cert || cert.error || cert.isRevoked;
+  const isInvalid = !cert || cert.error || cert.isRevoked || !cert.isValid;
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-16 space-y-6">
@@ -103,12 +103,12 @@ export default function CertificateVerificationPage() {
 
             <div className="pt-4 border-t border-slate-200/60 flex items-center justify-between text-[11px] text-slate-500">
               <span>Authority: {cert.issuerName}</span>
-              <span className="font-mono text-emerald-600 font-semibold">SHA-256 Validated</span>
+              <span className="font-mono text-emerald-600 font-semibold">Record verified</span>
             </div>
           </div>
         )}
 
-        <div className="pt-2">
+        <div className="pt-2 flex flex-wrap gap-3 justify-center">{!isInvalid && <a className="text-indigo-600 text-sm" href={`${API_BASE_URL}/certificates/verify/${encodeURIComponent(cert.certificateNumber)}/pdf`}>Download PDF</a>}<Link className="text-indigo-600 text-sm" href="/verify">Verify another certificate</Link>
           <Link
             href="/courses"
             className="inline-block px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow-md shadow-indigo-600/20"
