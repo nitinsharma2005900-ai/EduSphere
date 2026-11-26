@@ -1,334 +1,774 @@
 %PDF-1.4
-%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
-<<
-/F1 2 0 R /F2 3 0 R /F3 4 0 R /F4 5 0 R
->>
+<< /Type /Catalog /Pages 2 0 R >>
 endobj
 2 0 obj
-<<
-/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
->>
+<< /Type /Pages /Count 14 /Kids [8 0 R 10 0 R 12 0 R 14 0 R 16 0 R 18 0 R 20 0 R 23 0 R 25 0 R 28 0 R 30 0 R 37 0 R 39 0 R 44 0 R] >>
 endobj
 3 0 obj
-<<
-/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
->>
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 4 0 obj
-<<
-/BaseFont /Symbol /Name /F3 /Subtype /Type1 /Type /Font
->>
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
 endobj
 5 0 obj
-<<
-/BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding /Name /F4 /Subtype /Type1 /Type /Font
->>
+<< /Type /Annot /Subtype /Link /Rect [42 450 553 463] /Border [0 0 0] /A << /S /URI /URI (https://web-production-4feff415.up.railway.app) >> >>
 endobj
 6 0 obj
-<<
-/Contents 23 0 R /MediaBox [ 0 0 612 792 ] /Parent 22 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
->>
+<< /Type /Annot /Subtype /Link /Rect [42 403 553 416] /Border [0 0 0] /A << /S /URI /URI (https://github.com/nitinsharma2005900-ai/EduSphere) >> >>
 endobj
 7 0 obj
-<<
-/Contents 24 0 R /MediaBox [ 0 0 612 792 ] /Parent 22 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
->>
+<< /Length 2850 >>
+stream
+0.06 0.09 0.17 rg 0 798 595 44 re f
+BT /F2 10 Tf 1 1 1 rg 1 0 0 1 42 816 Tm (EDUSPHERE  |  PROJECT 05) Tj ET
+BT /F1 9 Tf 0.85 0.88 0.98 rg 1 0 0 1 390 816 Tm (TECHNICAL REPORT) Tj ET
+0.31 0.27 0.90 rg 42 783 511 3 re f
+BT /F2 29 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 758 Tm (EDUSPHERE) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 706 Tm (Enterprise Learning Management, Course Authoring & Assessment) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 687 Tm (Platform) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 666 Tm (Technical implementation and assessment evidence report | Project 05) Tj ET
+0.95 0.96 0.98 rg 42 626 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 639 Tm (Prepared for) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 639 Tm (Orion LMS Technical Skills Evaluation Cohort) Tj ET
+0.95 0.96 0.98 rg 42 599 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 612 Tm (Domain) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 612 Tm (EdTech / Enterprise Learning Management System) Tj ET
+0.95 0.96 0.98 rg 42 572 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 585 Tm (Assessment level) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 585 Tm (Advanced / Very Difficult \(1,500 possible points\)) Tj ET
+0.95 0.96 0.98 rg 42 545 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 558 Tm (Scope) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 558 Tm (15 mandatory hands-on assessments) Tj ET
+0.95 0.96 0.98 rg 42 518 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 531 Tm (Revision) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 531 Tm (26 November 2026) Tj ET
+0.95 0.96 0.98 rg 42 491 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 504 Tm (Evidence) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 504 Tm (45 automated tests passed; 8 CI jobs passed on reviewed code) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 474 Tm (Live application) Tj ET
+BT /F1 9.2 Tf 0.22 0.20 0.72 rg 1 0 0 1 42 453 Tm (https://web-production-4feff415.up.railway.app) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 427 Tm (Source repository) Tj ET
+BT /F1 9.2 Tf 0.22 0.20 0.72 rg 1 0 0 1 42 406 Tm (https://github.com/nitinsharma2005900-ai/EduSphere) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 387 Tm (The existing Railway application is online. The revised certificate and account code has) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 372 Tm (passed CI; deployment of that revision is staged, not yet confirmed live. This report) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 357 Tm (distinguishes implemented features, test evidence and remaining assessment work.) Tj ET
+0.84 0.86 0.90 rg 42 47 511 1 re f
+BT /F1 8.5 Tf 0.40 0.45 0.55 rg 1 0 0 1 42 30 Tm (Orion LMS evaluation cohort  |  Revised 26 Nov 2026) Tj ET
+BT /F1 8.5 Tf 0.40 0.45 0.55 rg 1 0 0 1 480 30 Tm (Page 1 of 14) Tj ET
+endstream
 endobj
 8 0 obj
-<<
-/Contents 25 0 R /MediaBox [ 0 0 612 792 ] /Parent 22 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
->>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R /Annots [5 0 R 6 0 R] >>
 endobj
 9 0 obj
-<<
-/Contents 26 0 R /MediaBox [ 0 0 612 792 ] /Parent 22 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
->>
+<< /Length 4058 >>
+stream
+0.06 0.09 0.17 rg 0 798 595 44 re f
+BT /F2 10 Tf 1 1 1 rg 1 0 0 1 42 816 Tm (EDUSPHERE  |  PROJECT 05) Tj ET
+BT /F1 9 Tf 0.85 0.88 0.98 rg 1 0 0 1 390 816 Tm (TECHNICAL REPORT) Tj ET
+0.31 0.27 0.90 rg 42 783 511 3 re f
+BT /F2 22 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 758 Tm (Contents & executive summary) Tj ET
+0.95 0.96 0.98 rg 42 704 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 717 Tm (1) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 717 Tm (Executive summary and business objectives \(p. 2\)) Tj ET
+0.95 0.96 0.98 rg 42 677 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 690 Tm (2) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 690 Tm (Technology stack and service boundaries \(p. 3\)) Tj ET
+0.95 0.96 0.98 rg 42 650 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 663 Tm (3) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 663 Tm (Architecture and PostgreSQL data model \(p. 4\)) Tj ET
+0.95 0.96 0.98 rg 42 623 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 636 Tm (4) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 636 Tm (User roles and authorization \(p. 5\)) Tj ET
+0.95 0.96 0.98 rg 42 596 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 609 Tm (5) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 609 Tm (Core modules and learning workflow \(p. 6\)) Tj ET
+0.95 0.96 0.98 rg 42 569 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 582 Tm (6) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 582 Tm (Python grading and analytics \(p. 7\)) Tj ET
+0.95 0.96 0.98 rg 42 542 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 555 Tm (7) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 555 Tm (EdTech integrations and certificates \(p. 8\)) Tj ET
+0.95 0.96 0.98 rg 42 515 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 528 Tm (8) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 528 Tm (Capstone security verification \(p. 9\)) Tj ET
+0.95 0.96 0.98 rg 42 488 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 501 Tm (9) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 501 Tm (Automated testing and evidence \(p. 10\)) Tj ET
+0.95 0.96 0.98 rg 42 461 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 474 Tm (10) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 474 Tm (Incident investigation and RCA \(p. 11\)) Tj ET
+0.95 0.96 0.98 rg 42 434 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 447 Tm (11) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 447 Tm (Docker, CI/CD and Railway deployment \(p. 12\)) Tj ET
+0.95 0.96 0.98 rg 42 407 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 420 Tm (12) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 420 Tm (Traceability matrix: 15 assessments \(p. 13\)) Tj ET
+0.95 0.96 0.98 rg 42 380 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 393 Tm (13) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 393 Tm (Operational verification and conclusion \(p. 14\)) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 363 Tm (1. Executive summary) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 342 Tm (EduSphere provides a multi-role LMS for authoring courses, enrolling learners, delivering) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 327 Tm (sequential lessons, assessing knowledge, grading submissions and issuing verifiable) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 312 Tm (completion certificates. Next.js is the presentation layer, Express owns business rules and) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 297 Tm (FastAPI handles bounded grading and analytics. PostgreSQL persists application state; Redis) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 282 Tm (supports background notification jobs. The implementation is an educational demo using) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 267 Tm (synthetic records, not a certified production LMS.) Tj ET
+0.84 0.86 0.90 rg 42 47 511 1 re f
+BT /F1 8.5 Tf 0.40 0.45 0.55 rg 1 0 0 1 42 30 Tm (Orion LMS evaluation cohort  |  Revised 26 Nov 2026) Tj ET
+BT /F1 8.5 Tf 0.40 0.45 0.55 rg 1 0 0 1 480 30 Tm (Page 2 of 14) Tj ET
+endstream
 endobj
 10 0 obj
-<<
-/Contents 27 0 R /MediaBox [ 0 0 612 792 ] /Parent 22 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
->>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
 endobj
 11 0 obj
-<<
-/Contents 28 0 R /MediaBox [ 0 0 612 792 ] /Parent 22 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
->>
+<< /Length 3389 >>
+stream
+0.06 0.09 0.17 rg 0 798 595 44 re f
+BT /F2 10 Tf 1 1 1 rg 1 0 0 1 42 816 Tm (EDUSPHERE  |  PROJECT 05) Tj ET
+BT /F1 9 Tf 0.85 0.88 0.98 rg 1 0 0 1 390 816 Tm (TECHNICAL REPORT) Tj ET
+0.31 0.27 0.90 rg 42 783 511 3 re f
+BT /F2 22 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 758 Tm (2. Technology stack & service boundaries) Tj ET
+0.95 0.96 0.98 rg 42 704 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 717 Tm (Frontend) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 717 Tm (Next.js 15 App Router, React 18, TypeScript, Tailwind CSS) Tj ET
+0.95 0.96 0.98 rg 42 664 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 690 Tm (State and forms) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 690 Tm (React context and hooks; TanStack Query, React Hook Form and Zod) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 677 Tm (dependencies are present. Full adoption is not established.) Tj ET
+0.95 0.96 0.98 rg 42 624 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 650 Tm (Core API) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 650 Tm (Node.js, Express, TypeScript; modular routes, controllers,) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 637 Tm (services and middleware) Tj ET
+0.95 0.96 0.98 rg 42 584 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 610 Tm (Database) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 610 Tm (PostgreSQL with pg client; Prisma normalized schema is a) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 597 Tm (migration target) Tj ET
+0.95 0.96 0.98 rg 42 557 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 570 Tm (Analytics) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 570 Tm (Python, FastAPI, Pydantic, pytest, ReportLab PDF rendering) Tj ET
+0.95 0.96 0.98 rg 42 530 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 543 Tm (Cache and jobs) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 543 Tm (Redis and BullMQ notification processing) Tj ET
+0.95 0.96 0.98 rg 42 490 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 516 Tm (Integrations) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 516 Tm (S3-compatible storage, mock video and payments, email/calendar) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 503 Tm (sandbox) Tj ET
+0.95 0.96 0.98 rg 42 463 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 476 Tm (Engineering) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 476 Tm (GitHub Actions, Docker, Docker Compose, Railway) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 446 Tm (Service boundaries) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 425 Tm (The API is the business authority. Analytics receives authenticated requests using) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 410 Tm (X-Internal-Key and returns computed results rather than owning a second business database.) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 395 Tm (Request IDs are assigned by the API for correlation. Development can run with an in-memory) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 380 Tm (store; production requires PostgreSQL. The demo must not be used for real learner or) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 365 Tm (payment records.) Tj ET
+0.84 0.86 0.90 rg 42 47 511 1 re f
+BT /F1 8.5 Tf 0.40 0.45 0.55 rg 1 0 0 1 42 30 Tm (Orion LMS evaluation cohort  |  Revised 26 Nov 2026) Tj ET
+BT /F1 8.5 Tf 0.40 0.45 0.55 rg 1 0 0 1 480 30 Tm (Page 3 of 14) Tj ET
+endstream
 endobj
 12 0 obj
-<<
-/Contents 29 0 R /MediaBox [ 0 0 612 792 ] /Parent 22 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
->>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
 endobj
 13 0 obj
-<<
-/Contents 30 0 R /MediaBox [ 0 0 612 792 ] /Parent 22 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
->>
+<< /Length 3804 >>
+stream
+0.06 0.09 0.17 rg 0 798 595 44 re f
+BT /F2 10 Tf 1 1 1 rg 1 0 0 1 42 816 Tm (EDUSPHERE  |  PROJECT 05) Tj ET
+BT /F1 9 Tf 0.85 0.88 0.98 rg 1 0 0 1 390 816 Tm (TECHNICAL REPORT) Tj ET
+0.31 0.27 0.90 rg 42 783 511 3 re f
+BT /F2 22 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 758 Tm (3. Architecture & PostgreSQL data model) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 714 Tm (Runtime flow) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 693 Tm ([Browser / Next.js] -> [Express REST API] -> [PostgreSQL state]) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 670 Tm (Express also calls [FastAPI grading / analytics / PDF] and [Redis / BullMQ]. The) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 655 Tm (notification worker and file endpoints use S3-compatible object storage. Railway hosts the) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 640 Tm (web, API, analytics, PostgreSQL and Redis services plus an uploads bucket.) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 610 Tm (Current system of record) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 589 Tm (The deployed implementation persists the domain collections in lms_state \(one JSONB row\),) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 574 Tm (using a PostgreSQL transaction, SELECT FOR UPDATE and an in-process mutex.) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 559 Tm (notification_outbox stores notification payloads with a primary key and pending-job index.) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 544 Tm (The normalized Prisma schema is a design artifact, not the authoritative live schema.) Tj ET
+0.95 0.96 0.98 rg 42 504 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 517 Tm (User / RefreshToken) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 517 Tm (Identity, role, token rotation and revocation) Tj ET
+0.95 0.96 0.98 rg 42 477 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 490 Tm (Course / Topic / Lesson) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 490 Tm (Curriculum hierarchy, status, prerequisites and ordering) Tj ET
+0.95 0.96 0.98 rg 42 437 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 463 Tm (Enrollment /) Tj ET
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 450 Tm (LessonProgress) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 463 Tm (Learner membership and completion state) Tj ET
+0.95 0.96 0.98 rg 42 410 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 423 Tm (Assessment / Attempt) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 423 Tm (Questions, version number, time and attempt policy) Tj ET
+0.95 0.96 0.98 rg 42 383 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 396 Tm (Assignment / Submission) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 396 Tm (File references, rubric grades and feedback) Tj ET
+0.95 0.96 0.98 rg 42 343 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 369 Tm (Certificate / WebhookEvent) Tj ET
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 356 Tm (/ AuditLog) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 369 Tm (Credential identity, duplicate event tracking and audit history) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 326 Tm (Trade-off) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 305 Tm (Serializing mutations protects the current mutable model but limits throughput. Normalized) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 290 Tm (migrations, database-level foreign keys and per-entity uniqueness constraints remain future) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 275 Tm (work; do not claim that 25 relational tables are active in production.) Tj ET
+0.84 0.86 0.90 rg 42 47 511 1 re f
+BT /F1 8.5 Tf 0.40 0.45 0.55 rg 1 0 0 1 42 30 Tm (Orion LMS evaluation cohort  |  Revised 26 Nov 2026) Tj ET
+BT /F1 8.5 Tf 0.40 0.45 0.55 rg 1 0 0 1 480 30 Tm (Page 4 of 14) Tj ET
+endstream
 endobj
 14 0 obj
-<<
-/Contents 31 0 R /MediaBox [ 0 0 612 792 ] /Parent 22 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
->>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
 endobj
 15 0 obj
-<<
-/Contents 32 0 R /MediaBox [ 0 0 612 792 ] /Parent 22 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
->>
+<< /Length 3230 >>
+stream
+0.06 0.09 0.17 rg 0 798 595 44 re f
+BT /F2 10 Tf 1 1 1 rg 1 0 0 1 42 816 Tm (EDUSPHERE  |  PROJECT 05) Tj ET
+BT /F1 9 Tf 0.85 0.88 0.98 rg 1 0 0 1 390 816 Tm (TECHNICAL REPORT) Tj ET
+0.31 0.27 0.90 rg 42 783 511 3 re f
+BT /F2 22 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 758 Tm (4. User roles & server-side authorization) Tj ET
+0.95 0.96 0.98 rg 42 691 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 717 Tm (Learner) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 717 Tm (Browse/enroll, complete unlocked lessons, take quizzes, submit) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 704 Tm (assignments and claim earned certificates.) Tj ET
+0.95 0.96 0.98 rg 42 651 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 677 Tm (Instructor) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 677 Tm (Manage assigned courses and review learner progress, analytics) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 664 Tm (and permitted grades.) Tj ET
+0.95 0.96 0.98 rg 42 611 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 637 Tm (Course author) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 637 Tm (Create courses, topics, lessons, assessments and assignments) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 624 Tm (within authorized ownership.) Tj ET
+0.95 0.96 0.98 rg 42 571 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 597 Tm (Assessor) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 597 Tm (Review eligible submissions, apply rubric scores and provide) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 584 Tm (feedback.) Tj ET
+0.95 0.96 0.98 rg 42 531 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 557 Tm (Administrator) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 557 Tm (Platform governance, course approval and certificate revocation) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 544 Tm (with audit history.) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 514 Tm (Authentication) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 493 Tm (JWT access tokens, refresh rotation, logout/revocation and server-side role checks are) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 478 Tm (implemented. Public registration is restricted to the learner role. The revised source adds) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 463 Tm (a personal account page at /account, and retains the demo-role switcher for evaluation.) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 433 Tm (Demo identities) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 412 Tm (The shared demo learner is Alex Rivera. A separate synthetic registered learner must use) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 397 Tm (their own account and earn a certificate under that identity. The demo switcher includes) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 382 Tm (privileged personas and is not suitable for real production access. Personal account) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 367 Tm (changes passed CI; live rollout remains unconfirmed.) Tj ET
+0.84 0.86 0.90 rg 42 47 511 1 re f
+BT /F1 8.5 Tf 0.40 0.45 0.55 rg 1 0 0 1 42 30 Tm (Orion LMS evaluation cohort  |  Revised 26 Nov 2026) Tj ET
+BT /F1 8.5 Tf 0.40 0.45 0.55 rg 1 0 0 1 480 30 Tm (Page 5 of 14) Tj ET
+endstream
 endobj
 16 0 obj
-<<
-/Contents 33 0 R /MediaBox [ 0 0 612 792 ] /Parent 22 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
->>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 15 0 R >>
 endobj
 17 0 obj
-<<
-/Contents 34 0 R /MediaBox [ 0 0 612 792 ] /Parent 22 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
->>
+<< /Length 3525 >>
+stream
+0.06 0.09 0.17 rg 0 798 595 44 re f
+BT /F2 10 Tf 1 1 1 rg 1 0 0 1 42 816 Tm (EDUSPHERE  |  PROJECT 05) Tj ET
+BT /F1 9 Tf 0.85 0.88 0.98 rg 1 0 0 1 390 816 Tm (TECHNICAL REPORT) Tj ET
+0.31 0.27 0.90 rg 42 783 511 3 re f
+BT /F2 22 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 758 Tm (5. Core modules & learning workflow) Tj ET
+0.95 0.96 0.98 rg 42 691 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 717 Tm (1. Discovery) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 717 Tm (Browse the course catalog; enroll in free courses or use sandbox) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 704 Tm (checkout for paid courses.) Tj ET
+0.95 0.96 0.98 rg 42 638 511 50 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 677 Tm (2. Authoring) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 677 Tm (Authorized authors create curriculum; instructors/admins publish) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 664 Tm (courses. Content creation increments course version and records) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 651 Tm (an audit event.) Tj ET
+0.95 0.96 0.98 rg 42 598 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 624 Tm (3. Sequential learning) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 624 Tm (Video/text lesson player; server checks required prior lesson) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 611 Tm (completion and rejects bypass attempts.) Tj ET
+0.95 0.96 0.98 rg 42 558 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 584 Tm (4. Assessment) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 584 Tm (Timed quizzes, configurable attempt quotas, server-side grading) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 571 Tm (and hidden answer keys before submission.) Tj ET
+0.95 0.96 0.98 rg 42 518 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 544 Tm (5. Assignment) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 544 Tm (Learner submits permitted files or text; assessor applies a) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 531 Tm (bounded rubric and feedback.) Tj ET
+0.95 0.96 0.98 rg 42 465 511 50 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 504 Tm (6. Certificate) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 504 Tm (Server checks active enrollment, all mandatory lessons, passing) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 491 Tm (assessments and graded passing assignments. Duplicate valid) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 478 Tm (claims return the existing credential.) Tj ET
+0.95 0.96 0.98 rg 42 425 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 451 Tm (7. Notifications &) Tj ET
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 438 Tm (analytics) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 451 Tm (Learner notices, completion metrics and cohort performance for) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 438 Tm (authorized roles.) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 408 Tm (Hierarchy) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 387 Tm (Course -> Topics -> Lessons -> Assessments and assignments -> Certificate. Full) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 372 Tm (content-version snapshots, reordering, re-evaluation and failure-path browser evidence) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 357 Tm (still require review.) Tj ET
+0.84 0.86 0.90 rg 42 47 511 1 re f
+BT /F1 8.5 Tf 0.40 0.45 0.55 rg 1 0 0 1 42 30 Tm (Orion LMS evaluation cohort  |  Revised 26 Nov 2026) Tj ET
+BT /F1 8.5 Tf 0.40 0.45 0.55 rg 1 0 0 1 480 30 Tm (Page 6 of 14) Tj ET
+endstream
 endobj
 18 0 obj
-<<
-/Contents 35 0 R /MediaBox [ 0 0 612 792 ] /Parent 22 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
->>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 17 0 R >>
 endobj
 19 0 obj
-<<
-/Contents 36 0 R /MediaBox [ 0 0 612 792 ] /Parent 22 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
->>
+<< /Length 2945 >>
+stream
+0.06 0.09 0.17 rg 0 798 595 44 re f
+BT /F2 10 Tf 1 1 1 rg 1 0 0 1 42 816 Tm (EDUSPHERE  |  PROJECT 05) Tj ET
+BT /F1 9 Tf 0.85 0.88 0.98 rg 1 0 0 1 390 816 Tm (TECHNICAL REPORT) Tj ET
+0.31 0.27 0.90 rg 42 783 511 3 re f
+BT /F2 22 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 758 Tm (6. Python FastAPI grading & analytics) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 714 Tm (Deterministic grading) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 693 Tm (The separate analytics service supports single-choice, true/false and multi-select grading) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 678 Tm (and rubric aggregation. Scores are bounded and rounded; assessment and rubric checks remain) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 663 Tm (server-side. No external LLM is required for grading.) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 633 Tm (Transparent at-risk indicators) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 612 Tm (The original project design uses inactivity, assessment underperformance, course progress) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 597 Tm (and assignment backlog as risk factors. The analytics service returns explainable) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 582 Tm (indicators and cohort completion/performance metrics rather than opaque AI predictions.) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 552 Tm (Content utilities) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 531 Tm (CSV roster validation, certificate metadata preparation and PDF rendering are implemented) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 516 Tm (in the Python service. The API sends the learner name, course, completion date, issuer and) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 501 Tm (certificate number to the internal renderer. Lesson notes can also be rendered as PDFs.) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 486 Tm (Assignment metadata processing and end-to-end CSV/benchmark evidence require further) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 471 Tm (review.) Tj ET
+0.95 0.96 0.98 rg 42 418 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 444 Tm (Test evidence) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 444 Tm (10 Python tests passed in the reviewed CI run \(18 warnings, no) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 431 Tm (failures\).) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 401 Tm (Performance qualification) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 380 Tm (The original report mentions a grading benchmark. A local computational benchmark is not a) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 365 Tm (production concurrency/load test; no throughput guarantee is made here.) Tj ET
+0.84 0.86 0.90 rg 42 47 511 1 re f
+BT /F1 8.5 Tf 0.40 0.45 0.55 rg 1 0 0 1 42 30 Tm (Orion LMS evaluation cohort  |  Revised 26 Nov 2026) Tj ET
+BT /F1 8.5 Tf 0.40 0.45 0.55 rg 1 0 0 1 480 30 Tm (Page 7 of 14) Tj ET
+endstream
 endobj
 20 0 obj
-<<
-/PageMode /UseNone /Pages 22 0 R /Type /Catalog
->>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 19 0 R >>
 endobj
 21 0 obj
-<<
-/Author (\(anonymous\)) /CreationDate (D:20261126165446+05'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20261126165446+05'00') /Producer (ReportLab PDF Library - \(opensource\)) 
-  /Subject (\(unspecified\)) /Title (\(anonymous\)) /Trapped /False
->>
+<< /Type /Annot /Subtype /Link /Rect [42 351 553 364] /Border [0 0 0] /A << /S /URI /URI (https://web-production-4feff415.up.railway.app/verify/EDU-2026-PYT-7892) >> >>
 endobj
 22 0 obj
-<<
-/Count 14 /Kids [ 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 14 0 R 15 0 R 
-  16 0 R 17 0 R 18 0 R 19 0 R ] /Type /Pages
->>
+<< /Length 3388 >>
+stream
+0.06 0.09 0.17 rg 0 798 595 44 re f
+BT /F2 10 Tf 1 1 1 rg 1 0 0 1 42 816 Tm (EDUSPHERE  |  PROJECT 05) Tj ET
+BT /F1 9 Tf 0.85 0.88 0.98 rg 1 0 0 1 390 816 Tm (TECHNICAL REPORT) Tj ET
+0.31 0.27 0.90 rg 42 783 511 3 re f
+BT /F2 22 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 758 Tm (7. EdTech integrations & certificates) Tj ET
+0.95 0.96 0.98 rg 42 691 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 717 Tm (Video) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 717 Tm (Sample/mock streaming provider; URLs are withheld for restricted) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 704 Tm (lessons. Full streaming outage/recovery testing remains open.) Tj ET
+0.95 0.96 0.98 rg 42 638 511 50 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 677 Tm (Object storage) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 677 Tm (Railway uploads bucket; S3-compatible storage adapter. Assignment) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 664 Tm (PDF, ZIP and DOCX uploads are limited to 10 MB and checked for) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 651 Tm (file signatures.) Tj ET
+0.95 0.96 0.98 rg 42 598 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 624 Tm (Email) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 624 Tm (Redis/BullMQ worker writes sandbox messages to storage; SMTP) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 611 Tm (delivery is optional when configured.) Tj ET
+0.95 0.96 0.98 rg 42 558 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 584 Tm (Calendar) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 584 Tm (ICS export for course milestones; real calendar synchronization) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 571 Tm (is not established.) Tj ET
+0.95 0.96 0.98 rg 42 518 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 544 Tm (Payments) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 544 Tm (Sandbox checkout and signed webhook logic; no real charges or) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 531 Tm (live payment provider certification.) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 501 Tm (Certificate correction) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 480 Tm (The updated source adds a personal learner account, displays the issued learner name, uses) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 465 Tm (a personalized PDF filename, encodes certificate IDs and adds a dynamic /verify lookup.) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 450 Tm (Invalid IDs return 404; revoked certificates cannot be downloaded. New regression tests) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 435 Tm (cover a new learner and the renderer request \(mocked PDF response\). Existing runtime logs) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 420 Tm (show successful PDF responses; the specific reported 404 and the revised live workflow have) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 405 Tm (not been independently reproduced.) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 375 Tm (Existing sample verification) Tj ET
+BT /F1 9.2 Tf 0.22 0.20 0.72 rg 1 0 0 1 42 354 Tm (https://web-production-4feff415.up.railway.app/verify/EDU-2026-PYT-7892) Tj ET
+0.84 0.86 0.90 rg 42 47 511 1 re f
+BT /F1 8.5 Tf 0.40 0.45 0.55 rg 1 0 0 1 42 30 Tm (Orion LMS evaluation cohort  |  Revised 26 Nov 2026) Tj ET
+BT /F1 8.5 Tf 0.40 0.45 0.55 rg 1 0 0 1 480 30 Tm (Page 8 of 14) Tj ET
+endstream
 endobj
 23 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 1391
->>
-stream
-Gatm;9m>;N']&@2hIbos*o^Aop[$=_9\YbC8FXj')qP@7C2>BA2#R6]nlH,,c6AdK`6(GrpZ^tW%iF!p@J/N"6hER>GLqcjVg(eW[9ST-BGuq\N**^@\&j[j2NR9dXJ'V7S)r:"BY.gF_"AOI+oZO,P,f2-ZQAT;(`T,fi7)Gq@#_'cs3>7!Vt\Y!'L,FletCn@@sL@uou(@u)NRW6Zgl4+j4CTM0]WM[NbfL,A22sNC`i0IXO':OAYoUdLdW"]Z(`mCOfZJj'REZ4?t't&-nC-KQ^(mDdd6go/sR&AR=/A:j&qu;ALTQjTd,fZ6g'I9SV9f%\,`E:r=kGBTZpMp[4#"_6X2BPB3M+BP"AF;o1Iq;2upoA>o-WNj/:-[Y>:GIX=Ts(J%Ef=U.>IDMesp9cnX<(BTBpn-g[I$h>7*-US<3QK3(%(3R*VtGs:c>BseTXgiF^GlF4<LL>;<XG`3RW]&_PkN`en=bI8_.p<nbtB$UB%VPh9Wk-m(;QGh1Q=C.oQcn+.BeKUR+nc<RUD6ab'SYV*fLR=#(5VZAa&/q,[joitD9Ql(L>u^F_>2[n;H[OTFqW@E%+gKfY*VcYi,['ZS;1#\%+4]S@hU-:kdX87*(s"VVJ=VOI30>_b&^W.oARWqm+JVGU/K)%Z6<FbU31nRi&P91UKPnc(2Fch(BXUE..`ekk1p.Lg05$nb/<sO50u(>O"=Hb(7A_IMTIL;p`7/mqjAf,hDT#<2_`[UrYGLK(YtIp)(/W8*6LO(f>;!7hau.V$9h`rj98ttl.o@/6@+kb?RAbX8(PsaVc1FlS'J`_,D"PfPAV5:#&`DpU\+$HF.l(rd(E,,](#/`*E0W"2Yo"b)j(GE^@[fo]?^Gf#M&u5q9`-,N-%;7(oYUFu/C,%O..os<*c-)b:hQMq)'P[$^1Rrid/cJp]lA=:k0n.oGV4j^^t2Qr!d'TS`sg</:j"`^#h6@a<X9iRf^R5;<Y@!_>dc+Ulan"2_`q@*h20B8+c4t/Ig5F!INM$[)#>4DBgqE.'=e>"9Jm6":H+GQlCl.tb]M=Y42tksYoN1G5(38S,&EhHXSW:(c38:+cAGV?7BX+#X?%kDVoFN]BChnLL.,`rrRQ]lB>ZFWfW]%*b\MefcS!k^hhOPd3R<(-i/BfD@AhRn5H[L0CD^V>XgFL@DbHXtmHeD%[s`NqnJ[B^e[d*/QB;!8Z>TG+ks8Gt=V^T\OW.@ms1Ca&=JKG2FG]ViO&GnS1/k1'D&M^tEa`1\)h_N_nP:&N#IP;#NKQ+eKhVnR<;O$.HBB+?UZNtPK>;#gU74rW.Pb97JmK^'ZDg,n-r$EV_'amo:5^m0qO)b@hWVh\C\Uls\%76Fm5dlh'iHu),\VC`;:^lDC%OW.pL1l~>endstream
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 22 0 R /Annots [21 0 R] >>
 endobj
 24 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 2156
->>
+<< /Length 3292 >>
 stream
-Gau0D?$"c/&q0MXfVa\_Z!!56.C!fOj*$TB>;ajrIE;jj68B1::]SkIo'>aIOJ685iGE2Zn^rTJiaU5_Sn1;5^*<T`W/4i`l'L9OMIKb--q])Eeo0ebIJ2nVl9C\j1lqFLO9K((=MtLL@3.m`7R<7bo.VDq4bKJBcj_QaoYqRs=Do1cf(6;ZX!Hp=?0fMP`n?ttrINNao6l,IlcG]#Sp,BJoGQP)c@X"ZMruMmH'g6OfT7IX1sbCAmq7W0XJR8(n[kOG1NdD$aXli/KjN=Jm#d&EH2KO;MJ$)dbS+f4O>=Bqi[5T'Jd!+i^2N3t$L$VL(9LLGP#cF*$aZ`IoWkm)Ok.sQG9:A3s89T(P5)tgJ<;4#^*B.$E+_:kB(O\WETh7NS@t2Yg#l#5Pr/BPs!`uVM6P#$h28'D:':)k(AEfkoQF"\-]3t(_Fg7%<ChG8>C=Sls6##e@FOuo)=^"W-PQ;`(=6f7SZM(u'_f`nfWC89s%ZV3.G]f;?3r"C<gU*1`BP1s%K:GX5I=.;57-O<<Z6:^.r"mJ967XAV510Ch.re"GX!<NS5G@-*]TNEN<caD&#A_`*_6BT4bOdUDEApkALY'6WsZfE^Y4(j<;Q2GmXm7Ci1?"gSja=Oc2q2;&`ACm'@pG@?dl,,N4+/^^S'JD-rmUM>BC(sW+*F9#K*G/_.(Un5<AFkX5[bnc-cJ_mX4XFF)PiAVH\@rr\sCT?dNP25rZ2J'oqLBGP[Gf@UJ_[I/h[*3sHWOECW4PN^Z-/7P%@B@V;6L,[K;cWfkV-qOUNj7_(\\/WJJW/D*UjkRT"7"$R&^ctA8nd,tEg4C&=B92%_=3;6cB_+ZcuaGZpWUYlXu9a!Wu!>"SH'LEK<T)0CbW0akJBSM4rr44<oZ_M`r<u?fVD+</$_]N]`#(A[(KdL;\TRj:gnI^D8]cb,hL:R&1Y$_3LrJHnU-S$Ntj!8;9*Z0kK_/u^0K*SQ=.&=@O'pj2)l"Qn%>u_W:)dQSS10flX#)n"/!Z6?D!PZDELGN``.<Z/:)Z9h"h\Yh&!Bm(Rg4;>jGbeblimkq>U[TCc_Ef*6@<GI3%8p/G0?%Xe!a%+pBoiCE0?%XeL?V!]dm4=n4!>(==Z5SW3#lI#grjXrg-:rha:=#d$eDYD/a8Yu1[/^>s$lhZ"gM8>O)*ai]KsB$Gk$F9ELn/6-h!8>YK5lcA\6[P92IZ\8Ml+%Q"FZnQ'W8N:=<>q9]MP#BTQnteeb:^f%>QF2VSU%>+R!'/[5hZ,\lPt!ZCWsjR`K%\OF!3Rm"</8b,^mIXLLB9_*dO5=R`Zij`lVAet.H>)j`]3c6]!WJ8#=]8g3,p"E4JU<6,bBh12\RGmGrJB.L\`mVlJ:G$Ccp12q&#$l(UFH%AOX+7s`'`NAlRH'3(Ndj?SDD"Qg;eji2N51%R4UWeq#2poB'2X*Fm92^oi8'I$K1hH$)RdQ92@k7_!`#`'b'BYC+&J];be4LKZFWASYk&EY%1!b'@5ZE;bij4s:L^i@P_F"!4K%JQEpE3\=iKV0=6Q)_cDD!G6U&*>K;GX)%\$3$Hu,m<+^L.Q8fBT*RET]pT63U[<YX@"38=t7grGKDGV/&dq34>"-S.:q:&48`gLV.L0BJPS\uh*q^YTU\%'L!+bX6Um-E=Dq%t;i7i'L@K+IA5=L!Le3I,p_VY._tV@NGf,&QsuijG0^'V7t#kn;-+K7gQV>MQ6?K_QIP/+T;_iK"i7<a&$npP]2:9MYmP'U(VHVEeTrrR!\T?F$ZF%o`_=A="A'Iku:463\GSL5bod!#`]l>2;`sOA2qs:BMTUWGf0Eu&1@I\jJt`g98.$tmHAH&'**maF7gYs*'`BI#hb)r>K`>&i3%9#p/sE:k-7Vd#8chGKW$lV/0)q&_(Z$0GQSb4A,6m&XbD5Pf#%l`UJ=JVio(1=:<J<G_A^R,i3!RF(!_I1QFk3Wr/(*CKsAoFfp004T>+.IrmdKVqK\1qYMOk6*_.Xl1eElnN%%<0nbY./dtHjta9d1@K&=W=r1>iOb`$I^gCjrjY"IhZ&EWG$hk<u?-jWW+T8^FVm.g]%hp'ntiD89KKfDYNC!o`FVheuj2ZTq!U\\AAR/]"u=Pho;YV_09mJ>&7#$1J89IY3g#'IUK:OuuXeRq"#cMe&r$+p$~>endstream
+0.06 0.09 0.17 rg 0 798 595 44 re f
+BT /F2 10 Tf 1 1 1 rg 1 0 0 1 42 816 Tm (EDUSPHERE  |  PROJECT 05) Tj ET
+BT /F1 9 Tf 0.85 0.88 0.98 rg 1 0 0 1 390 816 Tm (TECHNICAL REPORT) Tj ET
+0.31 0.27 0.90 rg 42 783 511 3 re f
+BT /F2 22 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 758 Tm (8. Capstone challenge & security) Tj ET
+BT /F2 22 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 730 Tm (verification) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 693 Tm (The Project 05 capstone requires server-side enforcement against learner manipulation of) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 678 Tm (prerequisites, attempt quotas, grades and certificate eligibility.) Tj ET
+0.95 0.96 0.98 rg 42 638 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 651 Tm (Prerequisite bypass) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 651 Tm (403: server rejects completion of restricted later lessons.) Tj ET
+0.95 0.96 0.98 rg 42 611 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 624 Tm (Attempt quota bypass) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 624 Tm (403: attempts beyond the configured maximum are blocked.) Tj ET
+0.95 0.96 0.98 rg 42 584 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 597 Tm (Grade tampering) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 597 Tm (403: learners cannot call assessor grading endpoints.) Tj ET
+0.95 0.96 0.98 rg 42 544 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 570 Tm (Premature certificate) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 570 Tm (403: incomplete mandatory learning or failed work prevents) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 557 Tm (issuance.) Tj ET
+0.95 0.96 0.98 rg 42 504 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 530 Tm (Answer leakage) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 530 Tm (200: assessment response omits correct answers and explanations) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 517 Tm (for learners before submission.) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 487 Tm (Additional regression coverage) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 466 Tm (Public registration cannot create administrators. Refresh rotation, duplicate attempts,) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 451 Tm (invalid rubric scores, course ownership, paid enrollment and cohort access are tested. The) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 436 Tm (latest suite also tests personalized certificate issuance, duplicate claims, PDF) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 421 Tm (filename/renderer identity and unknown certificate IDs.) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 391 Tm (Scope of evidence) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 370 Tm (These are automated API/security results, not a comprehensive penetration test. Shared demo) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 355 Tm (personas and synthetic data are intentional limitations. No claim of production compliance) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 340 Tm (or exhaustive security is made.) Tj ET
+0.84 0.86 0.90 rg 42 47 511 1 re f
+BT /F1 8.5 Tf 0.40 0.45 0.55 rg 1 0 0 1 42 30 Tm (Orion LMS evaluation cohort  |  Revised 26 Nov 2026) Tj ET
+BT /F1 8.5 Tf 0.40 0.45 0.55 rg 1 0 0 1 480 30 Tm (Page 9 of 14) Tj ET
+endstream
 endobj
 25 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 2505
->>
-stream
-Gatm<CJX!3')g+Z-u#NgR8m_U<taD/&7@H'A-jM_>-7S(NnoA#Cq$=s%clO)dsf7E`%u'OL5Dn:];t8Ij&DF'`/e(!+2gS1.lt@!ag>aS5c/$N[(<-Xe]G96ZW]@-db*'-+iA'$f`4ZTZ7Pskl'4^"6uQKBh9!TUnECBVDa]=?ElQ!/aURnoKB@UqqO*F,>-[!?&Wt`4BUS\4=8G<X-FZ*FF=qU8P+8Mt[!JIsY?IW(r4GpBjE[S"-9^D`bD@sAN3'9WL,\`O6`Ap'VE#^Fh/=Z4nQJVHBAkY@j`fIi,I/]WE]^qr@KX8,)NH1kRk_'RiWd@[p2EPTIKu`?P0q1N-c9C,HsPKI=P2&JCItfYDKX#d1VL6%A[pI:g:e7!Lj`"2DsuE;0mV,.hD()&A)D;Z=\(%dU4Ys>DX5O@2D02hD;XG)ZT*qHb`^2r\4GNs?ZMG%#9FS/+*J$t*9TlE^60\^=;''^At=*_%b/edN:fK5hcR=$O6nk2RWa+Rq;$mWZBrd[;@#WN92iD8H,aBem[,),#d8]Z7W5\-feSXOc2+g<H1]=Sk&e0##3Vb=>0\9[FeCK]^-4F65`#OSV]rs@l;I\]6qeb&I$9ZGWJnfUlM%u!S1A5ol-_*hq*t#@Qf42i[a+)4J%N>mgdb0iCo-omOWO^".DCgEo7#ch?l!<q\U`oaaU=5u1'ZpR&i)Y@MnIW's5"&_IT#=GgRQAkNW/B5HnEk#42Keum)JpI3gCfu'Fu&bIdkFB9qOhBnX(ON"3OOfFU%';8#T+%BUln/)[1R<G\"'T><h+U&].fRRZh7#n5LN!T>R+Rj"C9'-iRpu*/n;<1*+8ueYgTW'[EfL-c34sfhTmXXN4hsjs&"o+&OKg=N5qDLFo*Cp5!*N1+ArR8LUIYU0E6$i$DMU'M"id&N8i.Gn:U(kjJ@b>(F92'i/d-63678-^a>,^q@4IdqK[8SQNHf&cRcp%bmCt$cs-R<hK8G(.)ROad0Ef<R0pMd61f&JEI?*s1eo&j0*lb(b?Bb;p72+/<Cg%KUhg/^rdc^S'EW)0Jhr@$<[K>3tnN+*=Jmd/pi7P'qsq]b;r\b<G1$?C%pl7=4u89eu-J>oFp;a5,C?:W#q]+;.U64<cD/[VGP2p:[0>Q`"<>$b'M9q13_$A[fdD_,,`S2NTAamkAT9uRf_O]eqj,W_+OXa7m"B?M5PPK3%lc%lN5Kr)NO\[1I9l#<8?Alk_E>T#X>?/@0Fnspljd-JV&cD1krpNpdlT==CtIHaY_-8b'$=K?t&E`qb3G+r*.Hgc:)/p.s,j!dBTXn'P1HH(So6eUQ=tpm`;"mQZk"AMT.XJ4HH64D'r)RUZ"%&"u2$Y9,SFfefg=c<.#gr'kP9Z"HR)]g_H6a!G;jVY`UtG.1uIVJtBol'.3TYOYoLa;<@:BOR-IGf:44p)nPJiD9]KOBHC'39!SS69,T<iVmUd67.-hM*(K@.r<-:*_C24p6/c"m<sqp&$>$pRiC%%8kmes2GB'\Kp7Bt6&YuoMVIKeY"l%n0$B@9?SPCiLE&nb.(BU*A^#)f`<=621NG$#hCH;j7>t"j;1jn^n.R>6\h13m`TP5V`(`GW8)\aEZUX'&47pSGf44T93!>p2ID&:p_F@I^,/(/h84g;ZYpZ]U5(ZQ8d-FR\5M&QH4G&9CTJPOP9kTqj90D\79EU()pQG&Tkf9G1,IFFXPPuKt*;Q!j%T,O]^8BnitSCCI8e4ACblF*Kh,IR5CY82G2fr13rp+guEJP,'iQh&jSZJ8?V5ATNNgX2EP[^;*C05UmrFu;Ok`f=g9$N+I^D]Hfs;d)%@*&Y'Reduai@*qQ]e#7V^B>)LBa41I4FQtpJrO<?*"r/M"eZ.`E^R5ca93'G=p@T5I)H@+D^XW_:rk15I(XIp^5DgjX`rstjdnu$%K:6IcDU8a@V]q^ZK!oTK/&U9km"U#/cm6qPHGbmTZn$BTa>;8O;2:WQH^\'4BOUSMq^+S(]T/rM!:-2&CD+NAs"2*p_Iemd5n+J?9FQf!cj]bGF\f(,`KMlgX.l\<f9ce@eCW/-hDCS=*HYX$;4M8Z53c.:0VJjPo@IANXVguPG5p?IY"&bCdBA;7V3D\uUtJ3,cHAI.:b%_>G_e:^(9e;l5IdZ9([U?(PT\Bq!:PjL%"=NjaD(*JI?jks/XI[/Kh'P^,=;^,P^K]/cigN!Eg4oU&_Ug[T!-b(%(&2i$@[IBk0(-a#+9Ull392_.Iij\\lk,AZ<L0E>oOZ/+Y/:"<-G);;=0Y1B]X)CXesLb<8KE#eMQ!a4j.pZ30*<L6]2A^S9DXWD?Su:.0PdbgT,^?=_#%G4-2HbHrGu;Fd:)q4L/G?q!o)h.>:=A?df(VJs=5+%9l=_j,mbr<cd+aMLlSM2Aj$-=$*;W<M@d^4-iX.m\G*-WdmHs>=n@XKs,E2>D3,WOZ[S'C)k5FmX-7epKc+3FLh(>]QD/m^g4;@n)Tq'0uA+aNXH\]Cu%1?c7>:GjSq"MG/=~>endstream
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 24 0 R >>
 endobj
 26 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 2601
->>
-stream
-Gatm>968iI'#+6EoI6W\g,,Fr\@8R,9R4Y"qN]l"pgBJB-mU(3J=mq]qs!69e6&H@>#`Wfe0OQAqJ.q!#rl>Q5H"KFc2mq;#j7g#E*RXXKB$0"4Pmm(j2oU\VgWT#6g2n7.)VsR^&ra>#M5dgc9Jr!bbtom%V@NKa(o3Id1e-ElA,'I<!j;bJpX(D/S)[Q\7D&E(Rab$5/=9OFfP5Sh$mW[;P_9%Gl/&4^QC!iphrNjBbWGi3:MZPJ"0WIg!gH5YTc/tfa&YpNY>1HrqDVNIOtdhEq,U7_j9_B[QBCRnjCjY%VOFRlT&;8U$eBPG@jl@@jf/_e0N5")(&EVorq\?`BiS.N9@k#,r![RTou`KWgmX5F1f<;`;BE,kp*.74j&#cEsC`ha'pZG!ht5."HE&j8q+KRU<M;9o8qN#HF>jb9cb+`lQDKRh<$#n_6Es09O0t_Rhr]g&seEA>eP/c<?a85`C*au_CJ\6^*AO-'NgK*O%!;&`J\sE0=!'jdb78g0EhuHdF^8G"!e$6B^H\"Goa1<dGfEp"L\bP:5F55r3m?Om\DR]m?Mj3>PGg,K'.G3aA.NF,gG^9F(*X?jtrSC>3OM^!C\??DO&;2>/?hY2kVrI+E$MRl"eZAfUP;S\<'-NglaIBJEnE<^Nd:&ht'R&pep5[%/2O;];IK1f]>t/cs=u59tYE.d%aha6P9^Nic!_W0:tFgF(oN.?a&q4>s1o$QAb+oj!e5_]tF4!dmTmL8!KqY25Wcl;58,?Jh>q':p(/=i*+'\EMa'O*[=@jZQk+i:.=UH*5gCf;?#Lc=,Y-Fih;=#6gPZA1ro^X'mf[uZA3LBC=G.2^3.,Te8'ZqY;1!E@VCUJi*nF\qU@6qb(Zor\N?$D-F"'CgDFD?GF;IqJ8R2#:Sh6#-`9cb$!"NsqI;C']Q&SA6?'nC]V&slodL&qQkG'9"3J)cPc]miJaXP!aJF\_S\Q)l_+nAHYp6q?4Ad_2K%$9Vm<u>\e):B"4V:auPuHOA;4p^MXHlC;7es@.N+.`Za4+jF;e(eBD%,`<VMub-9Pa4]j,!,&fK+l$"L3a:XXHmB,8)U`/_']bm\kguTbgPrT+r+qJn=m+=6'Z4`&k;n+k'[2QsO<&5`LnE%e!6bboq88^0/WTTptLtW'=I:h4afAMCDS>Ng%)nM4J&q(i+]a+Fe&%ac\0Q`c>kEChao[os[PjR,RH+\&]iW_%'i]YtsP0CQf\o;fKJj*37(s2n7u7X?iu'*FufYns1.t]jPlip&\A(\i]$XSnlD2T?7eSg)C*Pi>q7c`Xq%0o^,8TO8EE%fZjAeKm_'gP&c?p4T<_tr`BqWO]I@QXK2':P*I>$iV-i@I+qU%Z6oU8ei[<"qg^ERK72Z[`8),L@=\"q-;S;VL#2[-Z,5*BJ)P.7Ii'u^<ABgiVY*5b3iJ2??dNNh5:`f?a-)#Ca>@V?M9m,.>**G>Wg?tlQ\<I_/;fHhiW&TZ@t8E0@/\.O:2sAF(`H$Z0A*S[ZG7;#'7N+]Qme1.%t]t`%m:l2@`eD#!8gcLFMX4XF$Z)]Qie2C44F:k"l(19iq5jSftS")gN&*5IUQ!h$aj/QbgG'`+_&eLa!C1kWMH$p&rH;X5rZf@7T4T_J,.8Sara]gHSPh9J-QmNVDC_!kpr'<l4j$Z+k.U7^d4e!.Zc<[7XS=DeOIq_QP412_W[E1(haHG7dc:#OZBLq^\sX-%D)=1G*N6.M^%=1c+AC2s%TJTkEVp?&2KXT:32`^U(F]BeC9K=L"fLW5Oe.=M&"S\JRHa8^l8nT2KQRIUMX1fH0[Bmo6OW&>-qYkmGO/OhN//<C$r]bdrTl8]7/M@]hXHe:?p-%Xd!#&1miD`D"U]`l(ltsV,#Vq[5t9C$X,!eH>1`cPZkcMNB/MsHE#_o;6,n8*E]hkniJ7LJCF[D3)O1eBP8or-qQt][FFde.:#%"h>9?WY=UbS-?Zf[+SE8GBA/ssW/i!%?Ft@KL48'RCZ$j!C=80Zp+pPmC7ZoK=0R]N@tt5Xfesj;^WhE//e<j5k<Vm=(da3NHFGP$Y.OHFYQ!53m!G5;o5HR5L1^/K0!0#7lY0!4W^?Wb3!fBW#?ZI?D[l0](0jn`Ca8D:]JU7^n-is''%l_Zah/#%OQ+/rCkZg81H.5Tfa9F6P_pi2]dG<>M6'O[ZP[7Ui>:b:)c40$?UJZh6!L)"*L-bCL:3N1?![3;[`7oP.0P,NJ^>,*/7)N]Mq4^'3)P:eAX1f@W9mE=*.P8GbGp4T'4d;8!_[-^=d:U]]=%=&a-nB&L],SI1`N6bK<=iaK-*4dD:k=L*00Jd\"eiG'i:P>.)8/#:%:hC'$ERh50+CW#dI>8\q.d9k\(7FH2E/4OIEjI`R19hW))tPf!ISa@<mu.1!9%h5I+S!K'$=Yk.20"&-b$eWkgEW-eAgdL'Bq[Hsm1OlVfO9d-`E4WmLb[h>@7ghgjI?Bf[Xucu9!HLJuBQg`Gob8YU%RJK5/**B>4k/j,rBmo#Ok(f.8W<UngoMUFDUDN<@jCBZ?SK1XL=/8rQ+DabbqDSA6KeLShCAuG8fi`PmI0a3SQ9sM==a'1A77S66BM`,7#PJ7*bcPa"~>endstream
+<< /Type /Annot /Subtype /Link /Rect [42 667 553 680] /Border [0 0 0] /A << /S /URI /URI (https://github.com/nitinsharma2005900-ai/EduSphere/actions/runs/45847595875) >> >>
 endobj
 27 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 2151
->>
+<< /Length 3128 >>
 stream
-Gatm<968iG&AJ$Clm\]?Ckb__][_/k2OU@`@V'l-+V4rOYXq.^5eG1Bmk-kf<,BZRU[d!2QOrl`iS2<Ui8[U@s5k'3mo+IZ'gN>IF:LV'`@u]NQd_.:-UG@blpD]<@[,j:T\BI5<Y1#XL"BBL";BM+o979AN:A^qK5:s&0TK(]$u,g<fRqM=/,1A_Y2KQ>E-9LWfo7C>S2Y%/Q2&X`OS)86hSSn"g$oZ([VQgoRBn2i#Q0!oi_:c[0MT@+r+tAfjt%!oF:=f@32u;s.YtDB5>/M3@_4U>gNiFf3$j4UFFr8#;%TQ9)SYT]'RC'G:/T3uOhsRB(gRp%c"b?8#>qTq?Lc`_R#?;$L!W<=\H.DU_horrCSp&VQmHF@6uL.)XI(bp]]TGMWJ&jtNs8q:V92Xp>D$(!R'HRLf>T(+UIl4haWDAbrQ<hBnh266o2o/<#@?&%IsLk?K8WX#;.l=!rqS/,Z8QBYL14Gp9'!L2%>rJ)^+iV,Af?()Zc3!Z`D8(#Y'$XiBII#fBUC9r<bAG8InlonE.7a$9"*m)gR6Z(%'^n]M9+ZZ1PpBn'9Q-u!_NUW1Q9>8pcb4%.,lq1FlM.M>b3L4I@HJj0p3-N/Wb1oF?A5_Z9t"daUW-m.B#>a8WTk8%Bh%IkIGDDZVt?f3Msr7b,R1`a7Gf4WH[Weia_8eP%o_bk4Q',`t5'2OgMjc9\!D8b@[sE-WqXLHC!47<]Y*4nY4Es/\H[:h0G011OQDE@D'dBb8Ln9$)0m)BU%Y(aH;<=X.ZFbM%%iH%'g-/'eO*2#RgFYM!oT(%Big0PBO!J[aG@O%%4;p?1X59$?D0f2FiWZ>jnNj6IQNp]O5k6%HQ`=iOtkr5USHbF`t+>?tidm<mVbag,L4q3/2l%&BirDR;o&WN>NB^p3MM.7IcKoqmJtpRbZ!_YjM)]12KCWE!s4)'m^(pLK^uFWukHg(*"/lSH[Qd0!CPA`?69JDBY#jg*;AuOpar2/lhgUn:r'k'!!?[\=/[u,B@$sET!MWWnT>&4^Odcd%Z6bNc1I-!bGr6mgNQfElL_uCQ56SlM4[9)J+8oI5oH&_dM,$q]cS(D"'N5>Sjj[P+Cm1`PJ]:\Q3@47e^E^@+DlGjTe8;C;FZO]"lCPaLc+:"]nCZbOm;DCHL*uAlVH(_"F1t5*q85eDjF8Kjo**fH:+rr!rDd=nF^0e>C&cCg'^^pouq'G(6Tl7#el3+V*73elZOLMnLAQ:QEAEk?:eDpVO%2p</S,Xg\6uItsJt)g\,-F$Wl=#8G_?14IQl`ZZ%!N-b1$<)%)F=g"tuWPK<bUmd^WP_\UM:D\XDk69Zrp-\7mJScR>C1a<hbKZ_)Zk^77VN:8IA-T5(QKJ\9EZ`Ac@puH/pjSkVG`1?OCS^G2<]a:N:1RWffFN-[?:^l`RajDgZI4/F4EC'^QeTtI=27ji*EMk6*0`$Za`:UKgkF@b"@c@Tq]U-UB=eb!l#+id"pi'b\fgIGkkC'B>=Y#"q/?(nEUWDkp;BVkeJ,YfP_9oXKG]W1LaEV1pS#3r<q`7[:GdCM$mS=*Db5\!gtTm,%"i(8`M\\P8AeJ#:Rs>d2H"qV81,@/-N1)eeB79sa\o$#*GQ*3:.V"j1l@ig4u^oNNs@3JWl$su-quVt&[bQ,0TD7r6](h3fq[WJS)`03Wl?s%_:_7+YXc0(jD-\TJK%![^8*KIR*G?NP+j>e>+5hZ)s[pp4M-^]UT"AXDLn+#V:+!*JArNC(&`04="V+[_$\Fagf0*oj\.F0oJ[(=>`G;k?kHZUCZG@%!=JVie.,IWir9qc<YIlZ_4_Qc?8bcXR@PrR@8YjhY:4.erGIibPD^f@2"5TtB1;V:RDA*141>jr_PdpEBjO6q[rrE6,p-g'-e]5oZ9`9.YiT35\tHanrA2Ekgi;LWc0iQfG.&5:g8Grt'n($B+2`9GA&jRs2f?Yu?BjEj^uWF*SG==QM&R[V,:SHm9mk+O?sNFP$raB/!4).4JDa[Z],=B'b89*J%XJT9/Y*;$*2nbDYnpqZVsdg2>KZtR"$[ZNFjD&6AJHsa[KdjL%m@=b&OW(qdb&QW[`;6Y%Ci(s!B"s#Y70"F^SqlspE+;2d\3!+]s*isVgV0hcl;"gm>ffJW$WX$"M0jF3;F(@i5c6~>endstream
+0.06 0.09 0.17 rg 0 798 595 44 re f
+BT /F2 10 Tf 1 1 1 rg 1 0 0 1 42 816 Tm (EDUSPHERE  |  PROJECT 05) Tj ET
+BT /F1 9 Tf 0.85 0.88 0.98 rg 1 0 0 1 390 816 Tm (TECHNICAL REPORT) Tj ET
+0.31 0.27 0.90 rg 42 783 511 3 re f
+BT /F2 22 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 758 Tm (9. Automated testing & verification evidence) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 714 Tm (Reviewed source revision) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 693 Tm (Commit 4d17afd6dda67dbb2c2c47548820c7a38b7265e8) Tj ET
+BT /F1 9.2 Tf 0.22 0.20 0.72 rg 1 0 0 1 42 670 Tm (https://github.com/nitinsharma2005900-ai/EduSphere/actions/runs/45847595875) Tj ET
+0.95 0.96 0.98 rg 42 621 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 647 Tm (Node API and security) Tj ET
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 634 Tm (\(Jest/Supertest\)) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 647 Tm (32 / 32 passed \(4 suites\)) Tj ET
+0.95 0.96 0.98 rg 42 581 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 607 Tm (PostgreSQL persistence and) Tj ET
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 594 Tm (concurrency) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 607 Tm (3 / 3 passed \(1 suite\)) Tj ET
+0.95 0.96 0.98 rg 42 541 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 567 Tm (Python grading and) Tj ET
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 554 Tm (analytics \(pytest\)) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 567 Tm (10 / 10 passed; 18 warnings) Tj ET
+0.95 0.96 0.98 rg 42 514 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 527 Tm (Total automated tests) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 527 Tm (45 / 45 passed) Tj ET
+0.95 0.96 0.98 rg 42 474 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 500 Tm (GitHub CI jobs) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 500 Tm (8 / 8 passed, including lint/typecheck, production dependency) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 487 Tm (audit and three Docker image builds) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 457 Tm (Reproduction) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 436 Tm (npm run test:api | npm run test:analytics | npm run build:all) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 413 Tm (Repository includes Playwright and live verification scripts. Fresh browser execution and) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 398 Tm (the newly deployed personal certificate workflow still need verification. The certificate) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 383 Tm (API test mocks the renderer response; it does not prove actual PDF content or availability) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 368 Tm (on the revised live deployment. Prior successful baseline was 43 tests; this report uses) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 353 Tm (the reviewed 45-test revision instead of the original 21-test count.) Tj ET
+0.84 0.86 0.90 rg 42 47 511 1 re f
+BT /F1 8.5 Tf 0.40 0.45 0.55 rg 1 0 0 1 42 30 Tm (Orion LMS evaluation cohort  |  Revised 26 Nov 2026) Tj ET
+BT /F1 8.5 Tf 0.40 0.45 0.55 rg 1 0 0 1 480 30 Tm (Page 10 of 14) Tj ET
+endstream
 endobj
 28 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 1925
->>
-stream
-Gatm<bBDVu&Dd46B%%`ta/00W,dsc'[@<seldRu[`f&1h/0Q>H"sBZh?f)5&eAIU53;)g(71R.ZgcI;/Llm`_B)h$/d;K[Z3G683RbSO6]SImNF>c/SI)+O[`2=2'M]ouQ[T%dR'a9/6iT**D2E!$I59>l<#iDW-dY'`K6mFo>25S4CUJn-O]otldE_S4NOr)eN:.:b>oWM5<\##V0Urb!Qr+qmJO1u,oOu2PH@5Q$fm=@2;-c%2X0D3f!&$ougfI3GCr]$kDCDB9PJFAZ([]#+T3mYGQNJt@GBFHaaaMLd[Y;\g\@kT`;)otouBeV=C*1do$<AWZkNn:a<jTmLabs-EbD?ZbMefpZs8?(NN9P[s2.r!^K.]Ze!C!,a:e=:P^28&$n^7ZDTSU<]b0NYo+HA0pU<p0CISZp'>JH6R")T;[`0Y'/A'/hXdei#WApO,(4+Q@M?o7:hFoJ"o[nSQLd_^lss`6QHL'\EOE(pFE^m'("9bH$pf42XX^do)fp4)G0#R^$]JHSoSbpSImm4Z0U\WLAuOTJ()7XAK+%4R\MJ(N_^uq;(K2-PhG@>[cTg05TmrcD7=)k0`WakOK!^$[T'OXKu*PZ8Bko`IFp1_%4%qR^H9IVZ=QQ0"]q_/Jj&un#k8]<Nhn9?gpb>>\UcHEiqE^WDW5PCCO$8<k7R]k1ZSO`VFJ.dPgTVW-+"r/Jl0"PDNaKQ>W*WfaH;jcKaCYI`8%8JWt0kUUQ:oT0683JVV_n)UQo()n;iEHO5/$'>\RR[76<dQJ$j?RL$(i'0I-2ru(f%'O2ie>5kq+d^k!q$s!_/)rjZo*_EA`/!$3iIt>0\"2.[Vr!k5<@(-VO^Zq2[mFq8=U-BT]($Z(nIc>X2N*8'+L97oG<J11ZBP/%TiBGtZ-Z2=6!=q?iZ^13G(K:<(6V3otlmn(6f/ChL2Rf%8VjcG4itG:@-C!8oDqlM<Ok_6tFs]Z'O/V?d<ZGb[So]$BW(<AUNh;hS-)r$:ThQ?S95Y4oTd\8Yr>U1-bX@$\(*,_4AbKlph,M8"$BO%T?R]6C]oV2moLrX_R%prV[h?<pV331kp6#8hG!Rn''he+mQ2FUVhpJDTlKFtJi2F%QC=,X"5W_MNH5OFu4qh9sj6e^$i][8e/%_lgNDD)$5k!4PHV:62(RZbk2rp1fDNr6:Or6JcG\/@1NcRi0hmfq/+0SI^@4/1T>d`Q,PA/2^kOmNfG"iVlfER2VpO@43H>'Em4>I(Ug*qoJZ;m*f13KL]B_CDjSV?GlV_u(P+1QXql8ZQfS?J[B`p6iV4rnkm3uF/?%c\[#=;^2;3&JY^3'Ua[ad!m1c'::j$muK/o/@r\C\jq>hZSO`1g.N:K(0u&eK>%]]au!4/;]l*(P=7IS.$4I/FAFpla?oY;6]31qhM)F.(5r/QNfg2L[O@@N1u[?1>ITJK1q)U$/?OYP<Sa-a@*4oG,B?tpSQu!B>JQQ?lgV3<euK5+an`=R*;dAF:'n_Q!K)MTXqf'bQQNaL-^m+_OU##C&T\"=/K--kS1A>nc&GtHo3W>RmVGofu\Man'$$9]QB3dH]Mha)g!46G"36prUNIc>e%?-\fZ]&-5_Jd9[da/2s9mCqpB<W''2K!M8S;QY+;![RqJ[5`IZVQqR2s)qMc=lC76hA[BUXt0W5_E3igJ5\Qg,bD7t\KR=tA?7%!+F#.S4Ppt.t4Ti_%n^cf+#por3&3S+11Oa;jGa*M/4YSbIo`DPn*jMh'XGr(<;LdnXfZ>8j;IiY0nL7oO75b1VdrZ71H^PBWfI'JF#)2VR>X_Q+u2,hmNnQ6\\mC@(_?%F*$]t3BN&D+FNo9!ktn^q0YXq[SDSJ2l0\/@"^LiM?Pf!f,`dD<j#[kc`E]XsoEIY0MeV\68CgLH+Di$D4_1gU53Co#M?fEP&ln/i<c]Q=~>endstream
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 27 0 R /Annots [26 0 R] >>
 endobj
 29 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 1946
->>
+<< /Length 3506 >>
 stream
-Gatm;gN)"=&:O:SoZO,Q#0XSuai4k0YnM<J%5I35;&,.g!@HBOb`'?ulhAUo?u-3P-+-1p#\g/YqK2Jr*fjQR4Sq@gLu(qkjME.fVoan1cj=E,8`u;4mmg]tZK"j71Q-5`X1b&)/Bu91c%_DiT=gaMiODagkD/j#]3`6>Nn4TLDMR;C=riAf)ndY?\mS,@7ROa"Yq-TU.hQiK73<gK6p@M!*\UVJ@eH0:he;Sm!V?Pf8"_pAIKdlh2?*S;EdGEZhi5_A]D\</#lW-A\fJB]Ga-s")23J\h^OO(bXJp"a(u*p#.`LU_2KI\5rX<!O59PV:1P1qo_$J*iQmV5)N`rO-CO"5R[%Tu_>cXKU<$KKAROirZuo;SWY:-M)\'8pVQWRW\Y9>/g=Vds*)G>-nq<;Jc'<HcW+d]=Pt:\1XO_5cjp=g3.5E5jo,Q>H+a-mW9"="='=gpn7e<'h@oH$d.febCVN`m)<tB%BcATLE]UHO,-K"9HO[i.W^OlG@o"p8EJ"(['9AG:md)L&K%>'L)AnB+k9SUXW2IpL)%T*t-]g*Tu0t!lb[nHF##%,';2$T5.e(LIo;KX0VIWE8&`S]6^GK*j/Ia;It0iS!PjGN+mBX-Qm[.PeV3aUb(/[70s-;^VI/4?WUM&DRLLTcNORS,\)h8L(5807*a'93lm>D:!ZDao.TVHPNLIU(nS0rY>>n4`C@kQ^+c%')1%YTReKKrhU=[Mrm3oR[^/8&@RQdZWXahRn9P;.4/93k5M<k_)0jXr5I$qe=7#8Y`"(9$mr>$>j`_?DAL#iGD!3!-+U=/FO%kLNuT-I9miMCARe+Ma%;a:kr[_"m;,G.BI56A,"H<laUfcEs!72\h>Ap'(;uI[E1W5U,c]7jfPV*T@713Q[E\Pk7+]m)g/tpnH0%Q'BeCX$Ik,^[nS5Z&)/O.=gk^1S>IS&AI4-0\R'>p[*_i;]\6q$Q&[LuI,nJEHu_14r?"'Sfb:+G'']97V3K=l+(#CuLG1)"B#q_',pDIT%?fY[r\%pd,.p1kBlkYa4P^hu5q4.k>aci;\D*7eGK7234Um.E*L)I^HmA^#mMaq_pA'TB,oVGg,aWOYH/#qR,Xkt,;M=QD04cGe&p1(cHLmZi3AerWSRNo;`j43X3gW=l\V/m?9=aEuot''Q4.H);i2MS0Onhc)7Y-ek)`)D!Q_]I8PsKotMTtQ&PPuejH^a+Vpc_L]^!=tos.B\@-'pDd-TO^^5fT-gr#iH-P0FT"GKB..La<A@$)5JSh"%gSdum_E1h6+%XA]>^/niL#K*J+r=eImBU(;Vu@\F=K4%"TbmGbuRZ`W>5'NPdiX.odXK[&S6H#C`LO).OKq4X.8bM,^(D>^I@.:rk,pJN-=M=&Nc*<?CAlk7Qd%_G1JBiDd0(as-`#gH6QRt^Cf_b\12TBLS\rp.*f(4fZ[=Fb975,<3&(C[!.[3C5fM:Kb8FY=#q#2K["VYS-0>GZ$E)L#!qWHC,u(P0DE@/@*i'o>NBX8l4`c<@%-GPjnWo/f/s`<Q=8.<YdGb4b">OiM0m3Kn@+e>btqWb0F@hU$Ql!$&Qs&h@e[1+el-T4sPmkakE8;SgRDkgKp"-'I6kO7++o=:E.gUMG2)VOO!88q5)g`m$/qJIb!?4mZSWq'm"50q0M%[iq>aI_USgLph:nQdn3V(RHk*!#V%8WlLnlEW_TZ]cV+AL^'0d@bm+UoqBJKGkt154u,,ahtJ<k*_'SqouW%W1s+Sfb+k'0O_Z@`SL<NDM8"R?J<.h2E]\;K@HO09.BL4br]uB>K:O&jd@S:9;PjoO4bS0c$G.>!_hi%'4p:2@)34D!\C'0a(Cj9_N&=@-#(5Xp+;I=.HY&48p,8qF\r-r;o<H>eDZLtpAiQdNFp>?<J%"C[jjfaDX,^kBSe^`p2u=;7^=.YDg>WB+Tj\W^CEJ7eNrB.8i\`F~>endstream
+0.06 0.09 0.17 rg 0 798 595 44 re f
+BT /F2 10 Tf 1 1 1 rg 1 0 0 1 42 816 Tm (EDUSPHERE  |  PROJECT 05) Tj ET
+BT /F1 9 Tf 0.85 0.88 0.98 rg 1 0 0 1 390 816 Tm (TECHNICAL REPORT) Tj ET
+0.31 0.27 0.90 rg 42 783 511 3 re f
+BT /F2 22 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 758 Tm (10. Controlled incident investigations \(RCA\)) Tj ET
+0.95 0.96 0.98 rg 42 691 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 717 Tm (Incorrect grades) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 717 Tm (Bound negative partial-credit scores and round points. Grading) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 704 Tm (regression coverage exists.) Tj ET
+0.95 0.96 0.98 rg 42 638 511 50 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 677 Tm (Duplicated attempts) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 677 Tm (Server attempt checks and transactional state serialization) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 664 Tm (protect mutations; normalized unique constraints are design) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 651 Tm (targets.) Tj ET
+0.95 0.96 0.98 rg 42 598 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 624 Tm (Progress desynchronization) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 624 Tm (Server-side sequential prerequisite checks reject direct API) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 611 Tm (bypass attempts.) Tj ET
+0.95 0.96 0.98 rg 42 558 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 584 Tm (Broken video access) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 584 Tm (Catalog response sanitization and authorized curriculum access;) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 571 Tm (external video failure recovery still needs demonstration.) Tj ET
+0.95 0.96 0.98 rg 42 518 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 544 Tm (Premature certificate) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 544 Tm (Server verifies mandatory learning and passing) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 531 Tm (assessment/assignment results before issuing a credential.) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 501 Tm (Additional reported certificate incident) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 480 Tm (The user reported an incorrect name and a PDF 404. Source review found automatic demo) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 465 Tm (learner login, a fixed verification link and certificate-number-only download names.) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 450 Tm (Revised source introduces personal registration and dynamic verification plus explicit) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 435 Tm (download error handling. The exact reported 404 was not reproduced; a new live end-to-end) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 420 Tm (check is necessary.) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 390 Tm (Evidence) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 369 Tm (The repository contains docs/incidents/INCIDENT_RCA.md and regression tests. These support) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 354 Tm (the incident analysis; independent reproduction of all five original production-style) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 339 Tm (scenarios remains incomplete.) Tj ET
+0.84 0.86 0.90 rg 42 47 511 1 re f
+BT /F1 8.5 Tf 0.40 0.45 0.55 rg 1 0 0 1 42 30 Tm (Orion LMS evaluation cohort  |  Revised 26 Nov 2026) Tj ET
+BT /F1 8.5 Tf 0.40 0.45 0.55 rg 1 0 0 1 480 30 Tm (Page 11 of 14) Tj ET
+endstream
 endobj
 30 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 1910
->>
-stream
-Gatm<gN)"=&:N^lqItk`5aFkuZu6Gj=f9K`$"UNRem"&o`\=Zn;09'1^4+Ce`%<l`W1mN6dEH^YSF4jI#)c1Q=o*W4'"s^]`K`k-UZjpENoA@WL.9Y;f8eCAoM"g-2&J61[PeUL1aU/kKSq?Mej-c"9Qr0u%c.<:$9U'pcga_jM?S-NK1>Bq7n^G=._[=J9$"*0?g+q[O!<]i?,g;ZnY1D"dk<P+XVUI>Is[+DJtQ8*78J0Amhg\.a*a54^^LDo63iN^q&Xs1f?*ZlPam9_4e]t*mbHBaTdDe6>-[<&i.fpNmFtb=rjJq[iMrG!fE1`EE)Rm$7r^]6Qb;7pZRF&@3XI<C;OA_//O^9Go<>/o'_@i-0nos]3Tj%t`K\L^UC55r8;&Q-4npMm6=^HrA/$AXrQ#Y?V`_$2.!:Fd0Ri2=lpn@_k\2IY:2),^$847ODW<cUE)W"B3i7LaZ,h/m)@)sZ4[S:7C]_W\\:D$,-;[NA$Ca^VK&NRuI0L@_qpuie4)(A:ojqm.f^nAPbB)D\#>8\o!Gm`[UHsgQV=EHBWe7njc5H,l\igmqZ(8*Pq/.2?6o`2]lSMDI.KI.^HHVH57.KIJV)AjZLVra-bI11sGIFXIrQY@nSP,DN.&@V8FqjJQ"k>kr7o!P34g`'*&,0"T>P=cS'4*eQZO'ul8WWFgSqs<e9>raac![,1NuF6\YH'Lgkg8Kg2s:AJhf'?qXE[_7QqHJJka.Z/+aS]57A]AFZ;@'@^gdGCU/`6]/%0.qB>XG]r!O9p[EBb!n=t7l>Kj@nY!:8:?2cjXM>_LC3]6\p][h?\M[Bb?9<lPP[A_@a)91mTOfXJ(UP%1_4B"Z6kq'gE.8qJ.H*U.Z[,bXajcX[EHP4kl`n06J^KT_nC.n)fdpnc$\=r=r2\!M6F2r4e?6)\AGN'K_&EaX?'uqHJ17-mYV=n^;`sA%?Pgal'qbqc'2=f_5%M>cp5hLZA"?>(B*m*bT'PSdUH7J#!QVMfQ.rd5:br8e<8M#l:Yd;VbIA6%k3*?j+WOedSa]tBS=]]r?4kFYR6hr-SD?!:;&&SOu!]jerb+`D14^5j#=$q"6a//+\K\l6X"(ca?_5G::SD_f(L:1Y.Wa3YQf01p'Ar*CU;7+@)*m1E\-."-:/TVksQW5'0-rm#lR47Y1f'[X6(qM.n_Wb/`h(rKodZeXePmVtB'aJB1=VV"_C(n0Y3(FX.@dG=f=JW'27O*m6'UrVFCDEp+&1TROcH6ShRoYIOVE%E#*C]nEk=[6G#\"ZS>@LR+:>rhQ/8r?%(ZH9M7Ti4nk:r$106c@KG^\fn^)"Fn$uD76fG_,bmFpi_JIO_Y6u]/;Y^02kNV2[+fuuV&m[3.kk;.\Kg?NNf>AUOPib<6u!Am8.XDLcYN=?D6S'>+U*ZA80":oZc1Y*DnqqCo:q9@$$FlInXZ8K>_p,^3@a0bmb52!cYC2hbP]"N]ANO[J0eeEQ`(8A[bB?6">4nGHC6eaiq!3pahY^`A$%8!9FCUBH(MRN8l[ZUIpJJK$bI?[$XDC'q6')bDdFa`t^j.f+e-GJ&u]_,#;`5S$Rh7G9u(.O?sUUQlmb[b&[p9/2f*s<!`g2!!PCcTni+D_eW*^c1]2!?]!Tpq_bAl,EP:?1#]*jiNR>HQn/*W;V`-@R6[-S#PiC'gJf8DlI[b_;Y-D-!J13Eb(:T)KTM0YI+ZB@m6k>\(ZjS\ScH\BS#o57=V]^2'`"m+e?((i&;)+fi+7%Pu1'`SDRE)h9TH32uAd^X2*9*5=oQJTsq6<k&gcnNFbsfHqYCSCY;6%SV(ZlB.\T>4/H14.9=?5X2ZpG!M2@M?d_Jh_@[#(,/^>,ZZ#i>.s)0L!&2qGX<X2`O\Y%:h$WYbBn7]ApA:HHFsDXaFdHG]U'u1r!+%PShC~>endstream
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 29 0 R >>
 endobj
 31 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 2060
->>
-stream
-Gb!#\9lo&K%)(h*i3F60e&W_%=]TH4RWdF[2eh=*;_O*RfM(s<;Mp\;q?8:hQ5eSXB7/oR*)!Y,49,m7!!YXd1&!oS!6uoFI*[=_R+q]USq+p/>YL0,*3o4ZOUi&!LN*cqB$1YQd0r"4(P_B=YVC"Rq;HSB"b+KUMau^1ObioIQl-=P*h:F%<^j1LHnNlIjYI(\E2/TMkirKR;b#[/6rpn??bteE-Eda!(]7LT1Q(2s%tb%74rnq/nVB[YGd/?OI?Yc\`hF&mrG\"5f.mmla6s^[2JabXAil&[&eT]gUG6Z(!u=9*Jm[+li*JssPN?8b,h%kr#*ZTLdM2F*WSl?@FU,?SM,PluT-0?n<*%..24#&R8t'!&$X%<sa:!AaJ\4\l<!Ccs=sW"A-sIR[<,.;O>?g1^%B.<8iOu<BQ'G?^W"U93P7n]c89Ld[Hr?i,1,(M)Wpm/FTWP=2md28q+]5+O/<6*8*Bmc[.68TD+oYqZnTA'pch-emogcslUIIf*K8XGl;pLY*T^sG2;*p&VG8Ojr'q$?*[e$\"1XsI>GG1a*@&aZ>$4ZSL;a#!9<c_geb\Cj&?7BICDIl-o!o^K:Fg25"pZVG(FYS0)Om@f(4;^BJqf'Dl8\s6K,N!@dGh,<6n(c!Vo,g!LdXO?hfD2\I#D[:l&*E)\AGQGZhl7La%k:LjjAGQe`FG;OHFmE7%]cXU5k\IDGD/UfVXj,+`Bb6QWiMr:eFj"H/;j-/pg1V:b@2Mt)b!&dXi;bLHRbl"4$C3jE3W.63u:)"I<@?>P_"\3`>>J#=r)Eqn,^*#/m\;R%Z@m;'[tno9F8n_0T_3o9N@q%SKulm"VtoQTk2>ubP[`\/EN52dP=76<eamHC]V*]U,.`PR?_qW>1#;(7S!uK*fIJm"9[TfnG__=fuJ=*0)fu[HQ"nlD2c:KAT'H^7D_;0b)"i*e)i?79?R0*C]+_`pP#lCN]6V_$?o'HJuIg^cMRG'0f<(W<K7=/@uJt`!?io_4$BXhb$Y>4F795=%qi\DKh5/)#cKQuj$e.dnB>4515_*8MjbBGKEkeYY#ot+JK<0'Mh*TE:_jI%pcp\@9J@A>P4R@%b3^d)/)r7O$4<`CZ7ZY?4Z0Ub7TXEYiEJGc\giNaUg-Hsnu,P;DWgmar.)tZ4.JmLgDBg3epT\C4bl^,Vl<!R$?!sq[OVa%'^7+9h3fI.KcEN_Qeu/C?&/'u@\">Xb'q2J^0"lSi`I,aHr\V_,iQHkIesgS;Q7!OA\E6oT,4oOns72&6'5[9/,[/24knJq=1]>p39X)n40]\K,FL(K2jO\ge#F,EBaM!15:@TTSgntT730_]du3ue-I)9$LtO6HB+]42-?*`Y%.Q1"m6X[l-,7XVDBA3rou10loogO(I^nSf_j.uA1;lWqaf*tq]ul#OKXmS$#=I;=PI<kW.BqHN<r+0n:f-W7$OT8[eQB1%T0eme]K(3;p#n-;BrH6^00BsE31^sgs(l4O#PW/\mV:3%itHn0O1`QAX5JtiON4jmG!82/d+e[]>:a"1bVcSG70AKdUd8eqg.MC5k1Ad7EY`i!Gh&q%LpsF,[9Vg5[u+8ClF6pQ?L94oFq$*n2:fo_C\##L<p=t=.b\N(n(BA?#;lMh7,RsS)Ktp1BW"'W&g9VPia!*[,GaPW`cgQ'HJY*#X,ONjb;_/\XB,F?)FjrMa(*qeW0n(e7Rap;7J!;B(g,$WBNP>EV?R]ljjdamJtYcgDJHQ*=E@-.Cn/(R#^A-hBgRYG1$1bLapr!^iRn)c3/5(nKR8m@VD?%aY",rB<kB_,VTqEgB:U%]MPhnXdMbU@%YFrj])=;#S0ZUG)S)iDCaUlRDA[_qG4OVr0bP/E,=3">*5&MDm&[fR'G,s^flsY=7"+)X!ga.k9)=K,@cdk*Dn9HQ['&NpeYd?pVlM'/)QS,,,?YOc:R$Z)*fKhlhK:p;lYYR8]iTCd,MSk<nA<-`;O=Q?L_V&LG#^Am\ZTqf*Ir4rQDSMclu]rs7+KK,2fS:0dos3(79ut=3e`N>,M]HXnJVi?0bcIb>]UPur=@29OZi~>endstream
+<< /Type /Annot /Subtype /Link /Rect [42 460 553 473] /Border [0 0 0] /A << /S /URI /URI (https://web-production-4feff415.up.railway.app) >> >>
 endobj
 32 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 1676
->>
-stream
-GauHLgN)%,&:N/3lq9-,`h<G&hD[N=d`Ec6@WU6eGc!bTaJ-S1!ePUfpY?!E=gBTuFu^S(,^Kd`fuq3CQNP,iDSOX%i&$#F[iDo.A-(J,4@hZO=Yfe:iSDS*6-*aob&B2p.);M[#XK,ah[89RWGn4H7Dct"R.3-9LBh/,!mk"&N?'um9N=WYk)cOqAE=Q=J3T=E(0N+]<g@WIPKd*qWgAfP6h6+.q2Bebjof\ZR`")"5OTsp'Eo]Q_22;70a*P#cGKY-hb?^)XT1!ipm]1?"7#gZ!Uk9opuERl=pI(+,X;l3[25!=/;t-6\D.O!lf$O0\QCGK<`$l=2#+%9Q68+m)tY'6-8Q"oPq5Rc5Z;:7^8R(m-`JWPL>oYih\LK[Mdfi7TiPm&1U@:F,?.t/O?Q4aFK*],[0'!3A.C,HDc*di#r:%2?%Z90S@PZbbZ&oe/(hCs\'D+Ti:lT>iH!'Yqo.h&1eM&flt1*d0m*sQaq):3_`"ff&0Fi'M<SIb;[>D'bU/-UOF>.,236-S=M1(VWruf(r+)+c@\94<PMn4eFqZC[]TVSXlNHCHG'ZGg3Tprs7tc2hAYCNe#N:=Q&MC?AS7*>dr#h`W7RTB9JS__F:9rku:u,g/r#'4;qXDK*;7DH(?GQl.pjJre.@tID,5droUVX^C:#m-'=%^q.*@0$GW'3QEKBsHb8h`a<LGMN'GrF6%f$$lA0$\nb?qnEY3#t&&Xc=t<L(4GNqj+6=rCQ_bc;.6m4G#N*!WOfk7RIUr1)T)sBMcS)Cm[-,L3bUl4>E!t+-b:KT(#g*+*[p"7K\,QAO]&[&CMMnb\0hi$/K%44<*S-PS*=S43_SYQFOiFdrO;OYtmu[YAr_clm]3:a8aIO?*-iES)9E?p@f\B7`50"2DZ6cF1=HYR:elMI@D+rVbcT5ENX(:=fpVpC5gS[g1:$<l_<3I7L$mgi([4QZ<ZYQNFjG@X=B70['1#NA<`&ZM/Ri`7QhRQdG0#.TBh=Ig0tJ\aRqu\qXO:HqCWN-W9/8%Qkd%dUF3(5qg+]ACe(coVL?'@1\NmR54gV3dp!\RoJ/YtAGFNpgo-Fq6SH?'YlfhE)0]:qqRo63U6X0qS^d&.FEag.UJ;``8O)Zf%=DU1KmQ]Nm^))"XU#Mb50)U@Ir;oc4KhOdf741=9(_H8O'/&e=S#TrqTkC4<4\0&Wo-jAl*?BQV'DDe"V2S!DL[s7V59;RE'k)'25I`=)e1P)1'b3hA8-e<X9!0j>j<gC<+4@#J[\l(]rX&u1qqUK_D-K=o<gNkG#mo^TPTmlE8_lnbea%.H9thQ%<Woe`WF_QQ*aHZihJS$L#LaS7,<p#!kMcT"WO*r$rjI_o4Z9,DKO*2&[\77pDP#AYgV']D5SrHk5I05G"Qu&()_6sPeP6n4fKt]2!B7GOiZ-nKnlnL\Q)R$e5'[$&Cuo2U6O-g%S`&)W+'?'rH:fb!3seVfEo+nLuZL,j5P#?hi!m&a);nJ]DV4_#^o/khs*m@$5(/;;Ya1Unk)d!Nc=H(FKMK3LT0Sl%X/5MjjF\J[k-<do"r3$Z.S!ZFEO]`Z`Sap=-!G8]5I?dj72Pkle@Ke;n'/Zi;&qnCNknHO'Q0'GZ0k8C*f;Wa_H8'6W;\2iSt*3D0Uau'29SBa_-aRUQ*82#)YB2`7qtr_W5'YHMJ]~>endstream
+<< /Type /Annot /Subtype /Link /Rect [42 441 553 454] /Border [0 0 0] /A << /S /URI /URI (https://api-production-7499d486.up.railway.app/ready) >> >>
 endobj
 33 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 1747
->>
-stream
-Gatm;95iQE&AJ$Cb[l^>8@5*4[^:BRS[=k1D:?GV;\,QJg0l4_.S1r2rq`1Z,[3`I(Bt;c2DGi"o?D[S+9N]Mbl)-"_###Iq1/PS@($%NGnJ7QiI!Q[3F^g6@im%V?:L@Ga%6n3i;'@udP5u_*)6>ckiE'bZ'B4V;PN"J=@.=dJ@$@Phh.o.XB%b5Ek'OID_`hC"W(/cF&?)MSt<g,W0OgR/^/[Zll?u8%6kd9NRP6lLqsaR5E3<$)$c?B][T^j*t:mg`[53*r]$q5[M#;k_#FIR?;VM_l9*c79aI(M8Pi+mZ>^Gj^rI'@DBUc+Bh?$[(hX0a\'ch!iRA]Q9M)HjHjgDY-m2a3YLi8T#N*=\ciT.WRt=k,+%%[VZ;QFC=r:7%dY_*d//ta5e1uOArH+jS'&PF>cjF:-?X#Z1O!0CD%WWK,kVMj5#<=(@0S2ui$iCQFhhRBq7047n7_VgLHGi\$GOU6O`'H=Vp>\lo]/>,7F";<Lm0U'5'(ZWZgpL#qVS"VbcIrQFm<f=t8&(q9<B<*N]7"q2-j<)rn_t"*OMA6e!HKgHO12ro[[Vf87ldNT(7Bl;Rce-A?K^U%:M/RoUMm3DC+A4`/Lk)ZB?5=[;$*Bu%-GQei0Y6[eqH**mZl!!/C@3q/V+^lHG]WG=Q1[O14r,NnTIE=Dr4"<&6tH5']h@/O;5F0n_]`7RR"ZP[.c'^p.:h9,*O<+5SJ*'0E?BB-EPRjXJE*Vqq+4tYElI,GM<]Q*hOI/$\8Oq9jPi!8e@Lr/'<0.3HfMsp[IQl^]ooYa@!%ts3,(VE:rm9#,[fTdZl_C'sHb%=n@p!Ghj9r:JV>f-jnn7bueg%<0Q-rm,</)f\:aWfl3AnQSVXm'OAejj`><Ekr2Xa\Lq>]GILp3^>5B15N8_EEImd'bDsUB28C!QQ_p8\rVc+Y)N=FWA6W1JHISTn7tEI)SuZZT"84m%#6>0gIQ0&amm0sm1X$eRYo)WOn9Hb4pIt14*>%3%l2l=^c\@l1=9U#&%mZ*g$:I28Tr8Zm?b=F!3%VtiJ3eSt]#A7%b0!>X!OW\RZS^*fFck#jh_k12<cH[?80W'<0_@*Q8V1o%-ifA7n$RHQ(&Wu5X0o"7%#ro]Lr1)b<K3jY_FuH/&k&#:$I]:!YF7p*^pF`e,\B`r^8t#@]tSS>BI_lkHh)>acmZMT;[pUqRX&gYhp#5'D?gG;2nY;Sr^UMdXN08L84?td*n]jrja'W$7sln)UFY-3:`<2TF5n3-<2f-aQQ<2P;'A,&&7VXEU?$"9g<?PC<\BnPGE^unAdhE;lj+'(E"H,+_Wo,L.mhh;P(m..=-YN?Bsq1ZI/+^"*6dUcQhm)m\\K)<k#dQp<WF_*=Z6WI._[2Fl\V5/rZ<e.QQ,t("VPg@DH(rl`[C]`(jQcReq9<BEKHp^3-U*s8G==8n7ac>QYsmB'jZpt.hg&&%E\+1p?Bbk/."?dX]Ek(mA7>XV)\C]6<s/gER`*LdEBC5A_:d/h<Ab9oWXO6"6m;?-f'3ih+1I_gtc&E0F_-Cd>d-6o`O^Cp-,i$h)L!Xlr/"ecL^1q^8H>3pE5j=V;SqZ:jhC??b0]r$sgh5`PSB,4a]&u%:3I=_NZYX;&^Ji9u\6l]4ug:<r=$rPn+T(nR1[CX)Ae`1-T^gN"`\ciYOlpG>_\-E"au&RLHugCuI!Re?0eRYF761o(*<\5OtO_0.TtT=RGFA@R'BbZI3uONhY<*FD]mm/r]c7R"[Z\~>endstream
+<< /Type /Annot /Subtype /Link /Rect [42 422 553 435] /Border [0 0 0] /A << /S /URI /URI (https://analytics-production-44a30124.up.railway.app/health) >> >>
 endobj
 34 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 1401
->>
-stream
-Gatm:95iiK&AI=/b\?$A`3^rY\[U'[[TOlXGAX">*$S%7bX<)O,iqOGI>='H.#G&-73U<XaPhO<il@bNi'Zm]=p"W1KZQ(TlGE*(W(/sPhSRh6m+3-B,Qe9<C4pR:V<L8HMO*23B#E]`"WA6n`:9VDp$`t`1_,&_^^H\5A.BhV$!`A[R7Wd&8gh8\P5h(d/h6W!Z^])'''?i="YQb"Y^D&a(LtW!I,<Kh`,TQ'Ke<;<T91N/gs?9=4)s=(HL+KI#4V6==_5(-i5I=_$WnBG(J\1W`,,!2A$cn=W5bCV.5&d@S`dpM^72pWAnWB$_D&RDRROo%P!L\=L1a2J6.VjOa0B/H[YOLglUd@-dV)K)RUpZ1=,gl-n4L#l[R+1AT-"HG<F5t5j8#5ndk22LkkPo`KO<4'UEcl[mS!N]lbt#;AM"UKBY7_n_c$b4;2[d%Hak.\A6*B6[R+M3((^/3LMZS<n44-ga)-I^7^*]We&fBt,%.+'l(.U*AW="#+'1J+G$d=^K>%rAL"$Yo+PDK@ATP65_j9UG.$ccSlTM=(8%<5r;C?cR?6orb,"7,eaba#44<1na->_B#PQ=_'ESqA9e)[K8*?^gYMZT=SnY%`",(t]+$72=o"#PnW*rL*k5,n?,GgF6bN#DDk>qMIBE&#,D&D/9&0YChQ.Ok([Vs8B"&S\u2CNSu*;;-Pb4I+nNP!=bU"f?@Jo+[;T9jJ`ATuE's;oVt7'9fsb]/=2b/'TOQ)c8G'+$(6lQ7V&DEJ%sB_bVKX=P??Xmbk=($GFI*oGQr'<>,k:Q+Z,9'O$ISSDYKC`RGqj,_f=8TL8kp&?@1EC/A*T,k(UH%3m44W4>*GM5Sgp7/."F]B($"&I4#&@jQ;/n?>!?U#4+@&cEg8ko86h2_2DBa%!mP0?cCdO%85?2d#Pk\EBH<iQ%&*?>9;68)$S!,fc?e<g*W<:K$&sjcQcSm?!/]hA`uXd*s-%7]flUC5N)'lW:ug-?.Ag(^IN?G\n@Z3euh2ArBXZ>(`df?<CFW&#]Cg.^2DaGAD@#8q)qkA#>4Dh3,VANc;ZjF.aG3mp:SDCHO6>6FWO+%n:_'(e`!BgorNM.kEk`R=aC8bEo;<k(N%G=%;lF$c*&_JJPJ)G`a!jA%Y&].%<QpZ,.Z2]nV*)poQ`GF4V>`[O*=ef,0Walr"ou_t1RoEImm+(45\VG'slfh_DOhlNuub]E3"S+tH>#g`_72X@,rIa/cX'(D>kP/YlPI";a[=.a0Zl0nGBPQ9>V&:gOtMMTsBRhHUC\"[*$LhqL3=.q.5BfJ"3'4VrGlhiI-FFA6osgP^4j#A3P/a2l-;!)3>9[Q^([UhG2U;jrBqhC[Z#P8$`<1hHf;e]3+/SVYYVTQ+i^L)_=0U\,s0E:sf$_>b2~>endstream
+<< /Type /Annot /Subtype /Link /Rect [42 403 553 416] /Border [0 0 0] /A << /S /URI /URI (https://web-production-4feff415.up.railway.app/api/docs) >> >>
 endobj
 35 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 2301
->>
-stream
-GauHN>?BQ=&:WeDbgW/$2]0`If_\,?mD:;(D:7jq^'I48!o%a,)+]8UNYL6!/J4n`c5o`:13#/Ik*q8c2?=p"M#![0!,iWloTfI`@'KbGGnDUa_s-1=gB$QA9RN3?I5/l,5>KZM!mf2?OsT%K,b"Q9aRoR/7#&6lQ4i?iJ>@MJ+OII/,(Tt,8TRA)Geqo7/uXs2!EMP(EDZ^miOET(e!-q3c0qmHJ]2E<Qr!MOA3ieQD&5Uu*ae(8?CE4W1^5W)Zdd#!Ae?38"?sR^W6ER[Lp@$<$^a.7h)+KfkoW>mNQ[rk3)'sI&AS,DT,2DX'$0]AS'F8]]jl'b-*<J4#oq=n&$2QTiDPOPQ7I2)3Eq%V__l;hMQmLhD,G,"QZ^.:j_QpX`>\?.Zb]Q#m8j5L?Gj\fKPAdVaeBVHJVNBMA/Z<48@1[71kaNUiK-`!10D4RnBE4_TZ/4(""X/o+!=+[T6#d\2cfunB.dZ;F`t&,9Lp/gfsqhK\16-;XX&#qDm$$RpH*C,3ONGe3`L)r_<DtIZ7=`B'm7R5caeJ.F8MlHI:D<CfCRd.gDM&,\UQ@'lM\[AhD6W3-K-mCDUgVANjhno>Z=?XWM?`tf?Q1G%B]=Cf$N^+Zl"Q?fRra4)N^]4PV@Y*7g4NK84<paXI0i#(NdRU"MV;A4+'&pnK,]QGRpmg44BsMIm`g3A/UC\ch<-YTmF*"EE#"eq%cU'Hp4)S1e-C?_[j/n]ES%7?0gcX@l`Mu)U>TAR-J'.Oq;$gFi8<6A_EIm'A4;]#uqZl`0(jYU.8u?8$k(FQ]a9RKhKgl[:Jl)n"Ik,)+k=b!QI&K9GXN0PhHOHSpfUUkK(fP1HbidgB>g:)m"4_7k5ZO[54n*-?2\'fO0SkcYnhV'BHS6XiqY*jnUL*DlOL%CBXkp\M^)f0#/(JZ&S!6cS*o9b7,(h_)k5TRd]-AAkKJ:E]kK+.'DB/o`S::P#o:n4GSjJ-Oad4mqRiX[oX2RFH,h)2XWb[g&.o-mpd)Fd`-SgFiAZ9A_icG\$T#DK'hP;'A3S,@^"PH(GLknB6\%jZ^?>JMR>(g'?IZZoep&QZXoos&9Ih&(A0!"p!M,)kHXK5nYqfD?I,gqGm@Vnb'-@Xdq[,XqcR\se8_!?Zg=31CCqf3$=/I#deEt$JP!M12dA(FeOj5p05\61QP]X3+(@J)WKh^@H;9e7Q=%NIB(`PgH0p;&+0Bf.hp-b$2.s![8Oc@:d4]`ep(?F1N[QPqXsS*GRmTpY4JYe9LWu+F[I*``8E,Nobf[@M4X]IXGk0F`Z.%uuj13q0d"_&;b/Y+NX8D"CQ6%roFlTu-lVMBqU1']_/IJc>@'875Zf2.pV=VE&l(Ac!UUaItbK/R\[G.[s4+[:\MV:*_Rci'@8($\IU`-:E[4jHWo/9k6k"WpVrnL+V)o4JENd#MW.U"d__R`N=Sb7H5D)Gs@F?ImpNb80XZ'sY!l:*Mp$lh&#=*k+k\LC:0e$RS:-U:l^9&,shTuK3#i(aG^MWD]UVh\COB$Sm7)t:Ur]Nl93*Yo11-IpgBoP!omLis!rGi3Z"ekGB&(u4kqRo]!pEh1C\4g7<r.WMEAM)Q:7(#)hmO'K)@Lp`<+9T9NpIJc.jDAg.C>oBbj'][Jhl<U<`(ta$@k4a,/`[^ojj'0>3Xng@Bj:2#q\ni[pi-bOo"+!40YhWuT7$HScE,.hcR2Sfp$*+H=H#Yo(>3@<2SKZd^K6<)6nHjTYUZDTDDI&m&5'fG$c+]qJD-J+@8JGqtK-nVZ\@#5H3ZScI5L#H/c1>)'lhbu8k.GMgQUCY"4`:4o1(s"B)?]GJI\%S?LHAeN[Z.W]G)0\+j.Q-Yk"Z1ge?A7>_t$iK[INlJhQn8BNj"oSDea0NK9q=4OPrg\1^N,<5;n&X\K>^SQf_nj*pMhmqBlWWb^Ug^I*MB>++G.R8MA'1+H<[5MPEHU#/(^@K9X<f'M#j$A8*FAUHt?3?AbLDRRFh'7tVL9l_HKYUg]<NNs7&tXeJ>!2!^iH4(Qe]fQ;m!l!Yl"<)F/Ug0k?:_18(-LlG:%D.ce1DCr!JGL@Vf9(dNarRCAp4l]ok:<C/EHcEl01GgNVD%oL.++P/GT:pMp[rDQ"f[kTLl?(_)lYD6Sk+<c`meWIj[%_?bm$Zclb+']f>90RIrhr8/M'9MEZ@(`,O&SQs`$8D=kj+i^Gr3@$:;5g=R*M8qiZht23&RJV=/4(=..,7Y'JXp+?2u#R=!fJ@hofF,.!5Z]NkcYeg?l3OgP4q`Qsr;QFN_@enIc:bNWha66LuHtiS\(P$$-[~>endstream
+<< /Type /Annot /Subtype /Link /Rect [42 384 553 397] /Border [0 0 0] /A << /S /URI /URI (https://railway.com/project/29c53a48-6ba6-44eb-893d-de8d4a541e4b) >> >>
 endobj
 36 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 1862
->>
+<< /Length 3152 >>
 stream
-Gatm:gMZ%0&:Ml+bY&c*,*kZ#ZL%"CRnK5-]BbI4!X/XA'T'9/O[Lcmg$?EA+XJMAF$WY;7UhN-LVkq2bR>^<+6NR#"jsMpl<c5S!R2G!68,/124`'S^)sV'kKp,og!*X:DY@`D>71c>H_>j#&0"acSf`q]6&>!7cc/?CfJ&9_+fQb.Z[kW=/$9L0A=;NN(KY&h;E(FrF=PHjY;IZqC&X+S5?g@di3VUiE'/#c@C3l.eWDd/%>-VaDsWNT5&MEsN5\/qq<b,&`sN0o!PWWD]jNI-c$B"Z(gDdoGQ]h=J.:K=*8c6')gRQo\4(7NLDDe+_=;eOc`.^]S.r.@f=Wr/P*2!^X=tFS#qbF)mk&cnC;i!G,$1$BRaZO?kNRl(4>@5C$BHeKB`OnEJns@]Y-qlFUBFg^m!l3miWTa\m'&NG<4W^p"5DIkb#01D#jd'P)/5\n8sh303p2atKdbo2-u#^B2]O#+o%o%J^fm64/^-L#7Z=tlAqTV0R)0'&@)o@BK;aVd/j:qpSrl0`d5=^!.EWrBa]asWqj&$1)n\F(jp+USRQts=o6O6L7ZSm!+\H0_1/^tI<D'F)G'I$[I4k.!ZP7:#6@_jg[*J!3_9$+,G[RZNH%I0V7`Mi<QC<c67&j$r/M\q-k?9)O9dC@R0t"9]mkr^_r46AN)KCRP7?a8ATGrI?-^;fN7^u2Y)C>"1Na'h5X(f_Y@05'7q^e5F>]jk<:UX2)<&llsE8>>B+*OE0l8"^jK*H&J+deb[q6jc[H88un#FP:]Pae1U92;B8Sj%Opkn[rsFHL5mR9ic7;C+2%CQWYcWDjXD@sCig+9iE7@BeP4[rcu@I/g,!pRN7Y:H.S8^(:k,Bi8Xi9-CDij;-&PG&6'/BW70=`@g2X&S=I#SK#sL+TYCNY,V7=iTse]HSgA1\7+3T<:;NHgY7@;_cg`5_!Ui,P_l4j<c_N6-D>EAipQa2cX,N7_qt%SGqU4uK=efUNBB7/-[G*h[hd[]lE9T7DYqc+Jl5Y!$_`H4S10u^<^u)JeI&Y'1]s#X.HPO8ZMEJE0_c^mI`?HLf6^>U/o<euRPZh,@FI-Fe&3T521Nfg_;M/A_q=HCkkpac0iZlRSMW/*&isJ9Z31mmBnHTZli)Xrhjr,"b>d:n.^;3.e_1(5D-*b`I7TZ+eZ/i+Hp>./d](`.WVGi'26s=170;n\GgVUDDbJ"V`h5*1Tu843kE/\R!A\4Wr>P@%(07U=o*Wq[5`/`[gsBW6XkRuF*3an-W'[)\=k,.ikIt6Ug68<:JY:[C=Y@8MUGeH>Y.EV,[kQQ\'I[KnZd57o>b7]si0QfpB?1rq/HeCidS:eMEgNOb/OfI;`<uf7`^I-2Z#(o&XIGg>d,Ju\r*J:0`*EVi?hR:ABHu'F,+"drLl'%IfcZXE`1h.LjYdd=LjY>`LJ2SX>GS)N%aVa\VMO[#DV`&h[#!k_fYi\U_""LL0&^V]bo4/RSa6b+St)uPP=cOE5.(QaKtRiCU$:56iTf.Rfmmqg`ib<rg6Um)BAG.GPq=&fp6pC,i!"g%c`_J2NI%5Hr+Z_7iu+"s:G*F@7CRbnbFKc%n`"sK#QI9:1LO&F?ef35q&f&,5'[LoPN6!`Am:7@6]VZ^YeHF%2_/T"@s?S"6ZXcO.@<@Z&Dj``[GA.SFN<7Bm?PB$3+*=\%O:&cJ@m:hJDWZ8":0#.gF%2+`S2MkT/rX+82/5aXkW:pm#UTrYG5gd.!@`>>SY7GO.kamh7)_?3X5M\F7bG-)?=^&7pG/o!3L>WNSMT5dr%1)g/SRJir4i@JTKc!W]Y'#M<<'T>nt*Q385064$AjRX*OM8O[&EhkgAD>l3H+,[f,'@'-7#R(Lb,'~>endstream
+0.06 0.09 0.17 rg 0 798 595 44 re f
+BT /F2 10 Tf 1 1 1 rg 1 0 0 1 42 816 Tm (EDUSPHERE  |  PROJECT 05) Tj ET
+BT /F1 9 Tf 0.85 0.88 0.98 rg 1 0 0 1 390 816 Tm (TECHNICAL REPORT) Tj ET
+0.31 0.27 0.90 rg 42 783 511 3 re f
+BT /F2 22 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 758 Tm (11. Docker, CI/CD & Railway deployment) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 714 Tm (Local topology) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 693 Tm (Docker Compose includes Nginx, web \(3000\), API \(4000\), analytics \(8000\), PostgreSQL, Redis,) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 678 Tm (MinIO and Mailpit. The three application Docker images passed CI builds. GitHub Actions) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 663 Tm (defines CI and release workflows.) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 633 Tm (Railway environment \(existing deployment\)) Tj ET
+0.95 0.96 0.98 rg 42 595 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 608 Tm (Web / API / analytics) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 608 Tm (All three reported SUCCESS in the reviewed environment.) Tj ET
+0.95 0.96 0.98 rg 42 568 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 581 Tm (PostgreSQL / Redis) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 581 Tm (Both reported SUCCESS; existing persistent volumes retained.) Tj ET
+0.95 0.96 0.98 rg 42 541 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 554 Tm (Uploads) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 554 Tm (Existing object-storage bucket retained.) Tj ET
+0.95 0.96 0.98 rg 42 501 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 527 Tm (GitHub synchronization) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 527 Tm (Repository main connections staged for web, API and analytics;) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 514 Tm (revised rollout not yet verified live.) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 484 Tm (Live links) Tj ET
+BT /F1 9.2 Tf 0.22 0.20 0.72 rg 1 0 0 1 42 463 Tm (https://web-production-4feff415.up.railway.app) Tj ET
+BT /F1 9.2 Tf 0.22 0.20 0.72 rg 1 0 0 1 42 444 Tm (https://api-production-7499d486.up.railway.app/ready) Tj ET
+BT /F1 9.2 Tf 0.22 0.20 0.72 rg 1 0 0 1 42 425 Tm (https://analytics-production-44a30124.up.railway.app/health) Tj ET
+BT /F1 9.2 Tf 0.22 0.20 0.72 rg 1 0 0 1 42 406 Tm (https://web-production-4feff415.up.railway.app/api/docs) Tj ET
+BT /F1 9.2 Tf 0.22 0.20 0.72 rg 1 0 0 1 42 387 Tm (https://railway.com/project/29c53a48-6ba6-44eb-893d-de8d4a541e4b) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 368 Tm (Hosting uses Railway credits; availability is not permanent or guaranteed. Preserve) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 353 Tm (existing databases, buckets and managed secrets when releasing. Backup/restore validation) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 338 Tm (and automatic controlled release evidence are pending.) Tj ET
+0.84 0.86 0.90 rg 42 47 511 1 re f
+BT /F1 8.5 Tf 0.40 0.45 0.55 rg 1 0 0 1 42 30 Tm (Orion LMS evaluation cohort  |  Revised 26 Nov 2026) Tj ET
+BT /F1 8.5 Tf 0.40 0.45 0.55 rg 1 0 0 1 480 30 Tm (Page 12 of 14) Tj ET
+endstream
+endobj
+37 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 36 0 R /Annots [31 0 R 32 0 R 33 0 R 34 0 R 35 0 R] >>
+endobj
+38 0 obj
+<< /Length 4789 >>
+stream
+0.06 0.09 0.17 rg 0 798 595 44 re f
+BT /F2 10 Tf 1 1 1 rg 1 0 0 1 42 816 Tm (EDUSPHERE  |  PROJECT 05) Tj ET
+BT /F1 9 Tf 0.85 0.88 0.98 rg 1 0 0 1 390 816 Tm (TECHNICAL REPORT) Tj ET
+0.31 0.27 0.90 rg 42 783 511 3 re f
+BT /F2 22 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 758 Tm (12. Traceability matrix: all 15 assessments) Tj ET
+0.95 0.96 0.98 rg 42 691 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 717 Tm (01 Frontend) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 717 Tm (Implemented; personal account revision in CI;) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 704 Tm (browser/accessibility evidence pending.) Tj ET
+0.95 0.96 0.98 rg 42 664 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 677 Tm (02 Backend APIs) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 677 Tm (Core learning APIs and workflow tests verified.) Tj ET
+0.95 0.96 0.98 rg 42 637 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 650 Tm (03 Data model) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 650 Tm (Partial: PostgreSQL JSONB state; normalized migration pending.) Tj ET
+0.95 0.96 0.98 rg 42 610 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 623 Tm (04 Authorization) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 623 Tm (Core RBAC and capstone security tests passed.) Tj ET
+0.95 0.96 0.98 rg 42 583 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 596 Tm (05 Python utilities) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 596 Tm (Grading tests passed; full utilities/benchmark evidence pending.) Tj ET
+0.95 0.96 0.98 rg 42 556 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 569 Tm (06 FastAPI analytics) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 569 Tm (Core analytics implementation and tests verified.) Tj ET
+0.95 0.96 0.98 rg 42 516 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 542 Tm (07 Progress engine) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 542 Tm (Core prerequisites and quotas tested; re-evaluation and live) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 529 Tm (certificates pending.) Tj ET
+0.95 0.96 0.98 rg 42 476 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 502 Tm (08 Integrations) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 502 Tm (Partial: storage observed; sandbox/video/email/calendar coverage) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 489 Tm (pending.) Tj ET
+0.95 0.96 0.98 rg 42 436 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 462 Tm (09 Docker environment) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 462 Tm (Three application builds passed; full environment reproducibility) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 449 Tm (review pending.) Tj ET
+0.95 0.96 0.98 rg 42 396 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 422 Tm (10 Governance) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 422 Tm (Version increments/audit present; reviewed PRs and branch) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 409 Tm (protection pending.) Tj ET
+0.95 0.96 0.98 rg 42 356 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 382 Tm (11 CI/CD) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 382 Tm (Eight CI jobs passed; controlled release and staging evidence) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 369 Tm (pending.) Tj ET
+0.95 0.96 0.98 rg 42 329 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 342 Tm (12 Workflow testing) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 342 Tm (45 automated tests passed; fresh browser E2E pending.) Tj ET
+0.95 0.96 0.98 rg 42 302 511 24 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 315 Tm (13 API docs) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 315 Tm (Swagger and Postman present; endpoint coverage incomplete.) Tj ET
+0.95 0.96 0.98 rg 42 262 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 288 Tm (14 Deployment) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 288 Tm (Five existing services healthy; revised release and restore proof) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 275 Tm (pending.) Tj ET
+0.95 0.96 0.98 rg 42 222 511 37 re f
+BT /F2 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 49 248 Tm (15 Incident simulation) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 248 Tm (RCA and regressions present; full independent reproduction) Tj ET
+BT /F1 9.6 Tf 0.12 0.17 0.25 rg 1 0 0 1 203 235 Tm (pending.) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 212 Tm (This is an evidence matrix, not an official evaluation score or a claim of 100% assessment) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 197 Tm (completion.) Tj ET
+0.84 0.86 0.90 rg 42 47 511 1 re f
+BT /F1 8.5 Tf 0.40 0.45 0.55 rg 1 0 0 1 42 30 Tm (Orion LMS evaluation cohort  |  Revised 26 Nov 2026) Tj ET
+BT /F1 8.5 Tf 0.40 0.45 0.55 rg 1 0 0 1 480 30 Tm (Page 13 of 14) Tj ET
+endstream
+endobj
+39 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 38 0 R >>
+endobj
+40 0 obj
+<< /Type /Annot /Subtype /Link /Rect [42 483 553 496] /Border [0 0 0] /A << /S /URI /URI (https://github.com/nitinsharma2005900-ai/EduSphere) >> >>
+endobj
+41 0 obj
+<< /Type /Annot /Subtype /Link /Rect [42 464 553 477] /Border [0 0 0] /A << /S /URI /URI (https://github.com/nitinsharma2005900-ai/EduSphere/actions/runs/45847595875) >> >>
+endobj
+42 0 obj
+<< /Type /Annot /Subtype /Link /Rect [42 445 553 458] /Border [0 0 0] /A << /S /URI /URI (https://web-production-4feff415.up.railway.app) >> >>
+endobj
+43 0 obj
+<< /Length 3137 >>
+stream
+0.06 0.09 0.17 rg 0 798 595 44 re f
+BT /F2 10 Tf 1 1 1 rg 1 0 0 1 42 816 Tm (EDUSPHERE  |  PROJECT 05) Tj ET
+BT /F1 9 Tf 0.85 0.88 0.98 rg 1 0 0 1 390 816 Tm (TECHNICAL REPORT) Tj ET
+0.31 0.27 0.90 rg 42 783 511 3 re f
+BT /F2 22 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 758 Tm (13. Operational verification & conclusion) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 714 Tm (Demonstration sequence) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 693 Tm (1. Open the existing Railway website; select the appropriate synthetic role. 2. Create and) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 678 Tm (publish a course. 3. Register a new synthetic learner after the revised build is released.) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 663 Tm (4. Enroll and finish sequential lessons. 5. Submit and pass assessments. 6. Submit a) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 648 Tm (capstone and receive a passing rubric grade. 7. Claim a certificate, verify the registered) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 633 Tm (learner name, download the PDF and verify its public ID. 8. Check analytics, notifications) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 618 Tm (and forbidden operations.) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 588 Tm (Submission package) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 567 Tm (Source monorepo, schema and migrations, synthetic seed data, Jest/Supertest/pytest tests,) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 552 Tm (Swagger/Postman, Dockerfiles and Compose, CI/CD definitions, incident RCA, assessment) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 537 Tm (matrix and this report. Architecture and data-model limitations are described above.) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 507 Tm (Repository and evidence) Tj ET
+BT /F1 9.2 Tf 0.22 0.20 0.72 rg 1 0 0 1 42 486 Tm (https://github.com/nitinsharma2005900-ai/EduSphere) Tj ET
+BT /F1 9.2 Tf 0.22 0.20 0.72 rg 1 0 0 1 42 467 Tm (https://github.com/nitinsharma2005900-ai/EduSphere/actions/runs/45847595875) Tj ET
+BT /F1 9.2 Tf 0.22 0.20 0.72 rg 1 0 0 1 42 448 Tm (https://web-production-4feff415.up.railway.app) Tj ET
+BT /F2 14 Tf 0.26 0.22 0.75 rg 1 0 0 1 42 422 Tm (Conclusion) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 401 Tm (Core LMS functionality is implemented and supported by successful baseline runtime requests) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 386 Tm (and 45 passing tests on the revised source. Full Project 05 acceptance is not established.) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 371 Tm (Confirm revised Railway deployment, run the personalized live certificate workflow, and) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 356 Tm (address outstanding data model, governance, integration and operational evidence before) Tj ET
+BT /F1 10.5 Tf 0.12 0.17 0.25 rg 1 0 0 1 42 341 Tm (claiming complete compliance.) Tj ET
+0.84 0.86 0.90 rg 42 47 511 1 re f
+BT /F1 8.5 Tf 0.40 0.45 0.55 rg 1 0 0 1 42 30 Tm (Orion LMS evaluation cohort  |  Revised 26 Nov 2026) Tj ET
+BT /F1 8.5 Tf 0.40 0.45 0.55 rg 1 0 0 1 480 30 Tm (Page 14 of 14) Tj ET
+endstream
+endobj
+44 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 43 0 R /Annots [40 0 R 41 0 R 42 0 R] >>
 endobj
 xref
-0 37
+0 45
 0000000000 65535 f 
-0000000061 00000 n 
-0000000122 00000 n 
-0000000229 00000 n 
-0000000341 00000 n 
-0000000418 00000 n 
-0000000533 00000 n 
-0000000728 00000 n 
-0000000923 00000 n 
-0000001118 00000 n 
-0000001313 00000 n 
-0000001509 00000 n 
-0000001705 00000 n 
-0000001901 00000 n 
-0000002097 00000 n 
-0000002293 00000 n 
-0000002489 00000 n 
-0000002685 00000 n 
-0000002881 00000 n 
-0000003077 00000 n 
-0000003273 00000 n 
-0000003343 00000 n 
-0000003624 00000 n 
-0000003776 00000 n 
-0000005259 00000 n 
-0000007507 00000 n 
-0000010104 00000 n 
-0000012797 00000 n 
-0000015040 00000 n 
-0000017057 00000 n 
-0000019095 00000 n 
-0000021097 00000 n 
-0000023249 00000 n 
-0000025017 00000 n 
-0000026856 00000 n 
-0000028349 00000 n 
-0000030742 00000 n 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000207 00000 n 
+0000000277 00000 n 
+0000000352 00000 n 
+0000000511 00000 n 
+0000000674 00000 n 
+0000003576 00000 n 
+0000003734 00000 n 
+0000007844 00000 n 
+0000007981 00000 n 
+0000011423 00000 n 
+0000011561 00000 n 
+0000015418 00000 n 
+0000015556 00000 n 
+0000018839 00000 n 
+0000018977 00000 n 
+0000022555 00000 n 
+0000022693 00000 n 
+0000025691 00000 n 
+0000025829 00000 n 
+0000026014 00000 n 
+0000029455 00000 n 
+0000029610 00000 n 
+0000032955 00000 n 
+0000033093 00000 n 
+0000033282 00000 n 
+0000036463 00000 n 
+0000036618 00000 n 
+0000040177 00000 n 
+0000040315 00000 n 
+0000040475 00000 n 
+0000040641 00000 n 
+0000040814 00000 n 
+0000040983 00000 n 
+0000041161 00000 n 
+0000044366 00000 n 
+0000044549 00000 n 
+0000049391 00000 n 
+0000049529 00000 n 
+0000049693 00000 n 
+0000049882 00000 n 
+0000050042 00000 n 
+0000053232 00000 n 
 trailer
-<<
-/ID 
-[<b01699ac2af6c10d51a9c7b51a7dcbaa><b01699ac2af6c10d51a9c7b51a7dcbaa>]
-% ReportLab generated PDF document -- digest (opensource)
-
-/Info 21 0 R
-/Root 20 0 R
-/Size 37
->>
+<< /Size 45 /Root 1 0 R >>
 startxref
-32696
+53401
 %%EOF
